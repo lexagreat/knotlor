@@ -1,0 +1,1525 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  border-radius: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: unset;
+}
+
+/*--------------------*/
+body.lock {
+  touch-action: none;
+  -ms-touch-action: none;
+  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+svg path {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none; /* IE и Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+[data-tab] {
+  display: none;
+}
+[data-tab].active {
+  display: block;
+}
+
+@font-face {
+  font-family: "TT Ramillas";
+  src: local("TT Ramillas Trial Regular"), url("../fonts/TT Ramillas Trial Regular.woff2") format("woff2"), url("../fonts/TT Ramillas Trial Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Ramillas";
+  src: local("TT Ramillas Trial Italic"), url("../fonts/TT Ramillas Trial Italic.woff2") format("woff2"), url("../fonts/TT Ramillas Trial Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Ramillas";
+  src: local("TT Ramillas Trial Medium"), url("../fonts/TT Ramillas Trial Medium.woff2") format("woff2"), url("../fonts/TT Ramillas Trial Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Ramillas";
+  src: local("TT Ramillas Trial Medium Italic"), url("../fonts/TT Ramillas Trial Medium Italic.woff2") format("woff2"), url("../fonts/TT Ramillas Trial Medium Italic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Ramillas";
+  src: local("TT Ramillas Trial Light"), url("../fonts/TT Ramillas Trial Light.woff2") format("woff2"), url("../fonts/TT Ramillas Trial Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Ramillas";
+  src: local("TT Ramillas Trial Light Italic"), url("../fonts/TT Ramillas Trial Light Italic.woff2") format("woff2"), url("../fonts/TT Ramillas Trial Light Italic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Ramillas";
+  src: local("TT Ramillas Trial ExtraLight"), url("../fonts/TT Ramillas Trial ExtraLight.woff2") format("woff2"), url("../fonts/TT Ramillas Trial ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Ramillas";
+  src: local("TT Ramillas Trial ExtraLight Italic"), url("../fonts/TT Ramillas Trial ExtraLight Italic.woff2") format("woff2"), url("../fonts/TT Ramillas Trial ExtraLight Italic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Ramillas";
+  src: local("TT Ramillas Trial Bold"), url("../fonts/TT Ramillas Trial Bold.woff2") format("woff2"), url("../fonts/TT Ramillas Trial Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Ramillas";
+  src: local("TT Ramillas Trial Bold Italic"), url("../fonts/TT Ramillas Trial Bold Italic.woff2") format("woff2"), url("../fonts/TT Ramillas Trial Bold Italic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Ramillas";
+  src: local("TT Ramillas Trial ExtraBold"), url("../fonts/TT Ramillas Trial ExtraBold.woff2") format("woff2"), url("../fonts/TT Ramillas Trial ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Ramillas";
+  src: local("TT Ramillas Trial ExtraBold Italic"), url("../fonts/TT Ramillas Trial ExtraBold Italic.woff2") format("woff2"), url("../fonts/TT Ramillas Trial ExtraBold Italic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Ramillas";
+  src: local("TT Ramillas Trial ExtraBold"), url("../fonts/TT Ramillas Trial ExtraBold.woff2") format("woff2"), url("../fonts/TT Ramillas Trial ExtraBold.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Ramillas";
+  src: local("TT Ramillas Trial ExtraBold Italic"), url("../fonts/TT Ramillas Trial ExtraBold Italic.woff2") format("woff2"), url("../fonts/TT Ramillas Trial ExtraBold Italic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Drugs";
+  src: local("TT_Drugs_Trial_Regular"), url("../fonts/TT_Drugs_Trial_Regular.woff2") format("woff2"), url("../fonts/TT_Drugs_Trial_Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Drugs";
+  src: local("TT_Drugs_Trial_Italic"), url("../fonts/TT_Drugs_Trial_Italic.woff2") format("woff2"), url("../fonts/TT_Drugs_Trial_Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Drugs";
+  src: local("TT_Drugs_Trial_Thin"), url("../fonts/TT_Drugs_Trial_Thin.woff2") format("woff2"), url("../fonts/TT_Drugs_Trial_Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Drugs";
+  src: local("TT_Drugs_Trial_Thin_Italic"), url("../fonts/TT_Drugs_Trial_Thin_Italic.woff2") format("woff2"), url("../fonts/TT_Drugs_Trial_Thin_Italic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Drugs";
+  src: local("TT_Drugs_Trial_Medium"), url("../fonts/TT_Drugs_Trial_Medium.woff2") format("woff2"), url("../fonts/TT_Drugs_Trial_Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Drugs";
+  src: local("TT_Drugs_Trial_Medium_Italic"), url("../fonts/TT_Drugs_Trial_Medium_Italic.woff2") format("woff2"), url("../fonts/TT_Drugs_Trial_Medium_Italic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Drugs";
+  src: local("TT_Drugs_Trial_Light"), url("../fonts/TT_Drugs_Trial_Light.woff2") format("woff2"), url("../fonts/TT_Drugs_Trial_Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Drugs";
+  src: local("TT_Drugs_Trial_Light_Italic"), url("../fonts/TT_Drugs_Trial_Light_Italic.woff2") format("woff2"), url("../fonts/TT_Drugs_Trial_Light_Italic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Drugs";
+  src: local("TT_Drugs_Trial_DemiBold"), url("../fonts/TT_Drugs_Trial_DemiBold.woff2") format("woff2"), url("../fonts/TT_Drugs_Trial_DemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Drugs";
+  src: local("TT_Drugs_Trial_DemiBold_Italic"), url("../fonts/TT_Drugs_Trial_DemiBold_Italic.woff2") format("woff2"), url("../fonts/TT_Drugs_Trial_DemiBold_Italic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Drugs";
+  src: local("TT_Drugs_Trial_Bold"), url("../fonts/TT_Drugs_Trial_Bold.woff2") format("woff2"), url("../fonts/TT_Drugs_Trial_Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Drugs";
+  src: local("TT_Drugs_Trial_Bold_Italic"), url("../fonts/TT_Drugs_Trial_Bold_Italic.woff2") format("woff2"), url("../fonts/TT_Drugs_Trial_Bold_Italic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Drugs";
+  src: local("TT_Drugs_Trial_ExtraBold"), url("../fonts/TT_Drugs_Trial_ExtraBold.woff2") format("woff2"), url("../fonts/TT_Drugs_Trial_ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Drugs";
+  src: local("TT_Drugs_Trial_ExtraBold_Italic"), url("../fonts/TT_Drugs_Trial_ExtraBold_Italic.woff2") format("woff2"), url("../fonts/TT_Drugs_Trial_ExtraBold_Italic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Drugs";
+  src: local("TT_Drugs_Trial_Black"), url("../fonts/TT_Drugs_Trial_Black.woff2") format("woff2"), url("../fonts/TT_Drugs_Trial_Black.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Drugs";
+  src: local("TT_Drugs_Trial_Black_Italic"), url("../fonts/TT_Drugs_Trial_Black_Italic.woff2") format("woff2"), url("../fonts/TT_Drugs_Trial_Black_Italic.woff") format("woff");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+body {
+  --container: 50px;
+  --sectionMargin: 120px;
+  --containerFull: calc((100vw - 1340px) / 2);
+  leading-trim: both;
+  text-edge: cap;
+}
+@media (max-width: 1024px) {
+  body {
+    --container: 16px;
+    --sectionMargin: 70px;
+  }
+}
+@media (max-width: 568px) {
+  body {
+    --container: 12px;
+    --sectionMargin: 60px;
+  }
+}
+
+.collapse:not(.collapse_show) {
+  display: none;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #f8f4e8;
+  font-family: "TT Drugs";
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: var(--headerHeight);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--container);
+}
+
+.collapse:not(.collapse_show) {
+  display: none;
+}
+
+.circle {
+  --size: 32px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 var(--size);
+          flex: 0 0 var(--size);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+label {
+  cursor: pointer;
+}
+
+.h1 {
+  /* 1440/H1 */
+  font-family: "TT Drugs";
+  font-size: 75px;
+  font-weight: 400;
+  line-height: 130%; /* 97.5px */
+}
+@media (max-width: 1024px) {
+  .h1 {
+    /* 768/H1 medium */
+    font-family: "TT Drugs";
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 120%; /* 48px */
+  }
+}
+@media (max-width: 568px) {
+  .h1 {
+    /* 390/H1 */
+    font-family: "TT Drugs";
+    font-size: 33px;
+    font-weight: 500;
+    line-height: 120%; /* 39.6px */
+  }
+}
+
+.h2 {
+  /* 1440/H2 */
+  font-family: "TT Drugs";
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 110%; /* 55px */
+}
+@media (max-width: 1024px) {
+  .h2 {
+    /* 768/Decor H2 regular */
+    font-family: "TT Drugs";
+    font-size: 28px;
+    line-height: 130%; /* 36.4px */
+  }
+}
+@media (max-width: 568px) {
+  .h2 {
+    /* 390/Decor H2 regular */
+    font-family: "TT Drugs";
+    font-size: 24px;
+    line-height: 130%; /* 31.2px */
+  }
+}
+
+.h3 {
+  font-family: "TT Ramillas";
+  font-size: 35px;
+  line-height: 130%; /* 45.5px */
+}
+@media (max-width: 1024px) {
+  .h3 {
+    font-family: "TT Ramillas";
+    font-size: 28px;
+    line-height: 130%; /* 28.6px */
+  }
+}
+@media (max-width: 568px) {
+  .h3 {
+    /* 390/Decor H3 regular */
+    font-family: "TT Ramillas";
+    font-size: 24px;
+    line-height: 130%; /* 28.6px */
+  }
+}
+
+.h4 {
+  /* 1440/Decor H4 regular */
+  font-family: "TT Ramillas";
+  font-size: 28px;
+  line-height: 120%; /* 33.6px */
+}
+@media (max-width: 1024px) {
+  .h4 {
+    /* 768/H4 medium CAPS */
+    font-family: "TT Ramillas";
+    font-size: 22px;
+    font-weight: 500;
+  }
+}
+@media (max-width: 568px) {
+  .h4 {
+    /* 390/Decor H5 regular */
+    font-family: "TT Ramillas";
+    font-size: 22px;
+    line-height: 140%; /* 18.2px */
+  }
+}
+
+.h5 {
+  /* 1440/H5 medium */
+  font-family: "TT Drugs";
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.h6 {
+  /* 1440/H6 medium CAPS */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.slider-btn {
+  --size: 54px;
+  background: #f3f3f3;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider-btn.swiper-button-disabled {
+  opacity: 0;
+}
+.slider-btn svg {
+  width: 16px;
+  height: 16px;
+}
+.slider-btn::after {
+  display: none;
+}
+
+.home-about {
+  position: relative;
+}
+.home-about__bg {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home-about__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 1;
+  color: #f8f4e8;
+  padding-top: 110px;
+  padding-bottom: 83px;
+}
+@media (max-width: 1024px) {
+  .home-about__wrapper {
+    padding-top: 60px;
+    padding-bottom: 92px;
+  }
+}
+@media (max-width: 568px) {
+  .home-about__wrapper {
+    padding-top: 44px;
+    padding-bottom: 73px;
+    padding-left: var(--container);
+    padding-right: var(--container);
+  }
+}
+.home-about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  max-width: 720px;
+}
+@media (max-width: 1024px) {
+  .home-about__content {
+    max-width: 574px;
+  }
+}
+.home-about__label {
+  /* 1440/H6 medium CAPS */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .home-about__label {
+    /* 768/H5 medium CAPS */
+    font-family: "TT Drugs";
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+@media (max-width: 568px) {
+  .home-about__label {
+    /* 1440/H6 medium CAPS */
+    font-family: "TT Drugs";
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+.home-about__title {
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+@media (max-width: 1024px) {
+  .home-about__title {
+    margin-top: 32px;
+  }
+}
+.home-about__link {
+  color: #f8f4e8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  /* 1440/Body 6 medium */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+}
+.home-about__link .circle {
+  --size: 32px;
+  border: 1px solid #f8f4e8;
+}
+.home-about__image {
+  margin-top: 122px;
+  margin-bottom: 69px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 348px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.home-about__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .home-about__image {
+    max-width: 366px;
+    margin-top: 40px;
+    margin-bottom: 3px;
+  }
+}
+@media (max-width: 1024px) {
+  .home-about__image {
+    max-width: 246px;
+  }
+}
+.home-about__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  text-align: center;
+}
+.home-about__footer p {
+  max-width: 446px;
+}
+.home-about__footer .circle {
+  --size: 10px;
+  background-color: #f8f4e8;
+  translate: 0 12px;
+}
+
+.home-categories {
+  overflow: hidden;
+}
+.home-categories__wrapper {
+  padding-top: 50px;
+  padding-bottom: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 45px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 1024px) {
+  .home-categories__wrapper {
+    gap: 36px;
+    padding: 70px 0;
+  }
+}
+@media (max-width: 568px) {
+  .home-categories__wrapper {
+    gap: 28px;
+    padding: 60px 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
+.home-categories__label {
+  text-transform: uppercase;
+  text-align: center;
+  /* 1440/H6 medium CAPS */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 500;
+}
+@media (max-width: 1024px) {
+  .home-categories__label {
+    /* 768/H5 medium CAPS */
+    font-family: "TT Drugs";
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+@media (max-width: 568px) {
+  .home-categories__label {
+    /* 1440/H6 medium CAPS */
+    font-family: "TT Drugs";
+    font-size: 12px;
+    font-weight: 500;
+    text-align: left;
+  }
+}
+.home-categories__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 0 100px;
+  width: 100%;
+}
+.home-categories__list > li {
+  width: 100%;
+}
+.home-categories__list a {
+  width: 100%;
+  color: #949698;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (hover: hover) {
+  .home-categories__list a:hover img {
+    opacity: 1;
+  }
+}
+.home-categories__list a img {
+  position: absolute;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
+  pointer-events: none;
+  top: 50%;
+  translate: 0 -50%;
+}
+.home-categories__list a img:nth-child(1) {
+  left: 0;
+}
+.home-categories__list a img:last-child {
+  right: 0;
+}
+.home-categories__list a p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+.home-categories__list a sup {
+  /* 1440/Body 4 regular */
+  font-family: "TT Ramillas";
+  font-size: 16px;
+  line-height: 140%; /* 22.4px */
+}
+@media (max-width: 1024px) {
+  .home-categories__list a sup {
+    /* 1440/Body 4 regular */
+    font-family: "TT Drugs";
+    font-size: 12px;
+    line-height: 140%; /* 22.4px */
+  }
+}
+@media (max-width: 568px) {
+  .home-categories__list a sup {
+    font-size: 12px;
+  }
+}
+@media (hover: hover) {
+  .home-categories__list a:hover {
+    color: #202929;
+  }
+}
+@media (max-width: 1024px) {
+  .home-categories__list {
+    padding: 0;
+    gap: 36px;
+  }
+  .home-categories__list a p {
+    gap: 6px;
+  }
+  .home-categories__list a span {
+    color: #202929;
+    font-family: "TT Ramillas";
+    font-size: 28px;
+    line-height: 130%; /* 28.6px */
+  }
+  .home-categories__list a sup {
+    /* 1440/Body 4 regular */
+    font-family: "TT Drugs";
+    font-size: 12px;
+    line-height: 140%; /* 22.4px */
+  }
+}
+@media (max-width: 568px) {
+  .home-categories__list {
+    text-align: left;
+    gap: 16px;
+  }
+  .home-categories__list a {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 16px;
+  }
+  .home-categories__list a img {
+    opacity: 1;
+    position: relative;
+    top: unset;
+    left: unset;
+    right: unset;
+    translate: unset;
+    width: 50px;
+    height: 48px;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50px;
+            flex: 0 0 50px;
+  }
+  .home-categories__list a img:last-child {
+    display: none;
+  }
+  .home-categories__list a span {
+    /* 390/Decor H3 regular */
+    font-family: "TT Ramillas";
+    font-size: 24px;
+    line-height: 130%; /* 28.6px */
+  }
+  .home-categories__list a sup {
+    /* 1440/Body 6 medium */
+    font-family: "TT Drugs";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 120%; /* 16.8px */
+  }
+}
+
+.home-collections {
+  overflow: hidden;
+  padding-bottom: 120px;
+}
+.home-collections__wrapper > .home-about__link {
+  display: none;
+}
+@media (max-width: 568px) {
+  .home-collections__wrapper > .home-about__link {
+    margin-top: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 48px;
+    width: 100%;
+    border-radius: 50px;
+    border: 1px solid #949698;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 12px;
+    color: #202929;
+  }
+  .home-collections__wrapper > .home-about__link .circle {
+    --size: 12px;
+    border: unset !important;
+  }
+  .home-collections__wrapper > .home-about__link .circle svg path {
+    stroke: #202929;
+  }
+}
+.home-collections__header {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.home-collections__header .home-about__link {
+  color: #202929;
+}
+@media (max-width: 568px) {
+  .home-collections__header .home-about__link {
+    display: none;
+  }
+}
+.home-collections__header .home-about__link .circle {
+  border-color: #949698;
+}
+.home-collections__header .home-about__link .circle svg path {
+  stroke: #202929;
+}
+.home-collections__main {
+  position: relative;
+}
+.home-collections__main .swiper-slide {
+  max-width: 437px;
+}
+@media (max-width: 1024px) {
+  .home-collections__main .swiper-slide {
+    max-width: 363px;
+  }
+}
+@media (max-width: 1024px) {
+  .home-collections__main .slider-btn {
+    display: none;
+  }
+}
+.home-collections__main .swiper-pagination {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .home-collections__main .swiper-pagination {
+    display: block;
+    width: 196px;
+    top: unset;
+    bottom: -32px;
+    left: 50%;
+    translate: -50% 0;
+    height: 1px;
+    background: #d9d9d9;
+  }
+  .home-collections__main .swiper-pagination .swiper-pagination-progressbar-fill {
+    background: #adadad;
+  }
+}
+.home-collections__main .swiper {
+  margin-left: calc(-1 * var(--containerFull));
+  margin-right: calc(-1 * var(--containerFull));
+  padding-left: calc(1 * var(--containerFull));
+  padding-right: calc(1 * var(--containerFull));
+  width: 100vw;
+}
+@media (max-width: 1440px) {
+  .home-collections__main .swiper {
+    margin-left: calc(-1 * var(--container));
+    margin-right: calc(-1 * var(--container));
+    padding-left: calc(1 * var(--container));
+    padding-right: calc(1 * var(--container));
+  }
+}
+.home-collection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 72px;
+}
+.home-collection__image {
+  position: relative;
+}
+.home-collection__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home-collection__gallery {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  top: 100%;
+  left: 0;
+  translate: 0 -50%;
+  height: 95px;
+}
+.home-collection__gallery li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 83px;
+          flex: 0 0 83px;
+  height: 100%;
+  padding: 8px;
+  border-radius: 100px;
+  background: rgba(255, 254, 251, 0.75);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.home-collection__gallery li.circle {
+  -webkit-box-flex: 0 !important;
+      -ms-flex: 0 0 43px !important;
+          flex: 0 0 43px !important;
+  height: 43px !important;
+  /* 1440/Body small */
+  font-family: "TT Drugs";
+  font-size: 12px;
+  color: #949698;
+}
+.home-collection__gallery li img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 100px;
+}
+@media (max-width: 1024px) {
+  .home-collection__gallery {
+    height: 81px;
+  }
+  .home-collection__gallery li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 66px;
+            flex: 0 0 66px;
+  }
+}
+.home-collection__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  padding-left: 15px;
+}
+@media (max-width: 1024px) {
+  .home-collection__main {
+    padding-left: 12px;
+  }
+}
+.home-collection__main .circle {
+  --size: 54px;
+  border: 1px solid #949698;
+}
+.home-collection__main .circle svg path {
+  stroke: #202929;
+}
+@media (max-width: 1024px) {
+  .home-collection__main .circle {
+    --size: 40px;
+  }
+}
+.home-collection__info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  color: #202929;
+}
+.home-collection__title {
+  /* 1440/Decor H4 regular */
+  font-family: "TT Ramillas";
+  font-size: 28px;
+  line-height: 120%; /* 33.6px */
+}
+@media (max-width: 1024px) {
+  .home-collection__title {
+    /* 390/Decor H5 regular */
+    font-family: "TT Ramillas";
+    font-size: 22px;
+    line-height: 140%; /* 18.2px */
+  }
+}
+.home-collection__subtitle {
+  /* 1440/Body 7 regular */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  line-height: 130%; /* 18.2px */
+}
+@media (max-width: 1024px) {
+  .home-collection__subtitle {
+    /* 1440/Body 6 medium */
+    font-family: "TT Drugs";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 120%; /* 16.8px */
+  }
+}
+
+.products-section {
+  padding-bottom: 120px;
+}
+@media (max-width: 1024px) {
+  .products-section {
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 568px) {
+  .products-section {
+    padding-bottom: 60px;
+  }
+}
+.products-section__wrapper > .home-about__link {
+  display: none;
+}
+@media (max-width: 568px) {
+  .products-section__wrapper > .home-about__link {
+    margin-top: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 48px;
+    width: 100%;
+    border-radius: 50px;
+    border: 1px solid #949698;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 12px;
+    color: #202929;
+  }
+  .products-section__wrapper > .home-about__link .circle {
+    --size: 12px;
+    border: unset !important;
+  }
+  .products-section__wrapper > .home-about__link .circle svg path {
+    stroke: #202929;
+  }
+}
+.products-section__header {
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.products-section__header .home-about__link {
+  color: #202929;
+}
+@media (max-width: 568px) {
+  .products-section__header .home-about__link {
+    display: none;
+  }
+}
+.products-section__header .home-about__link .circle {
+  border-color: #949698;
+}
+.products-section__header .home-about__link .circle svg path {
+  stroke: #202929;
+}
+.products-section__filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+}
+.products-section__filters input {
+  display: none;
+}
+.products-section__filters label {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  color: #949698;
+}
+.products-section__filters label:has(input:checked) {
+  color: #202929;
+}
+@media (hover: hover) {
+  .products-section__filters label:hover {
+    color: #202929;
+  }
+}
+.products-section__main {
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .products-section__main .slider-btn {
+    display: none;
+  }
+}
+.products-section__main .swiper-pagination {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .products-section__main .swiper-pagination {
+    display: block;
+    width: 196px;
+    top: unset;
+    bottom: -32px;
+    left: 50%;
+    translate: -50% 0;
+    height: 1px;
+    background: #d9d9d9;
+  }
+  .products-section__main .swiper-pagination .swiper-pagination-progressbar-fill {
+    background: #adadad;
+  }
+}
+@media (max-width: 1024px) {
+  .products-section__main .swiper {
+    margin-left: calc(-1 * var(--container));
+    margin-right: calc(-1 * var(--container));
+    padding-left: calc(1 * var(--container));
+    padding-right: calc(1 * var(--container));
+    width: 100vw;
+  }
+}
+@media (max-width: 568px) {
+  .products-section__main .swiper-slide {
+    max-width: 176px;
+  }
+}
+
+.product-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .product-card {
+    gap: 12px;
+  }
+}
+.product-card__image {
+  background-color: rgba(255, 254, 251, 0.7490196078);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  border-radius: 6px;
+  height: 440px;
+}
+.product-card__image img {
+  max-width: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 1024px) {
+  .product-card__image {
+    height: 250px;
+  }
+}
+.product-card__header {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+}
+@media (max-width: 1024px) {
+  .product-card__header {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+  }
+}
+.product-card__banners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.product-card__banners li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 6px 8px;
+  border-radius: 5px;
+  background-color: #0f6062;
+  color: white;
+  /* 1440/Body 7 regular */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  line-height: 130%; /* 18.2px */
+}
+@media (max-width: 1024px) {
+  .product-card__banners {
+    padding: 5px 6px;
+    /* 1440/Body 6 medium */
+    font-family: "TT Drugs";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 120%; /* 16.8px */
+  }
+}
+.product-card__like svg path {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  stroke: #949698;
+}
+@media (hover: hover) {
+  .product-card__like svg:hover path {
+    stroke: #202929;
+  }
+}
+.product-card__colors {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+}
+.product-card__colors input {
+  display: none;
+}
+.product-card__colors label {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 18px;
+  height: 18px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 18px;
+          flex: 0 0 18px;
+  padding: 3px;
+  border: 1px solid transparent;
+}
+.product-card__colors label .circle {
+  --size: 18px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.product-card__colors label:has(input:checked) {
+  border-color: #949698;
+}
+.product-card__colors label:has(input:checked) .circle {
+  --size: 14px;
+}
+@media (max-width: 1024px) {
+  .product-card__colors {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+  }
+}
+.product-card__main {
+  padding-left: 15px;
+  color: #202929;
+}
+@media (max-width: 1024px) {
+  .product-card__main {
+    padding-left: 10px;
+  }
+}
+.product-card__title {
+  leading-trim: both;
+  text-edge: cap;
+  /* 1440/Decor Body 3 regular */
+  font-family: "TT Ramillas";
+  font-size: 16px;
+  line-height: 130%; /* 20.8px */
+}
+@media (max-width: 1024px) {
+  .product-card__title {
+    leading-trim: both;
+    text-edge: cap;
+    /* 390/Body 3 regular */
+    font-family: "TT Ramillas";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 16.8px */
+  }
+}
+.product-card__descripition {
+  margin-top: 12px;
+  margin-bottom: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block; /* for inline elements e.g. span, strong, em etc */
+  /* 1440/Body 7 regular */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  line-height: 130%; /* 18.2px */
+}
+@media (max-width: 1024px) {
+  .product-card__descripition {
+    /* 1440/Body 6 medium */
+    font-family: "TT Drugs";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 120%; /* 16.8px */
+    margin: 10px 0;
+  }
+}
+.product-card__price {
+  /* 1440/Body 5 demibold */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 140%; /* 19.6px */
+}
+@media (max-width: 1024px) {
+  .product-card__price {
+    /* 1440/Body 5 demibold */
+    font-family: "TT Drugs";
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 140%; /* 19.6px */
+  }
+}

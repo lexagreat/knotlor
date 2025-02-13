@@ -1,0 +1,129 @@
+.home-about {
+   // .home-about__bg
+   position: relative;
+
+   &__bg {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   // .home-about__wrapper
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      color: $romance;
+      padding-top: 110px;
+      padding-bottom: 83px;
+      @media (max-width: $tablet) {
+         padding-top: 60px;
+         padding-bottom: 92px;
+      }
+      @media (max-width: $mobile) {
+         padding-top: 44px;
+         padding-bottom: 73px;
+         padding-left: var(--container);
+         padding-right: var(--container);
+      }
+   }
+
+   // .home-about__content
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 720px;
+      @media (max-width: $tablet) {
+         max-width: 574px;
+      }
+   }
+
+   // .home-about__label
+
+   &__label {
+      @include h6;
+      text-transform: uppercase;
+      @media (max-width: $tablet) {
+         @include h5-tablet;
+      }
+      @media (max-width: $mobile) {
+         @include h6-mobile;
+      }
+   }
+
+   // .home-about__title
+
+   &__title {
+      margin-top: 40px;
+      margin-bottom: 32px;
+      @media (max-width: $tablet) {
+         margin-top: 32px;
+      }
+   }
+
+   // .home-about__link
+
+   &__link {
+      color: $romance;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      @include body-6;
+      .circle {
+         --size: 32px;
+         border: 1px solid $romance;
+      }
+   }
+
+   // .home-about__image
+
+   &__image {
+      margin-top: 122px;
+      margin-bottom: 69px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 348px;
+      margin-left: auto;
+      margin-right: auto;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+      @media (max-width: $tablet) {
+         max-width: 366px;
+         margin-top: 40px;
+         margin-bottom: 3px;
+      }
+      @media (max-width: $tablet) {
+         max-width: 246px;
+      }
+   }
+
+   // .home-about__footer
+
+   &__footer {
+      display: flex;
+      gap: 16px;
+      text-align: center;
+      p {
+         max-width: 446px;
+      }
+      .circle {
+         --size: 10px;
+         background-color: $romance;
+         translate: 0 12px;
+      }
+   }
+}

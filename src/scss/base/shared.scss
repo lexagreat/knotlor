@@ -1,0 +1,96 @@
+.collapse:not(.collapse_show) {
+   display: none;
+}
+
+.wrapper {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   background: $romance;
+   font-family: $fontDrugs;
+}
+.main {
+   flex: 1;
+   padding-top: var(--headerHeight);
+}
+.container {
+   max-width: 1440px;
+   margin: 0 auto;
+   padding: var(--container);
+}
+.collapse:not(.collapse_show) {
+   display: none;
+}
+.circle {
+   --size: 32px;
+   flex: 0 0 var(--size);
+   width: var(--size);
+   height: var(--size);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+label {
+   cursor: pointer;
+}
+
+.h1 {
+   @include h1;
+   @media (max-width: $tablet) {
+      @include h1-tablet;
+   }
+   @media (max-width: $mobile) {
+      @include h1-mobile;
+   }
+}
+.h2 {
+   @include h2;
+   @media (max-width: $tablet) {
+      @include h2-tablet;
+   }
+   @media (max-width: $mobile) {
+      @include h2-mobile;
+   }
+}
+.h3 {
+   @include h3;
+   @media (max-width: $tablet) {
+      @include h3-tablet;
+   }
+   @media (max-width: $mobile) {
+      @include h3-mobile;
+   }
+}
+.h4 {
+   @include h4;
+   @media (max-width: $tablet) {
+      @include h4-tablet;
+   }
+   @media (max-width: $mobile) {
+      @include h4-mobile;
+   }
+}
+.h5 {
+   @include h5;
+}
+.h6 {
+   @include h6;
+}
+
+.slider-btn {
+   --size: 54px;
+   background: $grey-light;
+   transition: $transition;
+   &.swiper-button-disabled {
+      opacity: 0;
+   }
+   svg {
+      width: 16px;
+      height: 16px;
+   }
+   &::after {
+      display: none;
+   }
+}

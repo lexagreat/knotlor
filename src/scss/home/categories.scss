@@ -1,0 +1,146 @@
+.home-categories {
+   // .home-categories__wrapper
+   overflow: hidden;
+   &__wrapper {
+      padding-top: 50px;
+      padding-bottom: 70px;
+      display: flex;
+      flex-direction: column;
+      gap: 45px;
+      align-items: center;
+      @media (max-width: $tablet) {
+         gap: 36px;
+         padding: 70px 0;
+      }
+      @media (max-width: $mobile) {
+         gap: 28px;
+         padding: 60px 0;
+         align-items: start;
+      }
+   }
+
+   // .home-categories__label
+
+   &__label {
+      text-transform: uppercase;
+      text-align: center;
+      @include h6;
+      @media (max-width: $tablet) {
+         @include h5-tablet;
+      }
+      @media (max-width: $mobile) {
+         @include h6-mobile;
+         text-align: left;
+      }
+   }
+
+   // .home-categories__list
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      text-align: center;
+      padding: 0 100px;
+      width: 100%;
+      & > li {
+         width: 100%;
+      }
+      a {
+         width: 100%;
+         color: $grey-dark;
+         transition: $transition;
+         position: relative;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         @media (hover: hover) {
+            &:hover {
+               img {
+                  opacity: 1;
+               }
+            }
+         }
+         img {
+            position: absolute;
+            transition: $transition;
+            opacity: 0;
+            pointer-events: none;
+            top: 50%;
+            translate: 0 -50%;
+            &:nth-child(1) {
+               left: 0;
+            }
+            &:last-child {
+               right: 0;
+            }
+         }
+         p {
+            display: flex;
+            gap: 8px;
+         }
+         sup {
+            @include body-4;
+            @media (max-width: $tablet) {
+               @include body-4-tablet;
+            }
+            @media (max-width: $mobile) {
+               font-size: 12px;
+            }
+         }
+         @media (hover: hover) {
+            &:hover {
+               color: $black;
+            }
+         }
+      }
+      @media (max-width: $tablet) {
+         padding: 0;
+         gap: 36px;
+         a {
+            p {
+               gap: 6px;
+            }
+            span {
+               color: $black;
+               @include h3-tablet;
+            }
+            sup {
+               @include body-4-tablet;
+            }
+         }
+      }
+      @media (max-width: $mobile) {
+         text-align: left;
+         gap: 16px;
+         a {
+            justify-content: flex-start;
+            gap: 16px;
+            img {
+               opacity: 1;
+               position: relative;
+               top: unset;
+               left: unset;
+               right: unset;
+               translate: unset;
+               width: 50px;
+               height: 48px;
+               border-radius: 5px;
+               overflow: hidden;
+               flex: 0 0 50px;
+
+               &:last-child {
+                  display: none;
+               }
+            }
+            span {
+               @include h3-mobile;
+            }
+            sup {
+               @include body-6-mobile;
+            }
+         }
+      }
+   }
+}

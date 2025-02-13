@@ -1,0 +1,274 @@
+$tablet: 1024px;
+$mobile: 568px;
+$fontRamilas: "TT Ramillas";
+$fontDrugs: "TT Drugs";
+
+$transition: 0.4s;
+body {
+   --container: 50px;
+   --sectionMargin: 120px;
+   --containerFull: calc((100vw - 1340px) / 2);
+   @media (max-width: $tablet) {
+      --container: 16px;
+      --sectionMargin: 70px;
+   }
+   @media (max-width: $mobile) {
+      --container: 12px;
+      --sectionMargin: 60px;
+   }
+   leading-trim: both;
+   text-edge: cap;
+}
+
+$white: white;
+$black: #202929;
+$blue-stone: #0f6062;
+$cyprus: #0a4a4b;
+$romance: #f8f4e8;
+$iceberg: #c7dcd5;
+$wheatfield: #dfd5bc;
+$pavlova: #bba889;
+$grey-light: #f3f3f3;
+$grey: #d4d4d4;
+$grey-dark: #949698;
+
+@mixin h1 {
+   /* 1440/H1 */
+   font-family: $fontDrugs;
+   font-size: 75px;
+   font-weight: 400;
+   line-height: 130%; /* 97.5px */
+}
+@mixin h1-tablet {
+   /* 768/H1 medium */
+   font-family: $fontDrugs;
+   font-size: 40px;
+   font-weight: 500;
+   line-height: 120%; /* 48px */
+}
+@mixin h1-mobile {
+   /* 390/H1 */
+   font-family: $fontDrugs;
+   font-size: 33px;
+   font-weight: 500;
+   line-height: 120%; /* 39.6px */
+}
+@mixin h2 {
+   /* 1440/H2 */
+   font-family: $fontDrugs;
+   font-size: 50px;
+   font-weight: 500;
+   line-height: 110%; /* 55px */
+}
+@mixin h2-tablet {
+   /* 768/Decor H2 regular */
+   font-family: $fontDrugs;
+   font-size: 28px;
+   line-height: 130%; /* 36.4px */
+}
+@mixin h2-mobile {
+   /* 390/Decor H2 regular */
+   font-family: $fontDrugs;
+   font-size: 24px;
+   line-height: 130%; /* 31.2px */
+}
+@mixin h3 {
+   font-family: $fontRamilas;
+   font-size: 35px;
+   line-height: 130%; /* 45.5px */
+}
+@mixin h3-tablet {
+   font-family: $fontRamilas;
+   font-size: 28px;
+   line-height: 130%; /* 28.6px */
+}
+@mixin h3-mobile {
+   /* 390/Decor H3 regular */
+   font-family: $fontRamilas;
+   font-size: 24px;
+   line-height: 130%; /* 28.6px */
+}
+@mixin h4 {
+   /* 1440/Decor H4 regular */
+   font-family: $fontRamilas;
+   font-size: 28px;
+   line-height: 120%; /* 33.6px */
+}
+@mixin h4-tablet {
+   /* 768/H4 medium CAPS */
+   font-family: $fontRamilas;
+   font-size: 22px;
+   font-weight: 500;
+}
+@mixin h4-mobile {
+   /* 390/Decor H5 regular */
+   font-family: $fontRamilas;
+   font-size: 22px;
+   line-height: 140%; /* 18.2px */
+}
+@mixin h5 {
+   /* 1440/H5 medium */
+   font-family: $fontDrugs;
+   font-size: 18px;
+   font-weight: 500;
+}
+@mixin h5-tablet {
+   /* 768/H5 medium CAPS */
+   font-family: $fontDrugs;
+   font-size: 13px;
+   font-weight: 500;
+   text-transform: uppercase;
+}
+@mixin h5-mobile {
+   /* 390/H5 medium */
+   font-family: $fontDrugs;
+   font-size: 16px;
+   font-weight: 500;
+}
+@mixin h6 {
+   /* 1440/H6 medium CAPS */
+   font-family: $fontDrugs;
+   font-size: 14px;
+   font-weight: 500;
+}
+@mixin h6-mobile {
+   /* 1440/H6 medium CAPS */
+   font-family: $fontDrugs;
+   font-size: 12px;
+   font-weight: 500;
+}
+@mixin body-1 {
+   /* 1440/Body 1 regular */
+   font-family: $fontDrugs;
+   font-size: 20px;
+   line-height: 140%; /* 28px */
+}
+@mixin body-1-tablet {
+   /* 768/Body 1 regular */
+   font-family: $fontDrugs;
+   font-size: 17px;
+   line-height: 140%; /* 23.8px */
+}
+@mixin body-1-mobile {
+   /* 390/Body 1 regular */
+   font-family: $fontDrugs;
+   font-size: 17px;
+   line-height: 140%; /* 23.8px */
+}
+@mixin body-2 {
+   leading-trim: both;
+   text-edge: cap;
+
+   /* 1440/Body 2 medium */
+   font-family: $fontDrugs;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 140%; /* 22.4px */
+}
+@mixin body-2-tablet {
+   leading-trim: both;
+   text-edge: cap;
+
+   /* 768/Body 2 medium */
+   font-family: $fontDrugs;
+   font-size: 14px;
+   font-weight: 500;
+   line-height: 140%; /* 19.6px */
+}
+@mixin body-2-mobile {
+   leading-trim: both;
+   text-edge: cap;
+
+   /* 390/Body 2 demibold */
+   font-family: $fontDrugs;
+   font-size: 12px;
+   font-weight: 600;
+   line-height: 140%; /* 16.8px */
+}
+@mixin body-3 {
+   leading-trim: both;
+   text-edge: cap;
+
+   /* 1440/Decor Body 3 regular */
+   font-family: $fontRamilas;
+   font-size: 16px;
+   line-height: 130%; /* 20.8px */
+}
+@mixin body-3-tablet {
+   leading-trim: both;
+   text-edge: cap;
+
+   /* 1440/Decor Body 3 regular */
+   font-family: $fontDrugs;
+   font-size: 14px;
+   line-height: 130%; /* 20.8px */
+}
+@mixin body-3-mobile {
+   leading-trim: both;
+   text-edge: cap;
+
+   /* 390/Body 3 regular */
+   font-family: $fontRamilas;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 140%; /* 16.8px */
+}
+@mixin body-4 {
+   /* 1440/Body 4 regular */
+   font-family: $fontRamilas;
+   font-size: 16px;
+   line-height: 140%; /* 22.4px */
+}
+@mixin body-4-tablet {
+   /* 1440/Body 4 regular */
+   font-family: $fontDrugs;
+   font-size: 12px;
+   line-height: 140%; /* 22.4px */
+}
+@mixin body-4-mobile {
+   /* 1440/Body 4 regular */
+   font-family: $fontRamilas;
+   font-size: 14px;
+   line-height: 140%; /* 22.4px */
+}
+@mixin body-5 {
+   /* 1440/Body 5 demibold */
+   font-family: $fontDrugs;
+   font-size: 14px;
+   font-weight: 600;
+   line-height: 140%; /* 19.6px */
+}
+@mixin body-5-mobile {
+   /* 1440/Body 5 demibold */
+   font-family: $fontDrugs;
+   font-size: 12px;
+   font-weight: 600;
+   line-height: 140%; /* 19.6px */
+}
+@mixin body-6 {
+   /* 1440/Body 6 medium */
+   font-family: $fontDrugs;
+   font-size: 14px;
+   font-weight: 500;
+   line-height: 120%; /* 16.8px */
+}
+@mixin body-6-mobile {
+   /* 1440/Body 6 medium */
+   font-family: $fontDrugs;
+   font-size: 12px;
+   font-weight: 400;
+   line-height: 120%; /* 16.8px */
+}
+@mixin body-7 {
+   /* 1440/Body 7 regular */
+   font-family: $fontDrugs;
+   font-size: 14px;
+   line-height: 130%; /* 18.2px */
+}
+@mixin body-small {
+   /* 1440/Body small */
+   font-family: $fontDrugs;
+   font-size: 12px;
+}
