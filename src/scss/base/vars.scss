@@ -5,15 +5,24 @@ $fontDrugs: "TT Drugs";
 
 $transition: 0.4s;
 body {
+   --header: 60px;
    --container: 50px;
    --sectionMargin: 120px;
    --containerFull: calc((100vw - 1340px) / 2);
+   @media (max-width: 1440px) {
+      --containerFull: 50px;
+   }
    @media (max-width: $tablet) {
+      --header: 62px;
+
       --container: 16px;
       --sectionMargin: 70px;
+      --containerFull: 16px;
    }
    @media (max-width: $mobile) {
       --container: 12px;
+      --containerFull: 12px;
+
       --sectionMargin: 60px;
    }
    leading-trim: both;
@@ -103,6 +112,7 @@ $grey-dark: #949698;
 @mixin h4-mobile {
    /* 390/Decor H5 regular */
    font-family: $fontRamilas;
+   font-weight: 400;
    font-size: 22px;
    line-height: 140%; /* 18.2px */
 }

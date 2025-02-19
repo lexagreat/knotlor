@@ -1,0 +1,314 @@
+.footer {
+   background-color: $black;
+   // .footer__wrapper
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+      padding-top: 80px;
+      padding-bottom: 40px;
+      @media (max-width: $tablet) {
+         padding-top: 40px;
+         gap: 32px;
+      }
+   }
+
+   // .footer__upper
+
+   &__upper {
+   }
+
+   // .footer__list
+
+   &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @media (max-width: $tablet) {
+         flex-direction: column;
+         flex-wrap: unset;
+      }
+   }
+
+   // .footer__block
+
+   &__block {
+   }
+   &__mail {
+      flex: 0 0 308px;
+      @media (max-width: $tablet) {
+         flex: unset;
+         margin-bottom: 32px;
+      }
+   }
+   &__contacts {
+      flex: 0 0 205px;
+      @media (max-width: $tablet) {
+         flex: unset;
+         margin-top: 24px;
+      }
+      & > p {
+         @include body-small;
+         color: $grey-dark;
+         display: flex;
+         gap: 4px;
+         &::before {
+            content: "*";
+            font-size: 11px;
+            color: $romance;
+         }
+      }
+   }
+   // .footer__title
+
+   &__title {
+      margin-bottom: 28px;
+      @include h5;
+      color: rgba(248, 244, 232, 0.8);
+
+      @media (max-width: $tablet) {
+         margin-bottom: 20px;
+         @include h5-mobile;
+      }
+   }
+
+   // .footer__main
+
+   &__main {
+      & > p {
+         @include body-7;
+         color: $grey-dark;
+
+         @media (max-width: $tablet) {
+            @include body-6-mobile;
+         }
+      }
+   }
+
+   // .footer__radios
+
+   &__radios {
+      margin: 24px 0;
+      display: flex;
+      gap: 12px;
+      @media (max-width: $tablet) {
+         gap: 20px;
+         margin: 20px 0;
+      }
+      input {
+         display: none;
+      }
+      label {
+         color: #f8f4e8cc;
+         @include body-7;
+         display: flex;
+         gap: 8px;
+         align-items: center;
+         .circle {
+            transition: $transition;
+            --size: 16px;
+            border: 1px solid $grey-dark;
+            position: relative;
+            &::after {
+               transition: $transition;
+               scale: 0;
+               content: "";
+               display: block;
+               width: 12px;
+               height: 12px;
+               border-radius: 50%;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               translate: -50% -50%;
+               background-color: $romance;
+            }
+         }
+         &:has(input:checked) {
+            border-color: $romance;
+            .circle {
+               &::after {
+                  scale: 1;
+               }
+            }
+         }
+         @media (max-width: $tablet) {
+            @include body-6-mobile;
+         }
+      }
+   }
+
+   // .footer__form
+
+   &__form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      & > div {
+         width: 100%;
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         input {
+            flex: 1;
+            height: 50px;
+            padding-left: 16px;
+            @include body-7;
+            color: $romance;
+            border-radius: 5px;
+            border: 1px solid $grey-dark;
+            background-color: transparent;
+            &::placeholder {
+               color: $grey-dark;
+            }
+         }
+         button {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            border: 1px solid $grey;
+         }
+      }
+      p {
+         @include body-small;
+         color: $grey-dark;
+         a {
+            color: #f8f4e8cc;
+         }
+      }
+   }
+
+   // .footer__accordeon
+
+   &__accordeon {
+      @media (max-width: $tablet) {
+         border-top: 1px solid #373737;
+
+         .footer__spoiler {
+            display: none;
+         }
+         &.last {
+            border-bottom: 1px solid #373737;
+         }
+         .footer__title {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0;
+            &.active {
+               &::after {
+                  rotate: 180deg;
+               }
+            }
+            &::after {
+               content: "";
+               transition: $transition;
+               display: block;
+               width: 24px;
+               height: 24px;
+               flex: 0 0 24px;
+               background: url(../img/icons/spoiler.svg) center / contain
+                  no-repeat;
+            }
+         }
+      }
+   }
+
+   // .footer__spoiler
+
+   &__spoiler {
+   }
+
+   // .footer__links
+
+   &__links {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      @include body-7;
+      color: $grey-dark;
+      a {
+         line-height: 1;
+         color: $grey-dark;
+      }
+      @media (max-width: $tablet) {
+         padding-bottom: 16px;
+         @include body-6-mobile;
+      }
+   }
+
+   // .footer__icons
+
+   &__icons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 40px 0;
+      a {
+         flex: 0 0 50px;
+         width: 50px;
+         height: 50px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: 5px;
+         border: 1px solid #535353;
+      }
+      @media (max-width: $mobile) {
+         margin: 28px 0;
+      }
+   }
+
+   // .footer__down
+
+   &__down {
+      white-space: nowrap;
+      padding-top: 14px;
+      border-top: 1px solid #373737;
+      display: flex;
+      align-items: center;
+      @include body-small;
+      color: $grey-dark;
+      justify-content: space-between;
+      @media (max-width: $tablet) {
+         padding-top: 32px;
+         flex-wrap: wrap;
+         row-gap: 20px;
+      }
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 20px;
+      }
+      p {
+         display: flex;
+         align-items: center;
+         gap: 96px;
+         @media (max-width: 700px) {
+            gap: 48px;
+         }
+         @media (max-width: $mobile) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+         }
+      }
+      a {
+         color: $grey-dark;
+      }
+      span {
+         a {
+            color: #f8f4e8cc;
+         }
+         &:last-child {
+            text-align: end;
+         }
+      }
+   }
+}

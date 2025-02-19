@@ -11,15 +11,12 @@
 }
 .main {
    flex: 1;
-   padding-top: var(--headerHeight);
+   padding-top: var(--header);
 }
 .container {
    max-width: 1440px;
    margin: 0 auto;
-   padding: var(--container);
-}
-.collapse:not(.collapse_show) {
-   display: none;
+   padding: 0 var(--container);
 }
 .circle {
    --size: 32px;
@@ -86,11 +83,42 @@ label {
    &.swiper-button-disabled {
       opacity: 0;
    }
+   &.transparent {
+      background: transparent;
+      border: 1px solid $grey-dark;
+      svg path {
+         stroke: white;
+      }
+   }
    svg {
       width: 16px;
       height: 16px;
    }
    &::after {
       display: none;
+   }
+}
+
+.pc {
+   @media (max-width: $tablet) {
+      display: none;
+   }
+}
+.tablet {
+   display: none;
+   @media (max-width: $tablet) {
+      display: block;
+   }
+   @media (max-width: $mobile) {
+      display: none;
+   }
+}
+.mobile {
+   display: none;
+   @media (max-width: $tablet) {
+      display: none;
+   }
+   @media (max-width: $mobile) {
+      display: block;
    }
 }

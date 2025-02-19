@@ -9,9 +9,97 @@
 <body>
    <div class="wrapper">
       @@include('components/_header.html')
-      <main class="main">
+      <main>
          <section class="home-hero">
-
+            <div class="swiper">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide home-hero__slide">
+                     <img class="pc" src="img/home-hero.webp" alt="">
+                     <img class="tablet" src="img/home-hero-tablet.webp" alt="">
+                     <img class="mobile" src="img/home-hero-mobile.webp" alt="">
+                     <div class="container">
+                        <div class="home-hero__wrapper">
+                           <div class="home-hero__info">
+                              <span class="home-hero__category">Muse</span>
+                              <h2 class="home-hero__title h2">Смеситель в ванной</h2>
+                              <span class="home-hero__text">Новинка в нашем интернет-магазине</span>
+                           </div>
+                           <a href="#" class="home-hero__link">В каталог</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide home-hero__slide">
+                     <img class="pc" src="img/home-hero.webp" alt="">
+                     <img class="tablet" src="img/home-hero-tablet.webp" alt="">
+                     <img class="mobile" src="img/home-hero-mobile.webp" alt="">
+                     <div class="container">
+                        <div class="home-hero__wrapper">
+                           <div class="home-hero__info">
+                              <span class="home-hero__category">Muse</span>
+                              <h2 class="home-hero__title h2">Смеситель в ванной</h2>
+                              <span class="home-hero__text">Новинка в нашем интернет-магазине</span>
+                           </div>
+                           <a href="#" class="home-hero__link">В каталог</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide home-hero__slide">
+                     <img class="pc" src="img/home-hero.webp" alt="">
+                     <img class="tablet" src="img/home-hero-tablet.webp" alt="">
+                     <img class="mobile" src="img/home-hero-mobile.webp" alt="">
+                     <div class="container">
+                        <div class="home-hero__wrapper">
+                           <div class="home-hero__info">
+                              <span class="home-hero__category">Muse</span>
+                              <h2 class="home-hero__title h2">Смеситель в ванной</h2>
+                              <span class="home-hero__text">Новинка в нашем интернет-магазине</span>
+                           </div>
+                           <a href="#" class="home-hero__link">В каталог</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="swiper-button-prev slider-btn circle transparent">
+                  <svg style="rotate: 180deg;" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                     viewBox="0 0 16 16" fill="none">
+                     <path
+                        d="M6 3C6 3 7.47161 5.0512 8.47498 6.05859C9.48778 7.07547 11.0583 8.05833 11.0583 8.05833C11.0583 8.05833 8.98781 9.5416 7.97498 10.5586C6.97177 11.5659 6 13.1167 6 13.1167"
+                        stroke="#202929" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                  </svg>
+               </div>
+               <div class="swiper-button-next slider-btn circle transparent">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                     <path
+                        d="M6 3C6 3 7.47161 5.0512 8.47498 6.05859C9.48778 7.07547 11.0583 8.05833 11.0583 8.05833C11.0583 8.05833 8.98781 9.5416 7.97498 10.5586C6.97177 11.5659 6 13.1167 6 13.1167"
+                        stroke="#202929" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                  </svg>
+               </div>
+               <div class="home-hero__pagination">
+                  <div>
+                     <svg class="progress-container" viewBox="0 0 50 50">
+                        <circle cx="25" cy="25" r="22" stroke="white" stroke-width="1" fill="none"
+                           stroke-dasharray="138" stroke-dashoffset="138" class="progress-circle" />
+                     </svg>
+                     <div class="circle"></div>
+                  </div>
+                  <div>
+                     <svg class="progress-container" viewBox="0 0 50 50">
+                        <circle cx="25" cy="25" r="22" stroke="white" stroke-width="1" fill="none"
+                           stroke-dasharray="138" stroke-dashoffset="138" class="progress-circle" />
+                     </svg>
+                     <div class="circle"></div>
+                  </div>
+                  <div>
+                     <svg class="progress-container" viewBox="0 0 50 50">
+                        <circle cx="25" cy="25" r="22" stroke="white" stroke-width="1" fill="none"
+                           stroke-dasharray="138" stroke-dashoffset="138" class="progress-circle" />
+                     </svg>
+                     <div class="circle"></div>
+                  </div>
+               </div>
+            </div>
          </section>
          <section class="home-about">
             <img class="home-about__bg" src="img/home/about-bg.png" alt="">
@@ -814,6 +902,1177 @@
                         </svg>
                      </div>
                   </a>
+               </div>
+            </div>
+         </section>
+         <section class="home-interier">
+            <div class="home-interier__backdrop"></div>
+            <div class="container">
+               <div class="home-interier__wrapper">
+                  <h3 class="home-interier__title h3">Товары в интерьере</h3>
+                  <ul class="home-interier__items">
+                     <li class="home-interier__item">
+                        <div class="home-interier__image">
+                           <img src="img/home/interier1.webp" alt="">
+                           <div class="home-interier__modal"
+                              style="left: calc(113 / 550 * 100%); top:calc(225 / 680 * 100%)">
+                              <div class="home-interier__point circle" data-dot="hint1">
+                              </div>
+                              <div class="interier-hint" data-hint="hint1">
+                                 <button class="interier-hint__close">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <g id="group">
+                                          <path id="Vector" d="M1 11L11 1" stroke="#292D32" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                          <path id="Vector_2" d="M11 11L1 1" stroke="#292D32" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                       </g>
+                                    </svg>
+                                 </button>
+                                 <div class="interier-hint__image">
+                                    <img src="img/product1.webp" alt="">
+                                    <ul class="product-card__colors">
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #A7ABAA;" class="circle"></div>
+                                             <input checked type="radio" name="interier-hint-1" value="0">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #3C4545;" class="circle"></div>
+                                             <input type="radio" name="interier-hint-1" value="1">
+                                          </label>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="interier-hint__main">
+                                    <div class="interier-hint__info">
+                                       <span class="interier-hint__collection">Коллекция Muse</span>
+                                       <p class="interier-hint__title">Душевая система</p>
+                                       <span class="interier-hint__price">7 958 ₽</span>
+                                    </div>
+                                    <button class="interier-hint__like">
+                                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <g id="vuesax/linear/heart">
+                                             <g id="heart">
+                                                <path id="Vector"
+                                                   d="M10.9999 17.3413C10.5351 17.5 9.38747 17.4737 8.99988 17.3413C6.58321 16.5163 1.6665 13.0747 1.6665 7.24134C1.6665 4.66634 3.7415 2.58301 6.29984 2.58301C7.8165 2.58301 9.15817 3.31634 9.99984 4.44967C10.8415 3.31634 12.1915 2.58301 13.6998 2.58301C16.2582 2.58301 18.3332 4.66634 18.3332 7.24134C18.3332 13.0747 13.4165 16.5163 10.9999 17.3413Z"
+                                                   stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                   stroke-linejoin="round" />
+                                             </g>
+                                          </g>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <a href="#" class="interier-hint__link">
+                                    Подробнее
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <g id="arrow-right">
+                                          <path id="Vector"
+                                             d="M5.5 1C5.5 1 6.67729 2.64096 7.47998 3.44687C8.29022 4.26037 9.54667 5.04667 9.54667 5.04667C9.54667 5.04667 7.89025 6.23328 7.07998 7.04687C6.27742 7.85273 5.5 9.09333 5.5 9.09333"
+                                             stroke="#F8F4E8" stroke-miterlimit="10" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                          <path id="Vector_2" d="M0.899902 5H9.0999" stroke="#F8F4E8"
+                                             stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                       </g>
+                                    </svg>
+
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+
+                     </li>
+                     <li class="home-interier__item">
+                        <div class="home-interier__image">
+                           <img src="img/home/interier2.webp" alt="">
+                           <div class="home-interier__modal"
+                              style="left: calc(201 / 436 * 100%); top:calc(240 / 680 * 100%) ">
+                              <div class="home-interier__point circle" data-dot="hint2"></div>
+                              <div class="interier-hint" data-hint="hint2">
+                                 <button class="interier-hint__close">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <g id="group">
+                                          <path id="Vector" d="M1 11L11 1" stroke="#292D32" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                          <path id="Vector_2" d="M11 11L1 1" stroke="#292D32" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                       </g>
+                                    </svg>
+                                 </button>
+                                 <div class="interier-hint__image">
+                                    <img src="img/product1.webp" alt="">
+                                    <ul class="product-card__colors">
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #A7ABAA;" class="circle"></div>
+                                             <input checked type="radio" name="interier-hint-2" value="0">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #3C4545;" class="circle"></div>
+                                             <input type="radio" name="interier-hint-2" value="1">
+                                          </label>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="interier-hint__main">
+                                    <div class="interier-hint__info">
+                                       <span class="interier-hint__collection">Коллекция Muse</span>
+                                       <p class="interier-hint__title">Душевая система с верхним тропическим душем</p>
+                                       <span class="interier-hint__price">7 958 ₽</span>
+                                    </div>
+                                    <button class="interier-hint__like">
+                                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <g id="vuesax/linear/heart">
+                                             <g id="heart">
+                                                <path id="Vector"
+                                                   d="M10.9999 17.3413C10.5351 17.5 9.38747 17.4737 8.99988 17.3413C6.58321 16.5163 1.6665 13.0747 1.6665 7.24134C1.6665 4.66634 3.7415 2.58301 6.29984 2.58301C7.8165 2.58301 9.15817 3.31634 9.99984 4.44967C10.8415 3.31634 12.1915 2.58301 13.6998 2.58301C16.2582 2.58301 18.3332 4.66634 18.3332 7.24134C18.3332 13.0747 13.4165 16.5163 10.9999 17.3413Z"
+                                                   stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                   stroke-linejoin="round" />
+                                             </g>
+                                          </g>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <div class="interier-hint__link" href="#">
+                                    Подробнее
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <g id="arrow-right">
+                                          <path id="Vector"
+                                             d="M5.5 1C5.5 1 6.67729 2.64096 7.47998 3.44687C8.29022 4.26037 9.54667 5.04667 9.54667 5.04667C9.54667 5.04667 7.89025 6.23328 7.07998 7.04687C6.27742 7.85273 5.5 9.09333 5.5 9.09333"
+                                             stroke="#F8F4E8" stroke-miterlimit="10" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                          <path id="Vector_2" d="M0.899902 5H9.0999" stroke="#F8F4E8"
+                                             stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                       </g>
+                                    </svg>
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                     </li>
+                     <li class="home-interier__item">
+                        <div class="home-interier__image">
+                           <img src="img/home/interier3.webp" alt="">
+                           <div class="home-interier__modal top"
+                              style="left: calc(135 / 324 * 100%); top:calc(340 / 680 * 100%) ">
+                              <div class="home-interier__point circle" data-dot="hint3"></div>
+                              <div class="interier-hint" data-hint="hint3">
+                                 <button class="interier-hint__close">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <g id="group">
+                                          <path id="Vector" d="M1 11L11 1" stroke="#292D32" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                          <path id="Vector_2" d="M11 11L1 1" stroke="#292D32" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                       </g>
+                                    </svg>
+                                 </button>
+                                 <div class="interier-hint__image">
+                                    <img src="img/product3.webp" alt="">
+                                    <ul class="product-card__colors">
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #A7ABAA;" class="circle"></div>
+                                             <input checked type="radio" name="interier-hint-3" value="0">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #3C4545;" class="circle"></div>
+                                             <input type="radio" name="interier-hint-3" value="1">
+                                          </label>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="interier-hint__main">
+                                    <div class="interier-hint__info">
+                                       <span class="interier-hint__collection">Коллекция Muse</span>
+                                       <p class="interier-hint__title">Душевая система с верхним тропическим душем</p>
+                                       <span class="interier-hint__price">7 958 ₽</span>
+                                    </div>
+                                    <button class="interier-hint__like">
+                                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <g id="vuesax/linear/heart">
+                                             <g id="heart">
+                                                <path id="Vector"
+                                                   d="M10.9999 17.3413C10.5351 17.5 9.38747 17.4737 8.99988 17.3413C6.58321 16.5163 1.6665 13.0747 1.6665 7.24134C1.6665 4.66634 3.7415 2.58301 6.29984 2.58301C7.8165 2.58301 9.15817 3.31634 9.99984 4.44967C10.8415 3.31634 12.1915 2.58301 13.6998 2.58301C16.2582 2.58301 18.3332 4.66634 18.3332 7.24134C18.3332 13.0747 13.4165 16.5163 10.9999 17.3413Z"
+                                                   stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                   stroke-linejoin="round" />
+                                             </g>
+                                          </g>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <div class="interier-hint__link" href="#">
+                                    Подробнее
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <g id="arrow-right">
+                                          <path id="Vector"
+                                             d="M5.5 1C5.5 1 6.67729 2.64096 7.47998 3.44687C8.29022 4.26037 9.54667 5.04667 9.54667 5.04667C9.54667 5.04667 7.89025 6.23328 7.07998 7.04687C6.27742 7.85273 5.5 9.09333 5.5 9.09333"
+                                             stroke="#F8F4E8" stroke-miterlimit="10" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                          <path id="Vector_2" d="M0.899902 5H9.0999" stroke="#F8F4E8"
+                                             stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                       </g>
+                                    </svg>
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                     </li>
+                     <li class="home-interier__item">
+                        <div class="home-interier__image">
+                           <img src="img/home/interier4.webp" alt="">
+                           <div class="home-interier__modal left"
+                              style="left: calc(571 / 775 * 100%); top:calc(273 / 693 * 100%) ">
+                              <div class="home-interier__point circle" data-dot="hint4"></div>
+                              <div class="interier-hint" data-hint="hint4">
+                                 <button class="interier-hint__close">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <g id="group">
+                                          <path id="Vector" d="M1 11L11 1" stroke="#292D32" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                          <path id="Vector_2" d="M11 11L1 1" stroke="#292D32" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                       </g>
+                                    </svg>
+                                 </button>
+                                 <div class="interier-hint__image">
+                                    <img src="img/product4.webp" alt="">
+                                    <ul class="product-card__colors">
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #A7ABAA;" class="circle"></div>
+                                             <input checked type="radio" name="interier-hint-4" value="0">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #3C4545;" class="circle"></div>
+                                             <input type="radio" name="interier-hint-4" value="1">
+                                          </label>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="interier-hint__main">
+                                    <div class="interier-hint__info">
+                                       <span class="interier-hint__collection">Коллекция Muse</span>
+                                       <p class="interier-hint__title">Душевая система с верхним тропическим душем</p>
+                                       <span class="interier-hint__price">7 958 ₽</span>
+                                    </div>
+                                    <button class="interier-hint__like">
+                                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <g id="vuesax/linear/heart">
+                                             <g id="heart">
+                                                <path id="Vector"
+                                                   d="M10.9999 17.3413C10.5351 17.5 9.38747 17.4737 8.99988 17.3413C6.58321 16.5163 1.6665 13.0747 1.6665 7.24134C1.6665 4.66634 3.7415 2.58301 6.29984 2.58301C7.8165 2.58301 9.15817 3.31634 9.99984 4.44967C10.8415 3.31634 12.1915 2.58301 13.6998 2.58301C16.2582 2.58301 18.3332 4.66634 18.3332 7.24134C18.3332 13.0747 13.4165 16.5163 10.9999 17.3413Z"
+                                                   stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                   stroke-linejoin="round" />
+                                             </g>
+                                          </g>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <div class="interier-hint__link" href="#">
+                                    Подробнее
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <g id="arrow-right">
+                                          <path id="Vector"
+                                             d="M5.5 1C5.5 1 6.67729 2.64096 7.47998 3.44687C8.29022 4.26037 9.54667 5.04667 9.54667 5.04667C9.54667 5.04667 7.89025 6.23328 7.07998 7.04687C6.27742 7.85273 5.5 9.09333 5.5 9.09333"
+                                             stroke="#F8F4E8" stroke-miterlimit="10" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                          <path id="Vector_2" d="M0.899902 5H9.0999" stroke="#F8F4E8"
+                                             stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                       </g>
+                                    </svg>
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                     </li>
+                     <li class="home-interier__item">
+                        <div class="home-interier__image">
+                           <img src="img/home/interier5.webp" alt="">
+                           <div class="home-interier__modal"
+                              style="left: calc(39 / 550 * 100%); top:calc(315 / 693 * 100%) ">
+                              <div class="home-interier__point circle" data-dot="hint5"></div>
+                              <div class="interier-hint" data-hint="hint5">
+                                 <button class="interier-hint__close">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <g id="group">
+                                          <path id="Vector" d="M1 11L11 1" stroke="#292D32" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                          <path id="Vector_2" d="M11 11L1 1" stroke="#292D32" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                       </g>
+                                    </svg>
+                                 </button>
+                                 <div class="interier-hint__image">
+                                    <img src="img/product1.webp" alt="">
+                                    <ul class="product-card__colors">
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #A7ABAA;" class="circle"></div>
+                                             <input checked type="radio" name="interier-hint-5" value="0">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #3C4545;" class="circle"></div>
+                                             <input type="radio" name="interier-hint-5" value="1">
+                                          </label>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="interier-hint__main">
+                                    <div class="interier-hint__info">
+                                       <span class="interier-hint__collection">Коллекция Muse</span>
+                                       <p class="interier-hint__title">Душевая система с верхним тропическим душем</p>
+                                       <span class="interier-hint__price">7 958 ₽</span>
+                                    </div>
+                                    <button class="interier-hint__like">
+                                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <g id="vuesax/linear/heart">
+                                             <g id="heart">
+                                                <path id="Vector"
+                                                   d="M10.9999 17.3413C10.5351 17.5 9.38747 17.4737 8.99988 17.3413C6.58321 16.5163 1.6665 13.0747 1.6665 7.24134C1.6665 4.66634 3.7415 2.58301 6.29984 2.58301C7.8165 2.58301 9.15817 3.31634 9.99984 4.44967C10.8415 3.31634 12.1915 2.58301 13.6998 2.58301C16.2582 2.58301 18.3332 4.66634 18.3332 7.24134C18.3332 13.0747 13.4165 16.5163 10.9999 17.3413Z"
+                                                   stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                   stroke-linejoin="round" />
+                                             </g>
+                                          </g>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <div class="interier-hint__link" href="#">
+                                    Подробнее
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <g id="arrow-right">
+                                          <path id="Vector"
+                                             d="M5.5 1C5.5 1 6.67729 2.64096 7.47998 3.44687C8.29022 4.26037 9.54667 5.04667 9.54667 5.04667C9.54667 5.04667 7.89025 6.23328 7.07998 7.04687C6.27742 7.85273 5.5 9.09333 5.5 9.09333"
+                                             stroke="#F8F4E8" stroke-miterlimit="10" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                          <path id="Vector_2" d="M0.899902 5H9.0999" stroke="#F8F4E8"
+                                             stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                       </g>
+                                    </svg>
+
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="home-interier__modal"
+                              style="left: calc(207 / 550 * 100%); top:calc(498 / 693 * 100%) ">
+                              <div class="home-interier__point circle" data-dot="hint6"></div>
+                              <div class="interier-hint" data-hint="hint6">
+                                 <button class="interier-hint__close">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <g id="group">
+                                          <path id="Vector" d="M1 11L11 1" stroke="#292D32" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                          <path id="Vector_2" d="M11 11L1 1" stroke="#292D32" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                       </g>
+                                    </svg>
+                                 </button>
+                                 <div class="interier-hint__image">
+                                    <img src="img/product1.webp" alt="">
+                                    <ul class="product-card__colors">
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #A7ABAA;" class="circle"></div>
+                                             <input checked type="radio" name="interier-hint-6" value="0">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #3C4545;" class="circle"></div>
+                                             <input type="radio" name="interier-hint-6" value="1">
+                                          </label>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="interier-hint__main">
+                                    <div class="interier-hint__info">
+                                       <span class="interier-hint__collection">Коллекция Muse</span>
+                                       <p class="interier-hint__title">Душевая система с верхним тропическим душем</p>
+                                       <span class="interier-hint__price">7 958 ₽</span>
+                                    </div>
+                                    <button class="interier-hint__like">
+                                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <g id="vuesax/linear/heart">
+                                             <g id="heart">
+                                                <path id="Vector"
+                                                   d="M10.9999 17.3413C10.5351 17.5 9.38747 17.4737 8.99988 17.3413C6.58321 16.5163 1.6665 13.0747 1.6665 7.24134C1.6665 4.66634 3.7415 2.58301 6.29984 2.58301C7.8165 2.58301 9.15817 3.31634 9.99984 4.44967C10.8415 3.31634 12.1915 2.58301 13.6998 2.58301C16.2582 2.58301 18.3332 4.66634 18.3332 7.24134C18.3332 13.0747 13.4165 16.5163 10.9999 17.3413Z"
+                                                   stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                   stroke-linejoin="round" />
+                                             </g>
+                                          </g>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <div class="interier-hint__link" href="#">
+                                    Подробнее
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <g id="arrow-right">
+                                          <path id="Vector"
+                                             d="M5.5 1C5.5 1 6.67729 2.64096 7.47998 3.44687C8.29022 4.26037 9.54667 5.04667 9.54667 5.04667C9.54667 5.04667 7.89025 6.23328 7.07998 7.04687C6.27742 7.85273 5.5 9.09333 5.5 9.09333"
+                                             stroke="#F8F4E8" stroke-miterlimit="10" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                          <path id="Vector_2" d="M0.899902 5H9.0999" stroke="#F8F4E8"
+                                             stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                       </g>
+                                    </svg>
+
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="home-interier__modal left"
+                              style="left: calc(394 / 550 * 100%); top:calc(306 / 693 * 100%) ">
+                              <div class="home-interier__point circle" data-dot="hint7"></div>
+                              <div class="interier-hint" data-hint="hint7">
+                                 <button class="interier-hint__close">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <g id="group">
+                                          <path id="Vector" d="M1 11L11 1" stroke="#292D32" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                          <path id="Vector_2" d="M11 11L1 1" stroke="#292D32" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                       </g>
+                                    </svg>
+                                 </button>
+                                 <div class="interier-hint__image">
+                                    <img src="img/product1.webp" alt="">
+                                    <ul class="product-card__colors">
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #A7ABAA;" class="circle"></div>
+                                             <input checked type="radio" name="interier-hint-7" value="0">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #3C4545;" class="circle"></div>
+                                             <input type="radio" name="interier-hint-7" value="1">
+                                          </label>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="interier-hint__main">
+                                    <div class="interier-hint__info">
+                                       <span class="interier-hint__collection">Коллекция Muse</span>
+                                       <p class="interier-hint__title">Душевая система с верхним тропическим душем</p>
+                                       <span class="interier-hint__price">7 958 ₽</span>
+                                    </div>
+                                    <button class="interier-hint__like">
+                                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <g id="vuesax/linear/heart">
+                                             <g id="heart">
+                                                <path id="Vector"
+                                                   d="M10.9999 17.3413C10.5351 17.5 9.38747 17.4737 8.99988 17.3413C6.58321 16.5163 1.6665 13.0747 1.6665 7.24134C1.6665 4.66634 3.7415 2.58301 6.29984 2.58301C7.8165 2.58301 9.15817 3.31634 9.99984 4.44967C10.8415 3.31634 12.1915 2.58301 13.6998 2.58301C16.2582 2.58301 18.3332 4.66634 18.3332 7.24134C18.3332 13.0747 13.4165 16.5163 10.9999 17.3413Z"
+                                                   stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                   stroke-linejoin="round" />
+                                             </g>
+                                          </g>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <div class="interier-hint__link" href="#">
+                                    Подробнее
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <g id="arrow-right">
+                                          <path id="Vector"
+                                             d="M5.5 1C5.5 1 6.67729 2.64096 7.47998 3.44687C8.29022 4.26037 9.54667 5.04667 9.54667 5.04667C9.54667 5.04667 7.89025 6.23328 7.07998 7.04687C6.27742 7.85273 5.5 9.09333 5.5 9.09333"
+                                             stroke="#F8F4E8" stroke-miterlimit="10" stroke-linecap="round"
+                                             stroke-linejoin="round" />
+                                          <path id="Vector_2" d="M0.899902 5H9.0999" stroke="#F8F4E8"
+                                             stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                       </g>
+                                    </svg>
+
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                     </li>
+                  </ul>
+                  <button class="home-interier__link">Показать еще</button>
+               </div>
+            </div>
+         </section>
+         <section class="home-features">
+            <div class="container">
+               <div class="home-features__wrapper">
+                  <h3 class="home-features__title h3">
+                     <span>Мы не просто создаем сантехнику – </span>
+                     <span>мы создаем комфорт, на который можно положиться</span>
+                  </h3>
+                  <ul class="home-features__list">
+                     <li style="background-color: #0F6062;" class="home-features__item feature-item">
+                        <div class="feature-item__front">
+                           <img src="img/home/feature1.webp" alt="">
+                           <h4 class="h4" style="color: #fff;">Преемственность <br>и стабильность</h4>
+                        </div>
+                        <div class="feature-item__back" style="color: #fff;background-color: #0F6062;">
+                           Мы уверены в каждом изделии  и предоставляем гарантию 10 лет  на всю продукцию, чтобы Вы были
+                           спокойны за свой выбор
+                        </div>
+                     </li>
+                     <li style="background-color: #fff;" class="home-features__item feature-item">
+                        <div class="feature-item__front">
+                           <img src="img/home/feature2.webp" alt="">
+                           <h4 class="h4" style="color: #202929;">Индивидуальность</h4>
+                        </div>
+                        <div class="feature-item__back" style="color: #202929;background-color: #fff;">
+                           Наши изделия выражают вкус  и стиль владельца и отражают актуальные тренды — идеально
+                           впишутся в любой интерьер
+                        </div>
+                     </li>
+                     <li style="background-color: #DFD5BC;" class="home-features__item feature-item">
+                        <div class="feature-item__front">
+                           <img src="img/home/feature3.webp" alt="">
+                           <h4 class="h4" style="color: #202929;">Инновации <br>и прогресс</h4>
+                        </div>
+                        <div class="feature-item__back" style="color: #202929;background-color: #DFD5BC;">
+                           Каждый продукт разработан  в соответствии с европейским стандартом качества и с учетом
+                           современных инженерных решений
+                        </div>
+                     </li>
+                     <li style="background-color: #C7DCD5;" class="home-features__item feature-item">
+                        <div class="feature-item__front">
+                           <img src="img/home/feature4.webp" alt="">
+                           <h4 class="h4" style="color: #202929;">Надежность <br>и долговечность</h4>
+                        </div>
+                        <div class="feature-item__back" style="color: #202929;background-color: #C7DCD5;">Мы используем
+                           материалы премиального
+                           качества, которые
+                           выдерживают многолетнюю эксплуатацию без потери надежности и внешнего вида</div>
+                     </li>
+                     <li style="background-color: #BBA889;" class="home-features__item feature-item">
+                        <div class="feature-item__front">
+                           <img src="img/home/feature5.webp" alt="">
+                           <h4 class="h4" style="color: white;">Совершенство <br>в каждой детали</h4>
+                        </div>
+                        <div class="feature-item__back" style="color: white;background-color: #BBA889;">Наши эксперты
+                           вкладывают опыт  и
+                           мастерство в каждый элемент
+                           сантехники, и каждая деталь тщательно продумана  до мельчайших нюансов</div>
+                     </li>
+                     <li style="background-color: #fff;" class="home-features__item feature-item">
+                        <div class="feature-item__front">
+                           <img src="img/home/feature6.webp" alt="">
+                           <h4 class="h4" style="color: #202929;">Ответственность <br>и доверие</h4>
+                        </div>
+                        <div class="feature-item__back" style="color: #202929;background-color: #fff;">Каждое изделие
+                           проходит многоступенчатый
+                           контроль качества и
+                           тестовые испытания.  Мы создаем комфорт, на который можно положиться</div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </section>
+         <section class="sales-section">
+            <div class="container">
+               <div class="sales-section__wrapper">
+                  <h2 class="sales-section__title h3">Акции</h2>
+                  <div class="sales-section__main">
+                     <div class="swiper">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                              <div class="sales-item">
+                                 <div class="sales-item__header">
+                                    <span class="sales-item__sale">- 60%</span>
+                                    <span class="sales-item__time">
+                                       <img src="img/icons/timer.svg" alt="">
+                                       10:30:20
+                                    </span>
+                                 </div>
+                                 <div class="sales-item__main">
+                                    <span class="sales-item__brand">Eclipse</span>
+                                    <span class="sales-item__title">Смеситель для кухни</span>
+                                    <p class="sales-item__prices">
+                                       <span>4 543 ₽</span>
+                                       <span>7 958 ₽</span>
+                                    </p>
+                                 </div>
+                                 <div class="sales-item__image">
+                                    <img src="img/product1.webp" alt="">
+                                 </div>
+                                 <div class="sales-item__footer">
+                                    <ul class="product-card__colors">
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #A7ABAA;" class="circle"></div>
+                                             <input checked type="radio" name="sale-card__colors-1" value="0">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #3C4545;" class="circle"></div>
+                                             <input type="radio" name="sale-card__colors-1" value="1">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #D9D9D9;" class="circle"></div>
+                                             <input type="radio" name="sale-card__colors-1" value="2">
+                                          </label>
+                                       </li>
+                                       <li>+ 3</li>
+                                    </ul>
+                                    <button class="sales-item__cart circle">
+                                       <svg width="17" height="19" viewBox="0 0 17 19" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <g id="Group 103">
+                                             <path id="Vector"
+                                                d="M1 1.5V1.5C2.13271 1.5 3.07852 2.36373 3.18107 3.49179L3.27273 4.5L3.72946 9.52401C3.87904 11.1695 5.33097 12.3843 6.97702 12.2411L13.1269 11.7064C14.5166 11.5855 15.6396 10.5228 15.8369 9.1419L16.0108 7.92426C16.269 6.11696 14.8666 4.5 13.041 4.5H7.5"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round" />
+                                             <path id="Vector_2"
+                                                d="M7 17.5C7.55228 17.5 8 17.0523 8 16.5C8 15.9477 7.55228 15.5 7 15.5C6.44772 15.5 6 15.9477 6 16.5C6 17.0523 6.44772 17.5 7 17.5Z"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                             <path id="Vector_3"
+                                                d="M13 17.5C13.5523 17.5 14 17.0523 14 16.5C14 15.9477 13.5523 15.5 13 15.5C12.4477 15.5 12 15.9477 12 16.5C12 17.0523 12.4477 17.5 13 17.5Z"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                          </g>
+                                       </svg>
+
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="sales-item">
+                                 <div class="sales-item__header">
+                                    <span class="sales-item__sale">- 60%</span>
+                                    <span class="sales-item__time">
+                                       <img src="img/icons/timer.svg" alt="">
+                                       10:30:20
+                                    </span>
+                                 </div>
+                                 <div class="sales-item__main">
+                                    <span class="sales-item__brand">Eclipse</span>
+                                    <span class="sales-item__title">Смеситель для кухни</span>
+                                    <p class="sales-item__prices">
+                                       <span>4 543 ₽</span>
+                                       <span>7 958 ₽</span>
+                                    </p>
+                                 </div>
+                                 <div class="sales-item__image">
+                                    <img src="img/product1.webp" alt="">
+                                 </div>
+                                 <div class="sales-item__footer">
+                                    <ul class="product-card__colors">
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #A7ABAA;" class="circle"></div>
+                                             <input checked type="radio" name="sale-card__colors-1" value="0">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #3C4545;" class="circle"></div>
+                                             <input type="radio" name="sale-card__colors-1" value="1">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #D9D9D9;" class="circle"></div>
+                                             <input type="radio" name="sale-card__colors-1" value="2">
+                                          </label>
+                                       </li>
+                                       <li>+ 3</li>
+                                    </ul>
+                                    <button class="sales-item__cart circle">
+                                       <svg width="17" height="19" viewBox="0 0 17 19" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <g id="Group 103">
+                                             <path id="Vector"
+                                                d="M1 1.5V1.5C2.13271 1.5 3.07852 2.36373 3.18107 3.49179L3.27273 4.5L3.72946 9.52401C3.87904 11.1695 5.33097 12.3843 6.97702 12.2411L13.1269 11.7064C14.5166 11.5855 15.6396 10.5228 15.8369 9.1419L16.0108 7.92426C16.269 6.11696 14.8666 4.5 13.041 4.5H7.5"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round" />
+                                             <path id="Vector_2"
+                                                d="M7 17.5C7.55228 17.5 8 17.0523 8 16.5C8 15.9477 7.55228 15.5 7 15.5C6.44772 15.5 6 15.9477 6 16.5C6 17.0523 6.44772 17.5 7 17.5Z"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                             <path id="Vector_3"
+                                                d="M13 17.5C13.5523 17.5 14 17.0523 14 16.5C14 15.9477 13.5523 15.5 13 15.5C12.4477 15.5 12 15.9477 12 16.5C12 17.0523 12.4477 17.5 13 17.5Z"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                          </g>
+                                       </svg>
+
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="sales-item">
+                                 <div class="sales-item__header">
+                                    <span class="sales-item__sale">- 60%</span>
+                                    <span class="sales-item__time">
+                                       <img src="img/icons/timer.svg" alt="">
+                                       10:30:20
+                                    </span>
+                                 </div>
+                                 <div class="sales-item__main">
+                                    <span class="sales-item__brand">Eclipse</span>
+                                    <span class="sales-item__title">Смеситель для кухни</span>
+                                    <p class="sales-item__prices">
+                                       <span>4 543 ₽</span>
+                                       <span>7 958 ₽</span>
+                                    </p>
+                                 </div>
+                                 <div class="sales-item__image">
+                                    <img src="img/product1.webp" alt="">
+                                 </div>
+                                 <div class="sales-item__footer">
+                                    <ul class="product-card__colors">
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #A7ABAA;" class="circle"></div>
+                                             <input checked type="radio" name="sale-card__colors-1" value="0">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #3C4545;" class="circle"></div>
+                                             <input type="radio" name="sale-card__colors-1" value="1">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #D9D9D9;" class="circle"></div>
+                                             <input type="radio" name="sale-card__colors-1" value="2">
+                                          </label>
+                                       </li>
+                                       <li>+ 3</li>
+                                    </ul>
+                                    <button class="sales-item__cart circle">
+                                       <svg width="17" height="19" viewBox="0 0 17 19" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <g id="Group 103">
+                                             <path id="Vector"
+                                                d="M1 1.5V1.5C2.13271 1.5 3.07852 2.36373 3.18107 3.49179L3.27273 4.5L3.72946 9.52401C3.87904 11.1695 5.33097 12.3843 6.97702 12.2411L13.1269 11.7064C14.5166 11.5855 15.6396 10.5228 15.8369 9.1419L16.0108 7.92426C16.269 6.11696 14.8666 4.5 13.041 4.5H7.5"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round" />
+                                             <path id="Vector_2"
+                                                d="M7 17.5C7.55228 17.5 8 17.0523 8 16.5C8 15.9477 7.55228 15.5 7 15.5C6.44772 15.5 6 15.9477 6 16.5C6 17.0523 6.44772 17.5 7 17.5Z"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                             <path id="Vector_3"
+                                                d="M13 17.5C13.5523 17.5 14 17.0523 14 16.5C14 15.9477 13.5523 15.5 13 15.5C12.4477 15.5 12 15.9477 12 16.5C12 17.0523 12.4477 17.5 13 17.5Z"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                          </g>
+                                       </svg>
+
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="sales-item">
+                                 <div class="sales-item__header">
+                                    <span class="sales-item__sale">- 60%</span>
+                                    <span class="sales-item__time">
+                                       <img src="img/icons/timer.svg" alt="">
+                                       10:30:20
+                                    </span>
+                                 </div>
+                                 <div class="sales-item__main">
+                                    <span class="sales-item__brand">Eclipse</span>
+                                    <span class="sales-item__title">Смеситель для кухни</span>
+                                    <p class="sales-item__prices">
+                                       <span>4 543 ₽</span>
+                                       <span>7 958 ₽</span>
+                                    </p>
+                                 </div>
+                                 <div class="sales-item__image">
+                                    <img src="img/product1.webp" alt="">
+                                 </div>
+                                 <div class="sales-item__footer">
+                                    <ul class="product-card__colors">
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #A7ABAA;" class="circle"></div>
+                                             <input checked type="radio" name="sale-card__colors-1" value="0">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #3C4545;" class="circle"></div>
+                                             <input type="radio" name="sale-card__colors-1" value="1">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #D9D9D9;" class="circle"></div>
+                                             <input type="radio" name="sale-card__colors-1" value="2">
+                                          </label>
+                                       </li>
+                                       <li>+ 3</li>
+                                    </ul>
+                                    <button class="sales-item__cart circle">
+                                       <svg width="17" height="19" viewBox="0 0 17 19" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <g id="Group 103">
+                                             <path id="Vector"
+                                                d="M1 1.5V1.5C2.13271 1.5 3.07852 2.36373 3.18107 3.49179L3.27273 4.5L3.72946 9.52401C3.87904 11.1695 5.33097 12.3843 6.97702 12.2411L13.1269 11.7064C14.5166 11.5855 15.6396 10.5228 15.8369 9.1419L16.0108 7.92426C16.269 6.11696 14.8666 4.5 13.041 4.5H7.5"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round" />
+                                             <path id="Vector_2"
+                                                d="M7 17.5C7.55228 17.5 8 17.0523 8 16.5C8 15.9477 7.55228 15.5 7 15.5C6.44772 15.5 6 15.9477 6 16.5C6 17.0523 6.44772 17.5 7 17.5Z"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                             <path id="Vector_3"
+                                                d="M13 17.5C13.5523 17.5 14 17.0523 14 16.5C14 15.9477 13.5523 15.5 13 15.5C12.4477 15.5 12 15.9477 12 16.5C12 17.0523 12.4477 17.5 13 17.5Z"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                          </g>
+                                       </svg>
+
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="sales-item">
+                                 <div class="sales-item__header">
+                                    <span class="sales-item__sale">- 60%</span>
+                                    <span class="sales-item__time">
+                                       <img src="img/icons/timer.svg" alt="">
+                                       10:30:20
+                                    </span>
+                                 </div>
+                                 <div class="sales-item__main">
+                                    <span class="sales-item__brand">Eclipse</span>
+                                    <span class="sales-item__title">Смеситель для кухни</span>
+                                    <p class="sales-item__prices">
+                                       <span>4 543 ₽</span>
+                                       <span>7 958 ₽</span>
+                                    </p>
+                                 </div>
+                                 <div class="sales-item__image">
+                                    <img src="img/product1.webp" alt="">
+                                 </div>
+                                 <div class="sales-item__footer">
+                                    <ul class="product-card__colors">
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #A7ABAA;" class="circle"></div>
+                                             <input checked type="radio" name="sale-card__colors-1" value="0">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #3C4545;" class="circle"></div>
+                                             <input type="radio" name="sale-card__colors-1" value="1">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #D9D9D9;" class="circle"></div>
+                                             <input type="radio" name="sale-card__colors-1" value="2">
+                                          </label>
+                                       </li>
+                                       <li>+ 3</li>
+                                    </ul>
+                                    <button class="sales-item__cart circle">
+                                       <svg width="17" height="19" viewBox="0 0 17 19" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <g id="Group 103">
+                                             <path id="Vector"
+                                                d="M1 1.5V1.5C2.13271 1.5 3.07852 2.36373 3.18107 3.49179L3.27273 4.5L3.72946 9.52401C3.87904 11.1695 5.33097 12.3843 6.97702 12.2411L13.1269 11.7064C14.5166 11.5855 15.6396 10.5228 15.8369 9.1419L16.0108 7.92426C16.269 6.11696 14.8666 4.5 13.041 4.5H7.5"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round" />
+                                             <path id="Vector_2"
+                                                d="M7 17.5C7.55228 17.5 8 17.0523 8 16.5C8 15.9477 7.55228 15.5 7 15.5C6.44772 15.5 6 15.9477 6 16.5C6 17.0523 6.44772 17.5 7 17.5Z"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                             <path id="Vector_3"
+                                                d="M13 17.5C13.5523 17.5 14 17.0523 14 16.5C14 15.9477 13.5523 15.5 13 15.5C12.4477 15.5 12 15.9477 12 16.5C12 17.0523 12.4477 17.5 13 17.5Z"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                          </g>
+                                       </svg>
+
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="sales-item">
+                                 <div class="sales-item__header">
+                                    <span class="sales-item__sale">- 60%</span>
+                                    <span class="sales-item__time">
+                                       <img src="img/icons/timer.svg" alt="">
+                                       10:30:20
+                                    </span>
+                                 </div>
+                                 <div class="sales-item__main">
+                                    <span class="sales-item__brand">Eclipse</span>
+                                    <span class="sales-item__title">Смеситель для кухни</span>
+                                    <p class="sales-item__prices">
+                                       <span>4 543 ₽</span>
+                                       <span>7 958 ₽</span>
+                                    </p>
+                                 </div>
+                                 <div class="sales-item__image">
+                                    <img src="img/product1.webp" alt="">
+                                 </div>
+                                 <div class="sales-item__footer">
+                                    <ul class="product-card__colors">
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #A7ABAA;" class="circle"></div>
+                                             <input checked type="radio" name="sale-card__colors-1" value="0">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #3C4545;" class="circle"></div>
+                                             <input type="radio" name="sale-card__colors-1" value="1">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #D9D9D9;" class="circle"></div>
+                                             <input type="radio" name="sale-card__colors-1" value="2">
+                                          </label>
+                                       </li>
+                                       <li>+ 3</li>
+                                    </ul>
+                                    <button class="sales-item__cart circle">
+                                       <svg width="17" height="19" viewBox="0 0 17 19" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <g id="Group 103">
+                                             <path id="Vector"
+                                                d="M1 1.5V1.5C2.13271 1.5 3.07852 2.36373 3.18107 3.49179L3.27273 4.5L3.72946 9.52401C3.87904 11.1695 5.33097 12.3843 6.97702 12.2411L13.1269 11.7064C14.5166 11.5855 15.6396 10.5228 15.8369 9.1419L16.0108 7.92426C16.269 6.11696 14.8666 4.5 13.041 4.5H7.5"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round" />
+                                             <path id="Vector_2"
+                                                d="M7 17.5C7.55228 17.5 8 17.0523 8 16.5C8 15.9477 7.55228 15.5 7 15.5C6.44772 15.5 6 15.9477 6 16.5C6 17.0523 6.44772 17.5 7 17.5Z"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                             <path id="Vector_3"
+                                                d="M13 17.5C13.5523 17.5 14 17.0523 14 16.5C14 15.9477 13.5523 15.5 13 15.5C12.4477 15.5 12 15.9477 12 16.5C12 17.0523 12.4477 17.5 13 17.5Z"
+                                                stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                          </g>
+                                       </svg>
+
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-button-prev slider-btn circle">
+                        <svg style="rotate: 180deg;" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                           viewBox="0 0 16 16" fill="none">
+                           <path
+                              d="M6 3C6 3 7.47161 5.0512 8.47498 6.05859C9.48778 7.07547 11.0583 8.05833 11.0583 8.05833C11.0583 8.05833 8.98781 9.5416 7.97498 10.5586C6.97177 11.5659 6 13.1167 6 13.1167"
+                              stroke="#202929" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                        </svg>
+                     </div>
+                     <div class="swiper-button-next slider-btn circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                           <path
+                              d="M6 3C6 3 7.47161 5.0512 8.47498 6.05859C9.48778 7.07547 11.0583 8.05833 11.0583 8.05833C11.0583 8.05833 8.98781 9.5416 7.97498 10.5586C6.97177 11.5659 6 13.1167 6 13.1167"
+                              stroke="#202929" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                        </svg>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="blog-section">
+            <div class="container">
+               <div class="blog-section__wrapper">
+                  <div class="blog-section__header">
+                     <h2 class="blog-section__title h3">Блог</h2>
+                     <a class="blog-section__link home-about__link" href="#">
+                        <span>Все статьи</span>
+                        <div class="circle">
+                           <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g id="arrow-right">
+                                 <path id="Vector"
+                                    d="M5.5 1C5.5 1 6.67729 2.64096 7.47998 3.44687C8.29022 4.26037 9.54667 5.04667 9.54667 5.04667C9.54667 5.04667 7.89025 6.23328 7.07998 7.04687C6.27742 7.85273 5.5 9.09333 5.5 9.09333"
+                                    stroke="#F8F4E8" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                 <path id="Vector_2" d="M0.899902 5H9.0999" stroke="#F8F4E8" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                              </g>
+                           </svg>
+
+                        </div>
+                     </a>
+                  </div>
+                  <div class="blog-section__main">
+                     <ul class="blog-section__filters scrollbar-none">
+                        <li><label><input checked type="radio" value="0" name="blog-section">Все</label></li>
+                        <li><label><input type="radio" value="1" name="blog-section">Рекомендации</label></li>
+                        <li><label><input type="radio" value="2" name="blog-section">Тренды</label></li>
+                        <li><label><input type="radio" value="3" name="blog-section">Новости</label></li>
+                        <li><label><input type="radio" value="4" name="blog-section">Акции</label></li>
+                        <li><label><input type="radio" value="5" name="blog-section">Производство</label></li>
+                        <li><label><input type="radio" value="6" name="blog-section">События</label></li>
+                     </ul>
+                     <div class="swiper">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                              <a class="blog-card" href="#">
+                                 <div class="blog-card__image">
+                                    <img src="img/blog/1.webp" alt="">
+                                 </div>
+                                 <div class="blog-card__main">
+                                    <span class="blog-card__filter light">Рекомендации</span>
+                                    <h4 class="blog-card__title">Как выбрать идеальный смеситель: советы  и рекомендации
+                                    </h4>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="swiper-slide">
+                              <a class="blog-card" href="#">
+                                 <div class="blog-card__image">
+                                    <img src="img/blog/2.webp" alt="">
+                                 </div>
+                                 <div class="blog-card__main">
+                                    <span class="blog-card__filter blue">Тренды</span>
+                                    <h4 class="blog-card__title">Матовый черный или классический хром? Современные
+                                       тренды в отделке смесителей</h4>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="swiper-slide">
+                              <a class="blog-card" href="#">
+                                 <div class="blog-card__image">
+                                    <img src="img/blog/3.webp" alt="">
+                                 </div>
+                                 <div class="blog-card__main">
+                                    <span class="blog-card__filter light">Производство</span>
+                                    <h4 class="blog-card__title">Эко-сантехника: как сэкономить воду  и сохранить
+                                       природу
+                                    </h4>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="swiper-slide">
+                              <a class="blog-card" href="#">
+                                 <div class="blog-card__image">
+                                    <img src="img/blog/4.webp" alt="">
+                                 </div>
+                                 <div class="blog-card__main">
+                                    <span class="blog-card__filter blue">События</span>
+                                    <h4 class="blog-card__title">Приглашаем на День открытых дверей: Демонстрация
+                                       инновационных решений  в сантехнике</h4>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="swiper-slide">
+                              <a class="blog-card" href="#">
+                                 <div class="blog-card__image">
+                                    <img src="img/blog/1.webp" alt="">
+                                 </div>
+                                 <div class="blog-card__main">
+                                    <span class="blog-card__filter light">Рекомендации</span>
+                                    <h4 class="blog-card__title">Как выбрать идеальный смеситель: советы  и рекомендации
+                                    </h4>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="swiper-slide">
+                              <a class="blog-card" href="#">
+                                 <div class="blog-card__image">
+                                    <img src="img/blog/2.webp" alt="">
+                                 </div>
+                                 <div class="blog-card__main">
+                                    <span class="blog-card__filter blue">Тренды</span>
+                                    <h4 class="blog-card__title">Матовый черный или классический хром? Современные
+                                       тренды в отделке смесителей</h4>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="swiper-slide">
+                              <a class="blog-card" href="#">
+                                 <div class="blog-card__image">
+                                    <img src="img/blog/3.webp" alt="">
+                                 </div>
+                                 <div class="blog-card__main">
+                                    <span class="blog-card__filter light">Производство</span>
+                                    <h4 class="blog-card__title">Эко-сантехника: как сэкономить воду  и сохранить
+                                       природу
+                                    </h4>
+                                 </div>
+                              </a>
+                           </div>
+                           <div class="swiper-slide">
+                              <a class="blog-card" href="#">
+                                 <div class="blog-card__image">
+                                    <img src="img/blog/4.webp" alt="">
+                                 </div>
+                                 <div class="blog-card__main">
+                                    <span class="blog-card__filter blue">События</span>
+                                    <h4 class="blog-card__title">Приглашаем на День открытых дверей: Демонстрация
+                                       инновационных решений  в сантехнике</h4>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+                  <div class="blog-section__footer">
+                     <a class="blog-section__link home-about__link" href="#">
+                        <span>Все статьи</span>
+                        <div class="circle">
+                           <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g id="arrow-right">
+                                 <path id="Vector"
+                                    d="M5.5 1C5.5 1 6.67729 2.64096 7.47998 3.44687C8.29022 4.26037 9.54667 5.04667 9.54667 5.04667C9.54667 5.04667 7.89025 6.23328 7.07998 7.04687C6.27742 7.85273 5.5 9.09333 5.5 9.09333"
+                                    stroke="#F8F4E8" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                 <path id="Vector_2" d="M0.899902 5H9.0999" stroke="#F8F4E8" stroke-miterlimit="10"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                              </g>
+                           </svg>
+
+                        </div>
+                     </a>
+                  </div>
                </div>
             </div>
          </section>

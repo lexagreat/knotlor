@@ -1,0 +1,117 @@
+.home-features {
+   padding-bottom: var(--sectionMargin);
+   // .home-features__wrapper
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      @media (max-width: $tablet) {
+         gap: 28px;
+      }
+      @media (max-width: $mobile) {
+         gap: 24px;
+      }
+   }
+
+   // .home-features__title
+
+   &__title {
+      line-height: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      span:nth-child(1) {
+         text-align: left;
+      }
+      span:nth-child(2) {
+         text-align: right;
+         @media (max-width: $tablet) {
+            text-align: left;
+         }
+      }
+      @media (max-width: $tablet) {
+         display: inline;
+      }
+   }
+
+   // .home-features__list
+
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      @media (max-width: $tablet) {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 10px;
+      }
+      @media (max-width: $mobile) {
+         gap: 15px;
+         grid-template-columns: 1fr;
+      }
+   }
+
+   // .home-features__item
+
+   &__item {
+   }
+}
+.feature-item {
+   border-radius: 10px;
+   min-height: 277px;
+   overflow: hidden;
+   position: relative;
+   cursor: pointer;
+   @media (max-width: $tablet) {
+      min-height: 168px;
+   }
+   &:hover {
+      .feature-item__back {
+         translate: 0;
+      }
+   }
+   // .feature-item__front
+
+   &__front {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+      .h4 {
+         position: absolute;
+         left: 30px;
+         bottom: 40px;
+         @media (max-width: $tablet) {
+            @include h4-mobile;
+         }
+      }
+   }
+
+   // .feature-item__back
+
+   &__back {
+      position: relative;
+      z-index: 2;
+      transition: calc(1.5 * $transition);
+      translate: 0 100%;
+      height: 100%;
+      padding: 35px;
+      @include body-1;
+      @media (max-width: $tablet) {
+         @include body-1-mobile;
+      }
+      @media (max-width: $mobile) {
+         padding: 30px;
+      }
+   }
+}
