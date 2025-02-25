@@ -1,0 +1,40 @@
+.breadcrumbs {
+   &__list {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      gap: 8px;
+      li:last-child a {
+         color: $grey-dark;
+         &::after {
+            display: none;
+         }
+      }
+      a {
+         color: $black;
+         @include body-small;
+         transition: 0.4s;
+         display: flex;
+         align-items: center;
+         gap: 8px;
+         &::after {
+            content: "";
+            width: 2px;
+            height: 2px;
+            flex: 0 0 2px;
+            background: $black;
+            display: flex;
+            border-radius: 50%;
+         }
+      }
+      @media (max-width: $mobile) {
+         overflow: auto;
+         width: 100vw;
+         white-space: nowrap;
+         margin-right: calc(-1 * var(--container));
+         margin-left: calc(-1 * var(--container));
+         padding-left: calc(1 * var(--container));
+         padding-right: calc(1 * var(--container));
+      }
+   }
+}

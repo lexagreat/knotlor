@@ -1,0 +1,314 @@
+.colection-hero {
+   position: relative;
+   overflow: hidden;
+   // .colection-hero__wrapper
+   & > img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 1340px;
+      z-index: 0;
+      @media (max-width: $tablet) {
+         height: 1100px;
+      }
+      @media (max-width: $mobile) {
+         height: 1085px;
+      }
+   }
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 295px;
+      position: relative;
+      height: 810px;
+      .breadcrumbs {
+         position: absolute;
+         top: calc(var(--header) + 40px);
+         left: 0;
+         &__list {
+            li:last-child a {
+               color: $grey;
+            }
+            a {
+               color: $romance;
+               &::after {
+                  background: $romance;
+               }
+            }
+         }
+         @media (max-width: $tablet) {
+            top: calc(var(--header) + 20px);
+         }
+         @media (max-width: $mobile) {
+            top: calc(var(--header) + 16px);
+         }
+      }
+      @media (max-width: $tablet) {
+         height: 860px;
+         padding-bottom: 350px;
+      }
+      @media (max-width: $mobile) {
+         height: 824px;
+         padding-bottom: 320px;
+      }
+   }
+   // .colection-hero__main
+
+   &__main {
+      color: $romance;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      span {
+         @include h5;
+      }
+      p {
+         @include body-2;
+      }
+      .h1 {
+         margin-top: 20px;
+         margin-bottom: 40px;
+         line-height: 1;
+         @media (max-width: $tablet) {
+            margin-bottom: 32px;
+         }
+         @media (max-width: $mobile) {
+            margin: 24px 0;
+         }
+      }
+   }
+}
+.collection-about {
+   padding-top: 70px;
+   margin-bottom: 120px;
+   @media (max-width: $tablet) {
+      padding-top: 50px;
+      margin-bottom: 70px;
+   }
+   @media (max-width: $mobile) {
+      padding-top: 40px;
+      margin-bottom: 60px;
+   }
+   // .collection-about__wrapper
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+   }
+
+   // .collection-about__row
+
+   &__row {
+      display: grid;
+      gap: 128px;
+      grid-template-columns: 550px 1fr;
+      @media (max-width: $tablet) {
+         gap: 45px;
+         grid-template-columns: 325px 1fr;
+      }
+      @media (max-width: $mobile) {
+         gap: 32px;
+         display: flex;
+         flex-direction: column;
+
+         &:nth-child(1) {
+            flex-direction: column-reverse;
+         }
+      }
+   }
+
+   // .collection-about__image
+
+   &__image {
+      border-radius: 10px;
+      overflow: hidden;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   // .collection-about__text
+
+   &__text {
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+      color: $black;
+      & > span {
+         @include h6;
+         text-transform: uppercase;
+      }
+      & > div {
+         p + p {
+            margin-top: 12px;
+         }
+         p {
+            @include body-4;
+         }
+      }
+      @media (max-width: $tablet) {
+         gap: 32px;
+         & > span {
+            @include h5-tablet;
+         }
+         & > div {
+            p + p {
+               margin-top: 8px;
+            }
+            p {
+               @include body-3-tablet;
+            }
+         }
+      }
+      @media (max-width: $mobile) {
+         & > span {
+            @include h6-mobile;
+         }
+         & > div {
+            p + p {
+               margin-top: 8px;
+            }
+            p {
+               @include body-4-mobile;
+            }
+         }
+      }
+   }
+
+   // .collection-about__colors
+
+   &__colors {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      margin-top: 26px;
+      & > span {
+         @include h6;
+         text-transform: uppercase;
+      }
+      ul {
+         display: flex;
+         gap: 4px;
+         li {
+            flex: 0 0 68px;
+            @include body-small;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            gap: 16px;
+            .circle {
+               --size: 32px;
+            }
+         }
+      }
+      @media (max-width: $tablet) {
+         margin-top: 8px;
+         & > span {
+            @include h5-tablet;
+         }
+         ul {
+            flex-wrap: wrap;
+            gap: 2px;
+            row-gap: 8px;
+            li {
+               .circle {
+                  --size: 25px;
+               }
+            }
+         }
+      }
+   }
+}
+.collection-products {
+   padding-bottom: 120px;
+   @media (max-width: $tablet) {
+      padding-bottom: 70px;
+   }
+   @media (max-width: $mobile) {
+      padding-bottom: 60px;
+   }
+   // .collection-products__wrapper
+
+   &__wrapper {
+      .search-page__products {
+         margin: 0;
+      }
+      .blog-section__filters {
+         margin-top: 30px;
+         margin-bottom: 20px;
+         @media (max-width: $tablet) {
+            margin-top: 28px;
+            margin-bottom: 12px;
+         }
+         @media (max-width: $mobile) {
+            margin-top: 24px;
+         }
+      }
+      & > button {
+         margin: 0 auto;
+         margin-top: 40px;
+         height: 45px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: 0 40px;
+         @include body-6;
+         color: $black;
+         border: 1px solid $grey-dark;
+         transition: $transition;
+         border-radius: 100px;
+         @media (max-width: $tablet) {
+            margin-top: 28px;
+         }
+         @media (max-width: $mobile) {
+            width: 100%;
+            margin-top: 32px;
+         }
+         @media (hover: hover) {
+            &:hover {
+               border-color: $black;
+            }
+         }
+      }
+   }
+
+   // .collection-products__title
+
+   &__title {
+   }
+}
+.collection-collections {
+   .home-collection {
+      gap: 24px;
+      @media (max-width: $tablet) {
+         gap: 16px;
+      }
+   }
+}
+.collection-main {
+   position: relative;
+   z-index: 9;
+   .colection-hero {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+   }
+}
+.collection-page {
+   position: relative;
+   z-index: 99;
+   background-color: $romance;
+   border-radius: 10px 10px 0 0;
+   margin-top: -10px;
+}

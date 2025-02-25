@@ -73,41 +73,47 @@ $grey-dark: #949698;
    /* 768/Decor H2 regular */
    font-family: $fontDrugs;
    font-size: 28px;
+   font-weight: 400;
    line-height: 130%; /* 36.4px */
 }
 @mixin h2-mobile {
    /* 390/Decor H2 regular */
    font-family: $fontDrugs;
    font-size: 24px;
+   font-weight: 400;
    line-height: 130%; /* 31.2px */
 }
 @mixin h3 {
    font-family: $fontRamilas;
    font-size: 35px;
+   font-weight: 400;
    line-height: 130%; /* 45.5px */
 }
 @mixin h3-tablet {
    font-family: $fontRamilas;
    font-size: 28px;
+   font-weight: 400;
    line-height: 130%; /* 28.6px */
 }
 @mixin h3-mobile {
    /* 390/Decor H3 regular */
    font-family: $fontRamilas;
    font-size: 24px;
+   font-weight: 400;
    line-height: 130%; /* 28.6px */
 }
 @mixin h4 {
    /* 1440/Decor H4 regular */
    font-family: $fontRamilas;
    font-size: 28px;
+   font-weight: 400;
    line-height: 120%; /* 33.6px */
 }
 @mixin h4-tablet {
    /* 768/H4 medium CAPS */
    font-family: $fontRamilas;
    font-size: 22px;
-   font-weight: 500;
+   font-weight: 400;
 }
 @mixin h4-mobile {
    /* 390/Decor H5 regular */
@@ -151,18 +157,21 @@ $grey-dark: #949698;
    /* 1440/Body 1 regular */
    font-family: $fontDrugs;
    font-size: 20px;
+   font-weight: 400;
    line-height: 140%; /* 28px */
 }
 @mixin body-1-tablet {
    /* 768/Body 1 regular */
    font-family: $fontDrugs;
    font-size: 17px;
+   font-weight: 400;
    line-height: 140%; /* 23.8px */
 }
 @mixin body-1-mobile {
    /* 390/Body 1 regular */
    font-family: $fontDrugs;
    font-size: 17px;
+   font-weight: 400;
    line-height: 140%; /* 23.8px */
 }
 @mixin body-2 {
@@ -192,8 +201,8 @@ $grey-dark: #949698;
 
    /* 390/Body 2 demibold */
    font-family: $fontDrugs;
-   font-size: 12px;
-   font-weight: 600;
+   font-size: 14px;
+   font-weight: 500;
    line-height: 140%; /* 16.8px */
 }
 @mixin body-3 {
@@ -203,6 +212,7 @@ $grey-dark: #949698;
    /* 1440/Decor Body 3 regular */
    font-family: $fontRamilas;
    font-size: 16px;
+   font-weight: 400;
    line-height: 130%; /* 20.8px */
 }
 @mixin body-3-tablet {
@@ -212,6 +222,7 @@ $grey-dark: #949698;
    /* 1440/Decor Body 3 regular */
    font-family: $fontDrugs;
    font-size: 14px;
+   font-weight: 400;
    line-height: 130%; /* 20.8px */
 }
 @mixin body-3-mobile {
@@ -227,20 +238,23 @@ $grey-dark: #949698;
 }
 @mixin body-4 {
    /* 1440/Body 4 regular */
-   font-family: $fontRamilas;
+   font-family: $fontDrugs;
    font-size: 16px;
+   font-weight: 400;
    line-height: 140%; /* 22.4px */
 }
 @mixin body-4-tablet {
    /* 1440/Body 4 regular */
    font-family: $fontDrugs;
    font-size: 12px;
+   font-weight: 400;
    line-height: 140%; /* 22.4px */
 }
 @mixin body-4-mobile {
    /* 1440/Body 4 regular */
    font-family: $fontRamilas;
    font-size: 14px;
+   font-weight: 400;
    line-height: 140%; /* 22.4px */
 }
 @mixin body-5 {
@@ -275,10 +289,12 @@ $grey-dark: #949698;
    /* 1440/Body 7 regular */
    font-family: $fontDrugs;
    font-size: 14px;
+   font-weight: 400;
    line-height: 130%; /* 18.2px */
 }
 @mixin body-small {
    /* 1440/Body small */
    font-family: $fontDrugs;
    font-size: 12px;
+   font-weight: 400;
 }

@@ -1,0 +1,137 @@
+.search-page {
+   margin-bottom: 80px;
+   // .search-page__wrapper
+   margin-top: 40px;
+   @media (max-width: $tablet) {
+      margin-top: 32px;
+      margin-bottom: 70px;
+   }
+   @media (max-width: $mobile) {
+      margin-bottom: 60px;
+   }
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   // .search-page__title
+
+   &__title {
+      text-align: center;
+      display: flex;
+      gap: 8px;
+      sup {
+         @include body-1;
+         @media (max-width: $tablet) {
+            @include body-1-tablet;
+         }
+         @media (max-width: $mobile) {
+            @include body-4-mobile;
+         }
+      }
+      @media (max-width: $mobile) {
+         width: 100%;
+         text-align: left;
+         gap: 6px;
+      }
+   }
+
+   // .search-page__products
+
+   &__products {
+      margin-top: 60px;
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 15px;
+      row-gap: 40px;
+      width: 100%;
+      .product-card {
+         &__descripition {
+            max-width: 294px;
+            @media (max-width: 1440px) {
+               max-width: calc(204px + 90 * ((100vw - 1024px) / (1440 - 1024)));
+            }
+            @media (max-width: $tablet) {
+               max-width: calc(120px + 140 * ((100vw - 568px) / (1024 - 568)));
+            }
+            @media (max-width: $mobile) {
+               max-width: calc(120px + 70 * ((100vw - 320px) / (568 - 320)));
+            }
+         }
+      }
+      @media (max-width: $tablet) {
+         margin: 32px 0;
+         grid-template-columns: repeat(3, 1fr);
+         column-gap: 10px;
+         row-gap: 28px;
+      }
+      @media (max-width: $mobile) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
+
+   // .search-page__pagination
+
+   &__pagination {
+   }
+}
+.app-pagination {
+   display: flex;
+   flex-direction: column;
+   gap: 32px;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   // .app-pagination__btn
+
+   &__btn {
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 40px;
+      @include body-6;
+      color: $black;
+      border: 1px solid $grey-dark;
+      transition: $transition;
+      border-radius: 100px;
+      @media (max-width: $tablet) {
+         width: 100%;
+      }
+      @media (hover: hover) {
+         &:hover {
+            border-color: $black;
+         }
+      }
+   }
+
+   // .app-pagination__list
+
+   &__list {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      button {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         @include body-7;
+         transition: $transition;
+         color: $grey-dark;
+
+         &.active {
+            color: $black;
+         }
+         @media (hover: hover) {
+            &:hover {
+               color: $black;
+            }
+         }
+         &:active {
+            color: $black;
+         }
+      }
+   }
+}

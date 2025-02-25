@@ -1,0 +1,103 @@
+@import "detail";
+.collections-hero {
+   margin-top: 40px;
+   @media (max-width: $tablet) {
+      margin-top: 32px;
+   }
+   // .collections-hero__wrapper
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      justify-content: center;
+      text-align: center;
+      & > p {
+         @include body-6;
+         @media (max-width: $tablet) {
+            @include body-2-tablet;
+         }
+         @media (max-width: $mobile) {
+            @include body-2-mobile;
+            br {
+               display: none;
+            }
+         }
+      }
+   }
+
+   // .collections-hero__title
+
+   &__title {
+   }
+
+   // .collections-hero__list
+
+   &__list {
+      justify-content: center;
+      display: flex;
+      gap: 8px;
+      li {
+         flex: 0 0 108px;
+         @media (max-width: $tablet) {
+            flex: 0 0 85px;
+         }
+      }
+      a {
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         gap: 12px;
+         @include body-7;
+         color: $black;
+         @media (max-width: $tablet) {
+            @include body-4-tablet;
+            gap: 8px;
+            img {
+               width: 63px;
+            }
+         }
+      }
+      @media (max-width: 650px) {
+         justify-content: flex-start;
+         gap: 4px;
+         overflow: auto;
+         margin-left: calc(-1 * var(--container));
+         margin-right: calc(-1 * var(--container));
+         padding-left: calc(1 * var(--container));
+         padding-right: calc(1 * var(--container));
+         width: 100vw;
+      }
+   }
+}
+.collections-page {
+   margin-top: 60px;
+   @media (max-width: $tablet) {
+      margin-top: 40px;
+   }
+   @media (max-width: $mobile) {
+      margin-top: 32px;
+   }
+   // .collections-page__list
+
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 15px;
+      row-gap: 48px;
+      .home-collection {
+         gap: 24px;
+         @media (max-width: $tablet) {
+            gap: 16px;
+         }
+      }
+      @media (max-width: $tablet) {
+         grid-template-columns: repeat(2, 1fr);
+         column-gap: 10px;
+         row-gap: 28px;
+      }
+      @media (max-width: $mobile) {
+         grid-template-columns: 1fr;
+      }
+   }
+}

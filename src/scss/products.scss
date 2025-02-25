@@ -136,7 +136,25 @@
       height: 440px;
       img {
          max-width: 90%;
+         max-height: 70%;
          object-fit: contain;
+      }
+      @media (hover: hover) {
+         &:hover {
+            .product-card__footer {
+               background-color: white;
+               padding-left: 40px;
+               padding-right: 5px;
+               padding-top: 5px;
+               padding-bottom: 5px;
+               border-radius: 100px;
+               left: 28px;
+               right: 28px;
+            }
+            .product-card__cart {
+               opacity: 1;
+            }
+         }
       }
       @media (max-width: $tablet) {
          height: 250px;
@@ -201,12 +219,39 @@
    }
 
    // .product-card__colors
-
-   &__colors {
+   &__footer {
       position: absolute;
       bottom: 20px;
       left: 20px;
       right: 20px;
+      display: flex;
+      align-items: center;
+      transition: 0.4s;
+      gap: 32px;
+      justify-content: space-between;
+      transition: $transition;
+   }
+   &__cart {
+      opacity: 0;
+      transition: $transition;
+      --size: 54px;
+      background-color: $black;
+      svg path {
+         stroke: white;
+      }
+      @media (max-width: $mobile) {
+         opacity: 1;
+         background-color: $romance;
+         --size: 40px;
+         svg {
+            width: 16px;
+         }
+         svg path {
+            stroke: $black;
+         }
+      }
+   }
+   &__colors {
       display: flex;
       gap: 6px;
       input {
@@ -281,6 +326,7 @@
    // .product-card__price
 
    &__price {
+      white-space: nowrap;
       @include body-5;
       @media (max-width: $tablet) {
          @include body-5-mobile;
