@@ -1,0 +1,46 @@
+body.lock {
+   overflow: hidden;
+}
+
+.modal {
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background: rgba(32, 41, 41, 0.3);
+   opacity: 0;
+   visibility: hidden;
+   -webkit-transition: 0.5s;
+   -o-transition: 0.5s;
+   transition: 0.5s;
+   overflow-y: auto;
+   overflow-x: hidden;
+   cursor: pointer;
+   z-index: 101;
+}
+
+.modal__content {
+   width: 100%;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   position: absolute;
+   background-color: white;
+   padding: 35px;
+   overflow-y: auto;
+   @media (max-width: $tablet) {
+      max-width: 100%;
+      padding: 20px;
+   }
+   @media (max-width: $mobile) {
+      padding: 12px;
+   }
+}
+.modal.open {
+   opacity: 1;
+   visibility: visible;
+   .modal__content {
+      translate: 0;
+   }
+}

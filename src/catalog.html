@@ -73,10 +73,676 @@
             </div>
          </section>
          <section class="catalog-filters">
+            <div class="filters-modal modal" id="filterModal">
+               <div class="modal__content">
+                  <div class="filters-modal__header">
+                     <span class="filters-modal__title">Фильтр</span>
+                     <button class="filters-modal__close circle modal__close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                           <path
+                              d="M7.05661 7.99943L1.86133 2.80413L2.80413 1.86133L7.99941 7.05656L13.1947 1.86133L14.1375 2.80413L8.94221 7.99943L14.1375 13.1946L13.1947 14.1375L7.99941 8.94223L2.80413 14.1375L1.86133 13.1946L7.05661 7.99943Z"
+                              fill="#949698" />
+                        </svg>
+                     </button>
+                  </div>
+                  <div class="filters-modal__main scrollbar-none">
+                     <div class="filters-modal__section">
+                        <div class="filters-modal__subheader">
+                           <span class="filters-modal__subtitle">Тип изделия</span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                              fill="none">
+                              <path
+                                 d="M3.4707 10.5879C3.4707 10.5879 5.5219 9.11628 6.5293 8.11292C7.54617 7.10011 8.52904 5.52956 8.52904 5.52956C8.52904 5.52956 10.0123 7.60008 11.0293 8.61292C12.0366 9.61612 13.5874 10.5879 13.5874 10.5879"
+                                 stroke="#202929" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                        <div class="collapse collapse_show">
+                           <div class="filters-modal__spoiler">
+                              <ul class="catalog-select__list">
+                                 <li>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select0" value="0">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Смеситель для раковины</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select0" value="1">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Смеситель для ванны с душем</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select0" value="2">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Напольные смесители</span>
+                                    </label>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="filters-modal__section">
+                        <div class="filters-modal__subheader">
+                           <span class="filters-modal__subtitle">Цена, ₽ </span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                              fill="none">
+                              <path
+                                 d="M3.4707 10.5879C3.4707 10.5879 5.5219 9.11628 6.5293 8.11292C7.54617 7.10011 8.52904 5.52956 8.52904 5.52956C8.52904 5.52956 10.0123 7.60008 11.0293 8.61292C12.0366 9.61612 13.5874 10.5879 13.5874 10.5879"
+                                 stroke="#202929" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                        <div class="collapse collapse_show">
+                           <div class="filters-modal__spoiler">
+                              <div class="catalog-select__range" id="priceRange">
+                                 <div class="price-input-container">
+                                    <div class="price-input">
+                                       <div class="price-field">
+                                          <span>от</span>
+                                          <input type="number" class="min-input" value="0">
+                                       </div>
+
+                                       <div class="price-field">
+                                          <span>до</span>
+                                          <input type="number" class="max-input" value="4000000">
+                                       </div>
+                                    </div>
+                                    <div class="slider-container">
+                                       <div class="price-slider">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- Slider -->
+                                 <div class="range-input">
+                                    <input type="range" class="min-range" min="0" max="4000000" value="0" step="1000">
+                                    <input type="range" class="max-range" min="0" max="4000000" value="4000000"
+                                       step="1000">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="filters-modal__section">
+                        <div class="filters-modal__subheader">
+                           <span class="filters-modal__subtitle">С душевой лейкой</span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                              fill="none">
+                              <path
+                                 d="M3.4707 10.5879C3.4707 10.5879 5.5219 9.11628 6.5293 8.11292C7.54617 7.10011 8.52904 5.52956 8.52904 5.52956C8.52904 5.52956 10.0123 7.60008 11.0293 8.61292C12.0366 9.61612 13.5874 10.5879 13.5874 10.5879"
+                                 stroke="#202929" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                        <div class="collapse collapse_show">
+                           <div class="filters-modal__spoiler">
+                              <ul class="filters-modal__radios">
+                                 <li>
+                                    <label class="app-radio">
+                                       <input type="radio" name="filters-modal__spoiler-leika" value="0">
+                                       <div class="circle">
+                                          <div class="circle"></div>
+                                       </div>
+                                       <span>Да</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="app-radio">
+                                       <input type="radio" name="filters-modal__spoiler-leika" value="1">
+                                       <div class="circle">
+                                          <div class="circle"></div>
+                                       </div>
+                                       <span>Нет</span>
+                                    </label>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="filters-modal__section">
+                        <div class="filters-modal__subheader">
+                           <span class="filters-modal__subtitle">Излив</span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                              fill="none">
+                              <path
+                                 d="M3.4707 10.5879C3.4707 10.5879 5.5219 9.11628 6.5293 8.11292C7.54617 7.10011 8.52904 5.52956 8.52904 5.52956C8.52904 5.52956 10.0123 7.60008 11.0293 8.61292C12.0366 9.61612 13.5874 10.5879 13.5874 10.5879"
+                                 stroke="#202929" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                        <div class="collapse collapse_show">
+                           <div class="filters-modal__spoiler">
+                              <ul class="blog-section__filters scrollbar-none">
+                                 <li><label><input checked type="checkbox" value="0"
+                                          name="blog-section">Поворотный</label></li>
+                                 <li><label><input type="checkbox" value="1" name="blog-section">Литой</label></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="filters-modal__section">
+                        <div class="filters-modal__subheader">
+                           <span class="filters-modal__subtitle">С душевой лейкой</span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                              fill="none">
+                              <path
+                                 d="M3.4707 10.5879C3.4707 10.5879 5.5219 9.11628 6.5293 8.11292C7.54617 7.10011 8.52904 5.52956 8.52904 5.52956C8.52904 5.52956 10.0123 7.60008 11.0293 8.61292C12.0366 9.61612 13.5874 10.5879 13.5874 10.5879"
+                                 stroke="#202929" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                        <div class="collapse collapse_show">
+                           <div class="filters-modal__spoiler">
+                              <ul class="filters-modal__radios">
+                                 <li>
+                                    <label class="app-radio">
+                                       <input type="radio" name="filters-modal__spoiler-vkl" value="0">
+                                       <div class="circle">
+                                          <div class="circle"></div>
+                                       </div>
+                                       <span>Сенсор</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="app-radio">
+                                       <input type="radio" name="filters-modal__spoiler-vkl" value="1">
+                                       <div class="circle">
+                                          <div class="circle"></div>
+                                       </div>
+                                       <span>Механическое</span>
+                                    </label>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="filters-modal__section">
+                        <div class="filters-modal__subheader">
+                           <span class="filters-modal__subtitle">Термостат</span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                              fill="none">
+                              <path
+                                 d="M3.4707 10.5879C3.4707 10.5879 5.5219 9.11628 6.5293 8.11292C7.54617 7.10011 8.52904 5.52956 8.52904 5.52956C8.52904 5.52956 10.0123 7.60008 11.0293 8.61292C12.0366 9.61612 13.5874 10.5879 13.5874 10.5879"
+                                 stroke="#202929" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                        <div class="collapse collapse_show">
+                           <div class="filters-modal__spoiler">
+                              <ul class="filters-modal__radios">
+                                 <li>
+                                    <label class="app-radio">
+                                       <input type="radio" name="filters-modal__spoiler-trermo" value="0">
+                                       <div class="circle">
+                                          <div class="circle"></div>
+                                       </div>
+                                       <span>Да</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="app-radio">
+                                       <input type="radio" name="filters-modal__spoiler-trermo" value="1">
+                                       <div class="circle">
+                                          <div class="circle"></div>
+                                       </div>
+                                       <span>Нет</span>
+                                    </label>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="filters-modal__section">
+                        <div class="filters-modal__subheader">
+                           <span class="filters-modal__subtitle">Фильтр для питьевой воды</span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                              fill="none">
+                              <path
+                                 d="M3.4707 10.5879C3.4707 10.5879 5.5219 9.11628 6.5293 8.11292C7.54617 7.10011 8.52904 5.52956 8.52904 5.52956C8.52904 5.52956 10.0123 7.60008 11.0293 8.61292C12.0366 9.61612 13.5874 10.5879 13.5874 10.5879"
+                                 stroke="#202929" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                        <div class="collapse collapse_show">
+                           <div class="filters-modal__spoiler">
+                              <ul class="filters-modal__radios">
+                                 <li>
+                                    <label class="app-radio">
+                                       <input type="radio" name="filters-modal__spoiler-pit-voda" value="0">
+                                       <div class="circle">
+                                          <div class="circle"></div>
+                                       </div>
+                                       <span>С фильтром</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="app-radio">
+                                       <input type="radio" name="filters-modal__spoiler-pit-voda" value="1">
+                                       <div class="circle">
+                                          <div class="circle"></div>
+                                       </div>
+                                       <span>Без фильтра</span>
+                                    </label>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="filters-modal__section">
+                        <div class="filters-modal__subheader">
+                           <span class="filters-modal__subtitle">Коллекция</span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                              fill="none">
+                              <path
+                                 d="M3.4707 10.5879C3.4707 10.5879 5.5219 9.11628 6.5293 8.11292C7.54617 7.10011 8.52904 5.52956 8.52904 5.52956C8.52904 5.52956 10.0123 7.60008 11.0293 8.61292C12.0366 9.61612 13.5874 10.5879 13.5874 10.5879"
+                                 stroke="#202929" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                        <div class="collapse collapse_show">
+                           <div class="filters-modal__spoiler">
+                              <ul class="catalog-select__list gtc2">
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-collection" value="0">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Infinity</span>
+                                    </label>
+                                 </div>
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-collection" value="1">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Elixir</span>
+                                    </label>
+                                 </div>
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-collection" value="2">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Eclipse</span>
+                                    </label>
+                                 </div>
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-collection" value="3">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Finesse</span>
+                                    </label>
+                                 </div>
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-collection" value="4">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Starshine</span>
+                                    </label>
+                                 </div>
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-collection" value="5">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Streamline</span>
+                                    </label>
+                                 </div>
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-collection" value="6">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Muse</span>
+                                    </label>
+                                 </div>
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-collection" value="7">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Vigor</span>
+                                    </label>
+                                 </div>
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-collection" value="8">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Inspiration</span>
+                                    </label>
+                                 </div>
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-collection" value="9">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Ecoflow</span>
+                                    </label>
+                                 </div>
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-collection" value="10">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Ergofit</span>
+                                    </label>
+                                 </div>
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-collection" value="11">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Pulse</span>
+                                    </label>
+                                 </div>
+
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="filters-modal__section">
+                        <div class="filters-modal__subheader">
+                           <span class="filters-modal__subtitle">Цвет</span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                              fill="none">
+                              <path
+                                 d="M3.4707 10.5879C3.4707 10.5879 5.5219 9.11628 6.5293 8.11292C7.54617 7.10011 8.52904 5.52956 8.52904 5.52956C8.52904 5.52956 10.0123 7.60008 11.0293 8.61292C12.0366 9.61612 13.5874 10.5879 13.5874 10.5879"
+                                 stroke="#202929" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                        <div class="collapse collapse_show">
+                           <div class="filters-modal__spoiler">
+                              <ul class="catalog-select__list gtc2 colors">
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-color" value="0">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <div class="circle">
+                                          <img src="img/catalog/filters/color1.webp" alt="">
+                                       </div>
+                                       <span>Хром</span>
+                                    </label>
+                                 </div>
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-color" value="1">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <div class="circle">
+                                          <img src="img/catalog/filters/color2.webp" alt="">
+                                       </div>
+                                       <span>Вороненая сталь</span>
+                                    </label>
+                                 </div>
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-color" value="2">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <div class="circle">
+                                          <img src="img/catalog/filters/color3.webp" alt="">
+                                       </div>
+                                       <span>Матовый черный</span>
+                                    </label>
+                                 </div>
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-color" value="3">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <div class="circle">
+                                          <img src="img/catalog/filters/color4.webp" alt="">
+                                       </div>
+                                       <span>Бронза</span>
+                                    </label>
+                                 </div>
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-color" value="4">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <div class="circle">
+                                          <img src="img/catalog/filters/color5.webp" alt="">
+                                       </div>
+                                       <span>Матовый белый</span>
+                                    </label>
+                                 </div>
+
+                                 <div>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-color" value="5">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <div class="circle">
+                                          <img src="img/catalog/filters/color6.webp" alt="">
+                                       </div>
+                                       <span>Матовая сталь</span>
+                                    </label>
+                                 </div>
+
+
+
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="filters-modal__section">
+                        <div class="filters-modal__subheader">
+                           <span class="filters-modal__subtitle">Материал</span>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                              fill="none">
+                              <path
+                                 d="M3.4707 10.5879C3.4707 10.5879 5.5219 9.11628 6.5293 8.11292C7.54617 7.10011 8.52904 5.52956 8.52904 5.52956C8.52904 5.52956 10.0123 7.60008 11.0293 8.61292C12.0366 9.61612 13.5874 10.5879 13.5874 10.5879"
+                                 stroke="#202929" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                 stroke-linejoin="round" />
+                           </svg>
+                        </div>
+                        <div class="collapse collapse_show">
+                           <div class="filters-modal__spoiler">
+                              <ul class="catalog-select__list">
+                                 <li>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-material" value="0">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Латунь</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-material" value="1">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Нержавеющая сталь</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-material" value="2">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Цинковый сплав</span>
+                                    </label>
+                                 </li>
+                                 <li>
+                                    <label class="app-checkbox">
+                                       <input type="checkbox" name="catalog-select-material" value="3">
+                                       <div>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                             viewBox="0 0 20 20" fill="none">
+                                             <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                          </svg>
+                                       </div>
+                                       <span>Силумин</span>
+                                    </label>
+                                 </li>
+
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="filters-modal__footer">
+                     <button class="filters-modal__apply">
+                        Применить</button>
+                     <button class="filters-modal__reset">Сбросить фильтр</button>
+                  </div>
+               </div>
+            </div>
             <div class="container">
                <div class="catalog-filters__wrapper">
                   <div class="catalog-filters__upper">
-                     <button class="catalog-filters__open">
+                     <button class="catalog-filters__open modal__link" href="#filterModal">
                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
                            <path d="M18.834 5.41699H13.834" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
                               stroke-linecap="round" stroke-linejoin="round" />

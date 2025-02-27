@@ -170,6 +170,37 @@ label {
       }
    }
 }
+.app-radio {
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   input {
+      display: none;
+   }
+   & > .circle {
+      --size: 16px;
+      border: 1px solid $grey-dark;
+      transition: $transition;
+      padding: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .circle {
+         transition: $transition;
+         --size: 10px;
+         background-color: $black;
+         opacity: 0;
+      }
+   }
+   &:has(input:checked) {
+      & > .circle {
+         border-color: $black;
+         .circle {
+            opacity: 1;
+         }
+      }
+   }
+}
 .app-select {
    position: relative;
    z-index: 2;

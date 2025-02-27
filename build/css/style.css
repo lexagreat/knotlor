@@ -659,6 +659,48 @@ label {
   opacity: 1;
 }
 
+.app-radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.app-radio input {
+  display: none;
+}
+.app-radio > .circle {
+  --size: 16px;
+  border: 1px solid #949698;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  padding: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.app-radio > .circle .circle {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  --size: 10px;
+  background-color: #202929;
+  opacity: 0;
+}
+.app-radio:has(input:checked) > .circle {
+  border-color: #202929;
+}
+.app-radio:has(input:checked) > .circle .circle {
+  opacity: 1;
+}
+
 .app-select {
   position: relative;
   z-index: 2;
@@ -6105,4 +6147,370 @@ input[type=range]::-webkit-slider-thumb {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 16px;
+}
+
+.filters-modal .modal__content {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 514px;
+  top: 0;
+  right: 0;
+  left: unset;
+  translate: unset;
+  bottom: 0;
+  height: 100dvh;
+}
+@media (max-width: 568px) {
+  .filters-modal .modal__content {
+    max-width: unset;
+  }
+}
+.filters-modal__header {
+  height: 84px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 50px;
+}
+@media (max-width: 568px) {
+  .filters-modal__header {
+    height: 58px;
+    padding: 0 12px;
+  }
+}
+.filters-modal__title {
+  /* 1440/Decor H4 regular */
+  font-family: "TT Ramillas";
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 120%; /* 33.6px */
+}
+@media (max-width: 568px) {
+  .filters-modal__title {
+    /* 390/Decor H5 regular */
+    font-family: "TT Ramillas";
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%; /* 18.2px */
+  }
+}
+.filters-modal__close {
+  --size: 34px;
+  border: 1px solid #949698;
+}
+.filters-modal__main {
+  overflow: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  padding-left: 40px;
+  padding-right: 50px;
+}
+@media (max-width: 568px) {
+  .filters-modal__main {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+.filters-modal__footer {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+  padding-right: 50px;
+  height: 136px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #d4d4d4;
+}
+@media (max-width: 568px) {
+  .filters-modal__footer {
+    padding-bottom: 32px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+.filters-modal__apply {
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  border: 1px solid #949698;
+  border-radius: 100px;
+  /* 1440/Body 6 medium */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+  color: #202929;
+}
+.filters-modal__reset {
+  height: 26px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #949698;
+  /* 1440/Body 6 medium */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+  border-bottom: 1px solid #949698;
+}
+.filters-modal__section {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f3f3f3;
+}
+.filters-modal__subheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.filters-modal__subheader svg {
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.filters-modal__subheader.active svg {
+  rotate: 180deg;
+}
+.filters-modal__subtitle {
+  leading-trim: both;
+  text-edge: cap;
+  /* 1440/Body 2 medium */
+  font-family: "TT Drugs";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 22.4px */
+  color: #202929;
+}
+.filters-modal__spoiler {
+  padding-top: 20px;
+}
+.filters-modal__spoiler .blog-section__filters {
+  margin-bottom: 0;
+}
+.filters-modal__spoiler .gtc2 {
+  max-width: 350px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.filters-modal__spoiler .gtc2.colors {
+  max-width: 388px;
+}
+.filters-modal__spoiler .gtc2.colors .circle {
+  width: 32px !important;
+  height: 32px !important;
+  -webkit-box-flex: 0 !important;
+      -ms-flex: 0 0 32px !important;
+          flex: 0 0 32px !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+}
+.filters-modal__spoiler .gtc2.colors .circle img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 568px) {
+  .filters-modal__spoiler .gtc2.colors {
+    grid-template-columns: 1fr;
+  }
+  .filters-modal__spoiler .gtc2.colors .circle {
+    width: 25px !important;
+    height: 25px !important;
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 25px !important;
+            flex: 0 0 25px !important;
+  }
+}
+.filters-modal__radios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 32px;
+}
+
+.collections-hero__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.collections-hero__title sup {
+  /* 1440/Body 1 regular */
+  font-family: "TT Drugs";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  color: #202929;
+}
+@media (max-width: 1024px) {
+  .collections-hero__title sup {
+    /* 768/Body 1 regular */
+    font-family: "TT Drugs";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 140%; /* 23.8px */
+  }
+}
+@media (max-width: 568px) {
+  .collections-hero__title sup {
+    /* 1440/Body 4 regular */
+    font-family: "TT Ramillas";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+  }
+}
+
+.catalog-hero__categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-top: 1px solid #d4d4d4;
+  border-bottom: 1px solid #d4d4d4;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 0;
+}
+.catalog-hero__categories li {
+  cursor: pointer;
+  padding: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+.catalog-hero__categories li span {
+  /* 1440/Body 7 regular */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%; /* 18.2px */
+  color: #202929;
+}
+.catalog-hero__categories li sup {
+  translate: 0 -2px;
+  /* 1440/Body small */
+  font-family: "TT Drugs";
+  font-size: 12px;
+  font-weight: 400;
+  color: #949698;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(32, 41, 41, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow-y: auto;
+  overflow-x: hidden;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.modal__content {
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-color: white;
+  padding: 35px;
+  overflow-y: auto;
+}
+@media (max-width: 1024px) {
+  .modal__content {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
+@media (max-width: 568px) {
+  .modal__content {
+    padding: 12px;
+  }
+}
+
+.modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+.modal.open .modal__content {
+  translate: 0;
 }
