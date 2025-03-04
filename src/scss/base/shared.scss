@@ -8,6 +8,7 @@
    flex-direction: column;
    background: $romance;
    font-family: $fontDrugs;
+   color: $black;
 }
 .main {
    flex: 1;
@@ -295,6 +296,71 @@ label {
          &.selected {
             color: $grey-dark;
          }
+      }
+   }
+}
+.app-tabs {
+   display: flex;
+   gap: 60px;
+   margin-left: calc(-1 * var(--containerFull));
+   margin-right: calc(-1 * var(--containerFull));
+   padding-left: calc(1 * var(--containerFull));
+   padding-right: calc(1 * var(--containerFull));
+   position: relative;
+   column-gap: 60px;
+   row-gap: 16px;
+   flex-wrap: wrap;
+   @media (max-width: $tablet) {
+      column-gap: 24px;
+   }
+   &::after {
+      content: "";
+      display: block;
+      background: #d4d4d4;
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+   }
+   input {
+      display: none;
+   }
+   label {
+      @include h6;
+      text-transform: uppercase;
+      color: $grey-dark;
+      transition: $transition;
+      padding-bottom: 16px;
+      display: flex;
+      position: relative;
+      z-index: 2;
+      &::after {
+         opacity: 0;
+         content: "";
+         position: absolute;
+         bottom: 0;
+         left: -12px;
+         width: calc(100% + 24px);
+         height: 1px;
+         background-color: $black;
+         transition: $transition;
+         @media (max-width: $tablet) {
+            display: none;
+         }
+      }
+      &:has(input:checked) {
+         color: $black;
+         &::after {
+            opacity: 1;
+         }
+      }
+      @media (max-width: $tablet) {
+         @include h5-tablet;
+      }
+      @media (max-width: $mobile) {
+         @include h6-mobile;
       }
    }
 }

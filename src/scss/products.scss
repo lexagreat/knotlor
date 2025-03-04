@@ -7,7 +7,9 @@
       padding-bottom: 60px;
    }
    // .products-section__wrapper
-
+   .slider-btn {
+      top: 40%;
+   }
    &__wrapper {
       & > .home-about__link {
          display: none;
@@ -139,23 +141,23 @@
          max-height: 70%;
          object-fit: contain;
       }
-      @media (hover: hover) {
-         &:hover {
-            .product-card__footer {
-               background-color: white;
-               padding-left: 40px;
-               padding-right: 5px;
-               padding-top: 5px;
-               padding-bottom: 5px;
-               border-radius: 100px;
-               left: 28px;
-               right: 28px;
-            }
-            .product-card__cart {
-               opacity: 1;
-            }
-         }
-      }
+      // @media (hover: hover) {
+      //    &:hover {
+      //       .product-card__footer {
+      //          background-color: white;
+      //          padding-left: 40px;
+      //          padding-right: 5px;
+      //          padding-top: 5px;
+      //          padding-bottom: 5px;
+      //          border-radius: 100px;
+      //          left: 28px;
+      //          right: 28px;
+      //       }
+      //       .product-card__cart {
+      //          opacity: 1;
+      //       }
+      //    }
+      // }
       @media (max-width: $tablet) {
          height: 250px;
       }
@@ -188,7 +190,8 @@
          display: flex;
          align-items: center;
          justify-content: center;
-         padding: 6px 8px;
+         padding: 0px 8px;
+         height: 22px;
          border-radius: 5px;
          background-color: $blue-stone;
          color: $white;
@@ -225,19 +228,26 @@
       left: 20px;
       right: 20px;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       transition: 0.4s;
       gap: 32px;
       justify-content: space-between;
       transition: $transition;
+      @media (max-width: $tablet) {
+         right: 7px;
+         left: 10px;
+         bottom: 10px;
+      }
    }
    &__cart {
-      opacity: 0;
       transition: $transition;
       --size: 54px;
-      background-color: $black;
+      background-color: $romance;
       svg path {
-         stroke: white;
+         stroke: $black;
+      }
+      @media (max-width: $tablet) {
+         --size: 40px;
       }
       @media (max-width: $mobile) {
          opacity: 1;
@@ -263,9 +273,9 @@
          display: flex;
          align-items: center;
          justify-content: center;
-         width: 18px;
-         height: 18px;
-         flex: 0 0 18px;
+         width: 24px;
+         height: 24px;
+         flex: 0 0 24px;
          padding: 3px;
          border: 1px solid transparent;
          .circle {
@@ -276,7 +286,7 @@
       label:has(input:checked) {
          border-color: $grey-dark;
          .circle {
-            --size: 14px;
+            // --size: 14px;
          }
       }
       @media (max-width: $tablet) {
@@ -308,8 +318,8 @@
    // .product-card__descripition
 
    &__descripition {
-      margin-top: 12px;
-      margin-bottom: 16px;
+      margin-top: 4px;
+      margin-bottom: 8px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -319,7 +329,7 @@
       @include body-7;
       @media (max-width: $tablet) {
          @include body-6-mobile;
-         margin: 10px 0;
+         margin: 4px 0;
       }
    }
 

@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
    }
    collectionCard();
    catalogPage();
+   productPage();
 });
 function headerWork() {
    const main = document.querySelector("main.main");
@@ -98,9 +99,30 @@ function headerWork() {
          close.closest(".header-collection.active").classList.remove("active");
       };
    }
+   let oldScrollTopPosition = 0;
+   const animateHeaderDown = () => {
+      if (window.innerWidth > 992) {
+         const scrollTopPosition = document.documentElement.scrollTop;
+         if (scrollTopPosition <= 0) {
+            return;
+         }
+         let scrollDown = oldScrollTopPosition < scrollTopPosition;
+         if (scrollDown) {
+            header.classList.contains("hidden")
+               ? ""
+               : header.classList.add("hidden");
+         } else {
+            header.classList.remove("hidden");
+         }
+
+         oldScrollTopPosition = scrollTopPosition;
+      }
+   };
    headerScroll();
    headerAssort();
    headerCollection();
+   animateHeaderDown();
+   window.addEventListener("scroll", animateHeaderDown);
 }
 function initProductSlider() {
    if (!document.querySelector(".products-section .swiper")) return;
@@ -457,6 +479,139 @@ function catalogPage() {
    initSelects();
    filtersModal();
    makeRange("#priceRange", 4000000, 100000);
+}
+function productPage() {
+   pageNavigation();
+   accordion(".product-accordeon__header", ".product-accordeon__collapse");
+   showAllReview();
+   const photos = document.querySelectorAll(".product-gallery__list li");
+   const slides = document.querySelectorAll(
+      ".product-gallery > .swiper .swiper-slide"
+   );
+   const zoomModal = document.querySelector(".product-zoom");
+   if (!photos.length) return;
+   photos.forEach((item, index) => {
+      item.onclick = () => {
+         popupOpen(zoomModal);
+         document
+            .querySelectorAll(`.product-zoom__gallery img`)
+            [index].scrollIntoView({
+               behavior: "smooth",
+               block: "start",
+            });
+      };
+   });
+   slides.forEach((item, index) => {
+      item.onclick = () => {
+         popupOpen(zoomModal);
+         zoomSwiper.slideTo(index);
+      };
+   });
+   const closeBtn = document.querySelector(".product-gallery .modal__close");
+   closeBtn.onclick = () => {
+      popupClose(zoomModal);
+   };
+   let mainSwiper = new Swiper(".product-gallery > .swiper", {
+      slidesPerView: 1,
+      pagination: {
+         el: ".product-gallery > .swiper-pagination",
+         type: "progressbar",
+      },
+   });
+   let zoomSwiper = new Swiper(".product-zoom__main", {
+      slidesPerView: 1,
+      pagination: {
+         el: ".product-zoom .modal__content .swiper-pagination",
+         type: "custom",
+         renderCustom: function (swiper, current, total) {
+            return `${current} из ${total}`;
+         },
+      },
+   });
+   tabs('[name="product-tabs"]', ".product-about__tab");
+   function pageNavigation() {
+      const links = document.querySelectorAll(
+         ".product-zoom__gallery_thumbs ul li a"
+      );
+      const sections = document.querySelectorAll(".product-zoom__gallery img");
+      if (!links.length) {
+         return;
+      }
+      links.forEach((anchor, i) => {
+         anchor.addEventListener("click", function (e) {
+            links.forEach((item, j) => {
+               if (i !== j) {
+                  item.classList.remove("active");
+               } else {
+                  item.classList.add("active");
+               }
+            });
+            e.preventDefault();
+            const targetId = this.getAttribute("data-scroll");
+            console.log(targetId);
+            const targetElement = document.querySelector(
+               `[data-scroll='${targetId}']`
+            );
+
+            if (targetElement) {
+               targetElement.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+               });
+            }
+         });
+      });
+      const callback = (entries, observer) => {
+         entries.forEach((entry) => {
+            if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
+               let section = entry.target.nextElementSibling;
+               if (!section || !section.getAttribute("data-scroll")) {
+                  return;
+               }
+               let id = section.getAttribute("data-scroll");
+               links.forEach((link) => {
+                  link.classList.remove("active");
+                  if (link.getAttribute("data-scroll") === id) {
+                     link.classList.add("active");
+                  }
+               });
+            } else {
+               if (entry.boundingClientRect.top < 0) {
+                  let section = entry.target;
+                  if (!section || !section.getAttribute("data-scroll")) {
+                     return;
+                  }
+                  let id = section.getAttribute("data-scroll");
+                  links.forEach((link) => {
+                     link.classList.remove("active");
+                     if (link.getAttribute("data-scroll") === id) {
+                        link.classList.add("active");
+                     }
+                  });
+               }
+            }
+         });
+      };
+
+      const options = {
+         // root: по умолчанию window, но можно задать любой элемент-контейнер
+         rootMargin: "-150px 0px 0px 0px",
+         threshold: 0,
+      };
+
+      const observer = new IntersectionObserver(callback, options);
+
+      sections.forEach((section) => observer.observe(section));
+   }
+   function showAllReview() {
+      const btns = document.querySelectorAll(".product-review__block button");
+      if (!btns.length) return;
+      btns.forEach((item) => {
+         item.onclick = (e) => {
+            e.target.previousElementSibling.classList.add("full");
+         };
+      });
+   }
 }
 function slideShow(el, duration = 500) {
    // завершаем работу метода, если элемент содержит класс collapsing или collapse_show
@@ -962,3 +1117,23 @@ document.addEventListener("keydown", function (e) {
       popupClose(popupActive);
    }
 });
+function tabs(linkSelector, contentSelector) {
+   const inputs = document.querySelectorAll(linkSelector);
+   const contents = document.querySelectorAll(contentSelector);
+   let value;
+   if (inputs.length) {
+      inputs.forEach((item) => {
+         item.addEventListener("change", () => {
+            if (item.checked) {
+               value = item.value;
+            }
+            contents.forEach((item) => {
+               item.classList.remove("active");
+               if (item.getAttribute("data-tab") == value) {
+                  item.classList.add("active");
+               }
+            });
+         });
+      });
+   }
+}

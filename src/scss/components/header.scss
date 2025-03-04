@@ -6,7 +6,9 @@
    left: 0;
    right: 0;
    transition: $transition;
-
+   &.hidden {
+      translate: 0 -100%;
+   }
    &.light {
       background-color: $romance;
       .header {
