@@ -787,3 +787,292 @@
       }
    }
 }
+.cart-modal {
+   // .cart-modal__content
+
+   &__content {
+      width: 100vw;
+      max-width: 524px !important;
+      background-color: $romance;
+      padding: 0 !important;
+      display: flex;
+      flex-direction: column;
+      height: 100dvh;
+      @media (max-width: $mobile) {
+         max-width: unset !important;
+      }
+   }
+
+   // .cart-modal__header
+
+   &__header {
+   }
+
+   // .cart-modal__title
+
+   &__title {
+   }
+
+   // .cart-modal__main
+
+   &__main {
+      overflow: auto;
+      flex: 1;
+      padding-left: 40px;
+      padding-right: 50px;
+      @media (max-width: $mobile) {
+         padding-left: 12px;
+         padding-right: 12px;
+      }
+   }
+   // .cart-modal__items
+
+   &__items {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      @media (max-width: $mobile) {
+         gap: 12px;
+      }
+   }
+
+   // .cart-modal__item
+
+   &__item {
+      padding-bottom: 16px;
+      display: flex;
+      gap: 28px;
+      border-bottom: 1px solid #d4d4d4;
+      @media (max-width: $mobile) {
+         gap: 15px;
+         padding-bottom: 12px;
+      }
+   }
+
+   // .cart-modal__image
+
+   &__image {
+      flex: 0 0 106px;
+      border-radius: 5px;
+      background: rgba(255, 254, 251, 0.75);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+         max-width: 86px;
+         height: auto;
+         object-fit: contain;
+      }
+      @media (max-width: $mobile) {
+         flex: 0 0 89px;
+         img {
+            max-width: 69px;
+         }
+      }
+   }
+
+   // .cart-modal__main
+
+   &__submain {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+      @media (max-width: $mobile) {
+         gap: 10px;
+      }
+   }
+
+   // .cart-modal__header
+
+   &__subheader {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      width: calc(100% - 40px);
+      @media (max-width: $mobile) {
+         gap: 2px;
+      }
+   }
+
+   &__subtitle {
+      @include body-3;
+      @media (max-width: $mobile) {
+         @include body-3-mobile;
+      }
+   }
+
+   &__description {
+      @include body-7;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      @media (max-width: $mobile) {
+         @include body-6-mobile;
+      }
+   }
+
+   // .cart-modal__color
+
+   &__color {
+      @include body-small;
+      color: $grey-dark;
+      @media (max-width: $mobile) {
+         @include body-6-mobile;
+      }
+   }
+
+   // .cart-modal__footer
+
+   &__subfooter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   // .cart-modal__count
+
+   &__count {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      button {
+         flex: 0 0 20px;
+         @media (max-width: $mobile) {
+            flex: 0 0 16px;
+         }
+      }
+      span {
+         @include body-4;
+      }
+   }
+
+   // .cart-modal__price
+
+   &__price {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      @include body-5;
+      @media (max-width: $mobile) {
+         @include body-5-mobile;
+      }
+   }
+
+   // .cart-modal__remove
+
+   &__remove {
+      position: absolute;
+      top: 0;
+      right: 0;
+   }
+   &__result {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include h5;
+      color: $black;
+      @media (max-width: $mobile) {
+         @include h5-mobile;
+      }
+   }
+   &__controls {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: $mobile) {
+         margin-bottom: 16px;
+      }
+      span {
+         @include body-1;
+         @media (max-width: $mobile) {
+            @include body-1-mobile;
+         }
+      }
+      ul {
+         display: flex;
+         gap: 12px;
+         .slider-btn {
+            border: 1px solid $grey;
+            background-color: transparent;
+            margin: unset !important;
+            --size: 40px;
+            position: relative;
+            top: unset !important;
+            left: unset !important;
+            right: unset !important;
+            bottom: unset !important;
+            translate: unset !important;
+            &.swiper-button-disabled {
+               opacity: 0.7 !important;
+            }
+            svg {
+               width: 16px;
+               path {
+                  stroke: $grey-dark;
+               }
+            }
+         }
+      }
+   }
+   &__slider {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      .swiper {
+         margin-left: -40px;
+         margin-right: -50px;
+         padding-left: 40px;
+         padding-right: 50px;
+         @media (max-width: $mobile) {
+            margin-left: -12px;
+            margin-right: -12px;
+            padding-left: 12px;
+            padding-right: 12px;
+         }
+         .swiper-slide {
+            width: fit-content;
+            .product-card {
+               max-width: 175px;
+               gap: 8px;
+               &__image {
+                  height: 203px;
+                  img {
+                     max-height: 50%;
+                  }
+               }
+               &__cart {
+                  --size: 40px;
+                  svg {
+                     width: 16px;
+                  }
+               }
+               &__footer {
+                  bottom: 10px;
+                  left: 10px;
+                  right: 10px;
+               }
+               &__descripition {
+                  margin: 4px 0;
+               }
+               &__main {
+                  padding-left: 0;
+               }
+               @media (max-width: $mobile) {
+                  max-width: 150px;
+                  &__image {
+                     height: 180px;
+                  }
+               }
+            }
+         }
+      }
+   }
+   &__footer {
+      .filters-modal__apply {
+         background-color: $black;
+         color: white;
+      }
+   }
+}

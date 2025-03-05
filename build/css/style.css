@@ -917,6 +917,89 @@ label {
   }
 }
 
+.app-input {
+  width: 100%;
+  position: relative;
+  display: block;
+}
+.app-input.error input {
+  border-color: #eb001b;
+}
+.app-input.error p {
+  display: block;
+  color: #eb001b;
+  /* 1440/Body small */
+  font-family: "TT Drugs";
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.app-input span {
+  position: absolute;
+  /* 1440/Body 7 regular */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%; /* 18.2px */
+  color: #949698;
+  top: 25px;
+  left: 16px;
+  translate: 0 -50%;
+  pointer-events: none;
+  background: #fbf8ef;
+  padding: 0 8px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.app-input input {
+  background-color: transparent;
+  width: 100%;
+  height: 50px;
+  padding-left: 16px;
+  border-radius: 5px;
+  border: 1px solid var(--grey, #d4d4d4);
+  /* 1440/Body 7 regular */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%; /* 18.2px */
+  color: #202929;
+  font-size: 16px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.app-input button {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  translate: 0 -50%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
+  width: 24px;
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer-events: none;
+}
+.app-input p {
+  display: none;
+}
+.app-input.filled span, .app-input:has(input:focus) span {
+  top: 0;
+}
+.app-input.filled button {
+  opacity: 1;
+  pointer-events: all;
+}
+
 .header {
   position: fixed;
   z-index: 100;
@@ -1926,6 +2009,403 @@ label {
   background-color: #f8f4e8;
 }
 
+.cart-modal__content {
+  width: 100vw;
+  max-width: 524px !important;
+  background-color: #f8f4e8;
+  padding: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100dvh;
+}
+@media (max-width: 568px) {
+  .cart-modal__content {
+    max-width: unset !important;
+  }
+}
+.cart-modal__main {
+  overflow: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 40px;
+  padding-right: 50px;
+}
+@media (max-width: 568px) {
+  .cart-modal__main {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+.cart-modal__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+@media (max-width: 568px) {
+  .cart-modal__items {
+    gap: 12px;
+  }
+}
+.cart-modal__item {
+  padding-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 28px;
+  border-bottom: 1px solid #d4d4d4;
+}
+@media (max-width: 568px) {
+  .cart-modal__item {
+    gap: 15px;
+    padding-bottom: 12px;
+  }
+}
+.cart-modal__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 106px;
+          flex: 0 0 106px;
+  border-radius: 5px;
+  background: rgba(255, 254, 251, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.cart-modal__image img {
+  max-width: 86px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 568px) {
+  .cart-modal__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 89px;
+            flex: 0 0 89px;
+  }
+  .cart-modal__image img {
+    max-width: 69px;
+  }
+}
+.cart-modal__submain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+@media (max-width: 568px) {
+  .cart-modal__submain {
+    gap: 10px;
+  }
+}
+.cart-modal__subheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+  width: calc(100% - 40px);
+}
+@media (max-width: 568px) {
+  .cart-modal__subheader {
+    gap: 2px;
+  }
+}
+.cart-modal__subtitle {
+  leading-trim: both;
+  text-edge: cap;
+  /* 1440/Decor Body 3 regular */
+  font-family: "TT Ramillas";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%; /* 20.8px */
+}
+@media (max-width: 568px) {
+  .cart-modal__subtitle {
+    leading-trim: both;
+    text-edge: cap;
+    /* 390/Body 3 regular */
+    font-family: "TT Ramillas";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 16.8px */
+  }
+}
+.cart-modal__description {
+  /* 1440/Body 7 regular */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%; /* 18.2px */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@media (max-width: 568px) {
+  .cart-modal__description {
+    /* 1440/Body 6 medium */
+    font-family: "TT Drugs";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 120%; /* 16.8px */
+  }
+}
+.cart-modal__color {
+  /* 1440/Body small */
+  font-family: "TT Drugs";
+  font-size: 12px;
+  font-weight: 400;
+  color: #949698;
+}
+@media (max-width: 568px) {
+  .cart-modal__color {
+    /* 1440/Body 6 medium */
+    font-family: "TT Drugs";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 120%; /* 16.8px */
+  }
+}
+.cart-modal__subfooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.cart-modal__count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.cart-modal__count button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+}
+@media (max-width: 568px) {
+  .cart-modal__count button {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 16px;
+            flex: 0 0 16px;
+  }
+}
+.cart-modal__count span {
+  /* 1440/Body 4 regular */
+  font-family: "TT Drugs";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+.cart-modal__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  /* 1440/Body 5 demibold */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 140%; /* 19.6px */
+}
+@media (max-width: 568px) {
+  .cart-modal__price {
+    /* 1440/Body 5 demibold */
+    font-family: "TT Drugs";
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 140%; /* 19.6px */
+  }
+}
+.cart-modal__remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.cart-modal__result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* 1440/H5 medium */
+  font-family: "TT Drugs";
+  font-size: 18px;
+  font-weight: 500;
+  color: #202929;
+}
+@media (max-width: 568px) {
+  .cart-modal__result {
+    /* 390/H5 medium */
+    font-family: "TT Drugs";
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+.cart-modal__controls {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 568px) {
+  .cart-modal__controls {
+    margin-bottom: 16px;
+  }
+}
+.cart-modal__controls span {
+  /* 1440/Body 1 regular */
+  font-family: "TT Drugs";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+}
+@media (max-width: 568px) {
+  .cart-modal__controls span {
+    /* 390/Body 1 regular */
+    font-family: "TT Drugs";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 140%; /* 23.8px */
+  }
+}
+.cart-modal__controls ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+.cart-modal__controls ul .slider-btn {
+  border: 1px solid #d4d4d4;
+  background-color: transparent;
+  margin: unset !important;
+  --size: 40px;
+  position: relative;
+  top: unset !important;
+  left: unset !important;
+  right: unset !important;
+  bottom: unset !important;
+  translate: unset !important;
+}
+.cart-modal__controls ul .slider-btn.swiper-button-disabled {
+  opacity: 0.7 !important;
+}
+.cart-modal__controls ul .slider-btn svg {
+  width: 16px;
+}
+.cart-modal__controls ul .slider-btn svg path {
+  stroke: #949698;
+}
+.cart-modal__slider {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.cart-modal__slider .swiper {
+  margin-left: -40px;
+  margin-right: -50px;
+  padding-left: 40px;
+  padding-right: 50px;
+}
+@media (max-width: 568px) {
+  .cart-modal__slider .swiper {
+    margin-left: -12px;
+    margin-right: -12px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+.cart-modal__slider .swiper .swiper-slide {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.cart-modal__slider .swiper .swiper-slide .product-card {
+  max-width: 175px;
+  gap: 8px;
+}
+.cart-modal__slider .swiper .swiper-slide .product-card__image {
+  height: 203px;
+}
+.cart-modal__slider .swiper .swiper-slide .product-card__image img {
+  max-height: 50%;
+}
+.cart-modal__slider .swiper .swiper-slide .product-card__cart {
+  --size: 40px;
+}
+.cart-modal__slider .swiper .swiper-slide .product-card__cart svg {
+  width: 16px;
+}
+.cart-modal__slider .swiper .swiper-slide .product-card__footer {
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+.cart-modal__slider .swiper .swiper-slide .product-card__descripition {
+  margin: 4px 0;
+}
+.cart-modal__slider .swiper .swiper-slide .product-card__main {
+  padding-left: 0;
+}
+@media (max-width: 568px) {
+  .cart-modal__slider .swiper .swiper-slide .product-card {
+    max-width: 150px;
+  }
+  .cart-modal__slider .swiper .swiper-slide .product-card__image {
+    height: 180px;
+  }
+}
+.cart-modal__footer .filters-modal__apply {
+  background-color: #202929;
+  color: white;
+}
+
 .footer {
   background-color: #202929;
 }
@@ -2861,7 +3341,6 @@ body.lock {
   bottom: 0;
   right: 0;
   position: absolute;
-  background-color: white;
   padding: 35px;
   overflow-y: auto;
 }
@@ -6309,6 +6788,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .filters-modal .modal__content {
+  background-color: white;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6764,11 +7244,10 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 44px;
+  gap: 32px;
 }
 @media (max-width: 1024px) {
   .product-info__wrapper {
-    gap: 32px;
     position: relative;
     top: unset;
   }
@@ -6781,12 +7260,7 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 24px;
-}
-@media (max-width: 1024px) {
-  .product-info__header {
-    gap: 20px;
-  }
+  gap: 16px;
 }
 .product-info__row {
   display: -webkit-box;
@@ -7042,7 +7516,7 @@ input[type=range]::-webkit-slider-thumb {
 
 .product-accordeon {
   padding-bottom: 8px;
-  border-bottom: 1px dashed var(--grey, #d4d4d4);
+  border-bottom: 1px solid var(--grey, #d4d4d4);
 }
 .product-accordeon__header {
   cursor: pointer;
@@ -8413,6 +8887,10 @@ input[type=range]::-webkit-slider-thumb {
 .product-stoika__main ul li {
   list-style-type: disc;
   list-style-position: inside;
+  /* 1440/H5 medium */
+  font-family: "TT Drugs";
+  font-size: 18px;
+  font-weight: 500;
 }
 @media (max-width: 1024px) {
   .product-stoika__footer {
@@ -8801,7 +9279,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 .product-chars__list > li {
   height: 52px;
-  border-bottom: 1px dashed var(--grey, #d4d4d4);
+  border-bottom: 1px solid var(--grey, #d4d4d4);
 }
 .product-chars__list > div {
   padding: 16px 0;
@@ -8813,7 +9291,7 @@ input[type=range]::-webkit-slider-thumb {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 16px;
-  border-bottom: 1px dashed var(--grey, #d4d4d4);
+  border-bottom: 1px solid var(--grey, #d4d4d4);
 }
 .product-chars__list > div > span {
   color: #949698;
@@ -9258,4 +9736,988 @@ input[type=range]::-webkit-slider-thumb {
 }
 .product-instruction ul {
   max-width: 446px;
+}
+
+.checkout-page {
+  margin-bottom: var(--sectionMargin);
+  margin-top: 40px;
+}
+@media (max-width: 1024px) {
+  .checkout-page {
+    margin-top: 32px;
+  }
+}
+.checkout-page__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 70px;
+}
+@media (max-width: 1024px) {
+  .checkout-page__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 32px;
+  }
+}
+.checkout-page__main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.checkout-page__aside {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 437px;
+          flex: 0 0 437px;
+  position: sticky;
+  top: calc(var(--header) + 24px);
+}
+@media (max-width: 568px) {
+  .checkout-page__aside {
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+  }
+}
+
+.cart-section {
+  margin-bottom: 60px;
+}
+@media (max-width: 1024px) {
+  .cart-section {
+    margin-bottom: 32px;
+  }
+}
+.cart-section__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.cart-section__header:has(.active) {
+  margin-bottom: 32px;
+}
+@media (max-width: 1024px) {
+  .cart-section__header:has(.active) {
+    margin-bottom: 24px;
+  }
+}
+.cart-section__header h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+.cart-section__header h2 sup {
+  /* 1440/Body 1 regular */
+  font-family: "TT Drugs";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+}
+.cart-section__header button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  /* 1440/Body 7 regular */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%; /* 18.2px */
+}
+.cart-section__header button.active svg {
+  rotate: 180deg;
+}
+.cart-section__header button svg {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.cart-section__items {
+  padding: 30px;
+  padding-bottom: 18px;
+  border-radius: 10px;
+  background: rgba(255, 254, 251, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+.cart-section__items > li:last-child {
+  border: 0 !important;
+}
+@media (max-width: 1024px) {
+  .cart-section__items {
+    padding: 20px;
+    padding-bottom: 8px;
+  }
+}
+@media (max-width: 568px) {
+  .cart-section__items {
+    padding: 12px;
+    padding-bottom: 0;
+  }
+}
+
+.cart-item {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d4d4d4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 28px;
+  position: relative;
+}
+@media (max-width: 568px) {
+  .cart-item {
+    gap: 15px;
+  }
+}
+.cart-item__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 106px;
+          flex: 0 0 106px;
+  border-radius: 5px;
+  background: rgba(255, 254, 251, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.cart-item__image img {
+  max-height: 80%;
+  max-width: 89px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 568px) {
+  .cart-item__image {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 89px;
+            flex: 0 0 89px;
+  }
+  .cart-item__image img {
+    max-width: 69px;
+  }
+}
+.cart-item__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+@media (max-width: 568px) {
+  .cart-item__main {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+}
+.cart-item__content {
+  max-width: 400px;
+}
+@media (max-width: 568px) {
+  .cart-item__content {
+    max-width: calc(100% - 32px);
+  }
+}
+.cart-item__title {
+  leading-trim: both;
+  text-edge: cap;
+  /* 1440/Decor Body 3 regular */
+  font-family: "TT Ramillas";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%; /* 20.8px */
+}
+@media (max-width: 568px) {
+  .cart-item__title {
+    leading-trim: both;
+    text-edge: cap;
+    /* 390/Body 3 regular */
+    font-family: "TT Ramillas";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 16.8px */
+  }
+}
+.cart-item__description {
+  margin-top: 4px;
+  margin-bottom: 12px;
+  /* 1440/Body 7 regular */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%; /* 18.2px */
+}
+@media (max-width: 568px) {
+  .cart-item__description {
+    /* 1440/Body 6 medium */
+    font-family: "TT Drugs";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 120%; /* 16.8px */
+    margin: 2px 0;
+  }
+}
+.cart-item__color {
+  /* 1440/Body 7 regular */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%; /* 18.2px */
+  color: #949698;
+}
+@media (max-width: 568px) {
+  .cart-item__color {
+    /* 1440/Body 6 medium */
+    font-family: "TT Drugs";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 120%; /* 16.8px */
+  }
+}
+.cart-item__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 12px;
+}
+@media (max-width: 568px) {
+  .cart-item__footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.cart-item__count {
+  /* 1440/Body 4 regular */
+  font-family: "TT Drugs";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.cart-item__count button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+}
+.cart-item__price {
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  /* 1440/Body 5 demibold */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 140%; /* 19.6px */
+}
+.cart-item__buttons {
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+}
+.cart-item__buttons button {
+  height: 20px;
+}
+@media (max-width: 568px) {
+  .cart-item__buttons {
+    bottom: unset;
+    top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  .cart-item__buttons button {
+    width: 16px;
+    height: 16px;
+  }
+  .cart-item__buttons button svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.checkout-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+@media (max-width: 568px) {
+  .checkout-section {
+    gap: 24px;
+  }
+}
+.checkout-section__block {
+  padding: 30px;
+  border-radius: 10px;
+  background: rgba(255, 254, 251, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 36px;
+}
+@media (max-width: 568px) {
+  .checkout-section__block {
+    padding: 30px 12px;
+    gap: 28px;
+    margin-left: -12px;
+    margin-right: 12px;
+    width: 100vw;
+  }
+}
+.checkout-section__subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.checkout-section__filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+.checkout-section__subblock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+.checkout-section__label {
+  /* 1440/H5 medium */
+  font-family: "TT Drugs";
+  font-size: 18px;
+  font-weight: 500;
+}
+@media (max-width: 568px) {
+  .checkout-section__label {
+    /* 390/H5 medium */
+    font-family: "TT Drugs";
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+.checkout-section__inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+  row-gap: 20px;
+}
+.checkout-section__inputs .gc2 {
+  grid-column: span 2;
+}
+@media (max-width: 568px) {
+  .checkout-section__inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 16px;
+  }
+  .checkout-section__inputs .gc2 {
+    scrollbar-width: unset;
+  }
+}
+.checkout-section__banner {
+  margin-top: -8px;
+  height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+  border-radius: 3px;
+  background: #ddece7;
+  /* 1440/Body small */
+  font-family: "TT Drugs";
+  font-size: 12px;
+  font-weight: 400;
+  color: #0f6062;
+}
+@media (max-width: 568px) {
+  .checkout-section__banner {
+    margin-top: -4px;
+  }
+}
+
+.checkout-delivery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+@media (max-width: 568px) {
+  .checkout-delivery {
+    gap: 20px;
+  }
+}
+.checkout-delivery > li > button {
+  border-radius: 100px;
+  border: 1px solid var(--grey-dark, #949698);
+  /* 1440/Body 6 medium */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 48px;
+  margin-top: 12px;
+  display: none;
+}
+.checkout-delivery > li:has(input:checked) > button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.checkout-delivery__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 57px;
+  padding: 0 20px;
+  border-radius: 10px;
+  border: 1px solid var(--grey, #d4d4d4);
+}
+.checkout-delivery__item:has(input:checked) .checkout-delivery__main > .circle {
+  border-color: #202929;
+}
+.checkout-delivery__item:has(input:checked) .checkout-delivery__main > .circle .circle {
+  opacity: 1;
+}
+.checkout-delivery__item input {
+  display: none;
+}
+@media (max-width: 568px) {
+  .checkout-delivery__item {
+    padding: 0 12px;
+  }
+}
+.checkout-delivery__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.checkout-delivery__main > .circle {
+  --size: 16px;
+  border: 1px solid #949698;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.checkout-delivery__main > .circle .circle {
+  --size: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-color: #202929;
+  opacity: 0;
+}
+.checkout-delivery__logo {
+  margin-left: 12px;
+  margin-right: 20px;
+}
+@media (max-width: 568px) {
+  .checkout-delivery__logo {
+    margin: 0 8px;
+  }
+}
+.checkout-delivery__name {
+  /* 1440/Body 7 regular */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%; /* 18.2px */
+}
+.checkout-delivery__price {
+  /* 1440/Body 6 medium */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+}
+
+.checkout-payment .app-radio ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.checkout-aside {
+  padding: 30px;
+  border-radius: 10px;
+  background: rgba(255, 254, 251, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media (max-width: 568px) {
+  .checkout-aside {
+    padding: 30px 12px;
+  }
+}
+.checkout-aside__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+.checkout-aside__title {
+  padding-bottom: 12px;
+  /* 1440/H5 medium */
+  font-family: "TT Drugs";
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom: 1px solid #d4d4d4;
+}
+.checkout-aside__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+  border-bottom: 1px solid #d4d4d4;
+  padding-bottom: 12px;
+}
+.checkout-aside__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.checkout-aside__list li span:nth-child(1) {
+  /* 1440/Body 4 regular */
+  font-family: "TT Drugs";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+.checkout-aside__list li span:nth-child(2) {
+  /* 1440/Body 1 regular */
+  font-family: "TT Drugs";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+}
+@media (max-width: 568px) {
+  .checkout-aside__list li span:nth-child(2) {
+    leading-trim: both;
+    text-edge: cap;
+    /* 1440/Body 2 medium */
+    font-family: "TT Drugs";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 22.4px */
+  }
+}
+.checkout-aside__result {
+  /* 1440/H5 medium */
+  font-family: "TT Drugs";
+  font-size: 18px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.checkout-aside__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+.checkout-aside__main button {
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  background-color: #202929;
+  /* 1440/Body 6 medium */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+  border-radius: 100px;
+}
+.checkout-aside__main p {
+  color: #202929;
+  /* 1440/Body small */
+  font-family: "TT Drugs";
+  font-size: 12px;
+  font-weight: 400;
+}
+.checkout-aside__main p a {
+  color: #949698;
+}
+.checkout-success {
+  margin-top: 70px;
+  margin-bottom: var(--sectionMargin);
+}
+@media (max-width: 1024px) {
+  .checkout-success {
+    margin-top: 32px;
+  }
+}
+.checkout-success__wrapper {
+  max-width: 693px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+@media (max-width: 1024px) {
+  .checkout-success__wrapper {
+    max-width: 642px;
+  }
+}
+.checkout-success__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 28px;
+}
+.checkout-success__header .checkout-section__banner {
+  font-size: 16px;
+  height: 45px;
+  height: unset;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.checkout-success__header .checkout-section__banner svg {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 16px;
+          flex: 0 0 16px;
+}
+@media (max-width: 568px) {
+  .checkout-success__header {
+    gap: 20px;
+  }
+}
+.checkout-success__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.checkout-success__main {
+  padding: 40px;
+  border-radius: 10px;
+  background: rgba(255, 254, 251, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+@media (max-width: 568px) {
+  .checkout-success__main {
+    margin-left: -12px;
+    margin-right: -12px;
+    padding: 40px 20px;
+    width: 100vw;
+  }
+}
+.checkout-success__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+.checkout-success__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 36px;
+}
+.checkout-success__list li > span {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 97px;
+          flex: 0 0 97px;
+}
+.checkout-success__list li > p {
+  /* 1440/Body 6 medium */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+.checkout-success__list li > p span {
+  /* 1440/Body small */
+  font-family: "TT Drugs";
+  font-size: 12px;
+  font-weight: 400;
+}
+.checkout-success__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+  /* 1440/Body 7 regular */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%; /* 18.2px */
+}
+.checkout-success__description a {
+  color: #202929;
+}
+.checkout-success__description .tel {
+  /* 1440/Body 6 medium */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+  margin: 0 8px;
+}
+.checkout-success__description .link {
+  border-bottom: 1px solid #202929;
+}
+.checkout-success__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 32px;
+}
+@media (max-width: 568px) {
+  .checkout-success__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.checkout-success__media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.checkout-success__media .footer__icons {
+  margin: 0 !important;
+}
+.checkout-success__media svg path {
+  fill: #202929;
+}
+.checkout-success__link {
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100px;
+  border: 1px solid var(--grey-dark, #949698);
+  /* 1440/Body 6 medium */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+  color: #202929;
+  padding: 0 40px;
 }

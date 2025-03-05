@@ -23,6 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
    collectionCard();
    catalogPage();
    productPage();
+   headerCart();
+   checkoutPage();
+   validateInputs();
 });
 function headerWork() {
    const main = document.querySelector("main.main");
@@ -325,13 +328,14 @@ function productCard() {
    const products = document.querySelectorAll(".product-card");
    if (!products.length) return;
    products.forEach((item) => {
-      item
-         .querySelector(".product-card__like")
-         .addEventListener("click", (e) => {
-            e.stopPropagation();
-            e.preventDefault();
-            s;
-         });
+      if (item.querySelector(".product-card__like")) {
+         item
+            .querySelector(".product-card__like")
+            .addEventListener("click", (e) => {
+               e.stopPropagation();
+               e.preventDefault();
+            });
+      }
       item.querySelectorAll(".product-card__colors label").forEach((color) => {
          color.addEventListener("click", (e) => {
             const radio = color.querySelector("input[type='radio']");
@@ -613,6 +617,42 @@ function productPage() {
       });
    }
 }
+function headerCart() {
+   let swiper = new Swiper(".cart-modal__slider .swiper", {
+      slidesPerView: "auto",
+      spaceBetween: 10,
+      navigation: {
+         prevEl: ".cart-modal__controls .swiper-button-prev",
+         nextEl: ".cart-modal__controls .swiper-button-next",
+      },
+   });
+}
+function checkoutPage() {
+   accordion(".cart-section__header button", ".cart-section__collapse");
+   tabs('[name="checkout-poluchatel"]', "[data-tab-for]");
+}
+function validateInputs() {
+   const labels = document.querySelectorAll(".app-input");
+   if (!labels.length) return;
+   labels.forEach((label) => {
+      const input = label.querySelector("input");
+      const button = label.querySelector("button");
+      input.oninput = (e) => {
+         let value = e.target.value.length;
+         if (value > 0) {
+            label.classList.add("filled");
+         } else {
+            label.classList.remove("filled");
+         }
+      };
+      button.onclick = () => {
+         input.value = "";
+         label.classList.remove("filled");
+         input.focus();
+      };
+   });
+}
+// helpers
 function slideShow(el, duration = 500) {
    // завершаем работу метода, если элемент содержит класс collapsing или collapse_show
    if (
