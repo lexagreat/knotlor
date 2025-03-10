@@ -66,6 +66,8 @@
          }
       }
       .slider-btn {
+         top: 35%;
+         margin: 0;
          @media (max-width: $tablet) {
             display: none;
          }

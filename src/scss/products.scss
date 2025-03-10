@@ -1,5 +1,6 @@
 .products-section {
    padding-bottom: 120px;
+   overflow: hidden;
    @media (max-width: $tablet) {
       padding-bottom: 70px;
    }
@@ -102,6 +103,13 @@
             }
          }
       }
+      .swiper {
+         margin-left: calc(-1 * var(--containerFull));
+         margin-right: calc(-1 * var(--containerFull));
+         padding-left: calc(1 * var(--containerFull));
+         padding-right: calc(1 * var(--containerFull));
+         width: 100vw;
+      }
       @media (max-width: $tablet) {
          .swiper {
             margin-left: calc(-1 * var(--container));
@@ -114,6 +122,18 @@
       .swiper-slide {
          @media (max-width: $mobile) {
             max-width: 176px;
+         }
+      }
+      .slider-btn {
+         margin: 0 !important;
+         top: 35% !important;
+         &.swiper-button-prev {
+            left: var(--containerFull);
+            translate: -50% 0;
+         }
+         &.swiper-button-next {
+            right: var(--containerFull);
+            translate: 50% 0;
          }
       }
    }
@@ -140,6 +160,10 @@
          max-width: 90%;
          max-height: 70%;
          object-fit: contain;
+         @media (max-width: $mobile) {
+            max-width: 70%;
+            max-height: 50%;
+         }
       }
       // @media (hover: hover) {
       //    &:hover {
@@ -264,6 +288,9 @@
    &__colors {
       display: flex;
       gap: 6px;
+      @media (max-width: $tablet) {
+         gap: 2px;
+      }
       input {
          display: none;
       }
@@ -281,6 +308,14 @@
          .circle {
             --size: 18px;
             transition: $transition;
+         }
+         @media (max-width: $tablet) {
+            width: 14px;
+            height: 14px;
+            flex: 0 0 14px;
+            .circle {
+               --size: 10px;
+            }
          }
       }
       label:has(input:checked) {

@@ -176,7 +176,8 @@
    // .blog-card__filter
 
    &__filter {
-      padding: 6px 8px;
+      height: 22px;
+      padding: 0 8px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -194,6 +195,7 @@
       }
       @media (max-width: $tablet) {
          @include body-6-mobile;
+         height: 20px;
       }
    }
 

@@ -72,14 +72,14 @@ $grey-dark: #949698;
 @mixin h2-tablet {
    /* 768/Decor H2 regular */
    font-family: $fontDrugs;
-   font-size: 28px;
+   font-size: 40px;
    font-weight: 400;
    line-height: 130%; /* 36.4px */
 }
 @mixin h2-mobile {
    /* 390/Decor H2 regular */
    font-family: $fontDrugs;
-   font-size: 24px;
+   font-size: 33px;
    font-weight: 400;
    line-height: 130%; /* 31.2px */
 }

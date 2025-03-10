@@ -212,6 +212,9 @@
          border-radius: 50px;
          border: 1px solid $grey-dark;
       }
+      @media (max-width: $mobile) {
+         margin: unset;
+      }
    }
 }
 .interier-hint {
@@ -226,8 +229,12 @@
    flex-direction: column;
    gap: 24px;
    border-radius: 10px;
-   width: 170px;
+   width: 240px;
    background-color: $white;
+   z-index: 1;
+   .product-card__colors {
+      position: absolute;
+   }
    // .interier-hint__close
    @media (max-width: $mobile) {
       pointer-events: all;
@@ -325,6 +332,7 @@
 
    &__title {
       @include body-6;
+      font-weight: 400;
       color: $black;
       line-height: 1;
       @media (max-width: $mobile) {

@@ -54,7 +54,7 @@
                max-width: calc(204px + 90 * ((100vw - 1024px) / (1440 - 1024)));
             }
             @media (max-width: $tablet) {
-               max-width: calc(120px + 140 * ((100vw - 568px) / (1024 - 568)));
+               max-width: calc(100px + 100 * ((100vw - 568px) / (1024 - 568)));
             }
             @media (max-width: $mobile) {
                max-width: calc(120px + 70 * ((100vw - 320px) / (568 - 320)));
@@ -63,7 +63,7 @@
       }
       @media (max-width: $tablet) {
          margin: 32px 0;
-         grid-template-columns: repeat(3, 1fr);
+         // grid-template-columns: repeat(3, 1fr);
          column-gap: 10px;
          row-gap: 28px;
       }

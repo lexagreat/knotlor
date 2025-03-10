@@ -353,9 +353,9 @@
 .checkout-delivery {
    display: flex;
    flex-direction: column;
-   gap: 32px;
+   gap: 20px;
    @media (max-width: $mobile) {
-      gap: 20px;
+      gap: 16px;
    }
    // .checkout-delivery__item
    & > li {
@@ -369,7 +369,11 @@
          width: 100%;
          height: 48px;
          margin-top: 12px;
+         margin-bottom: 12px;
          display: none;
+         @media (max-width: $mobile) {
+            margin-bottom: 4px;
+         }
       }
       &:has(input:checked) > button {
          display: flex;
@@ -439,6 +443,7 @@
 
    &__price {
       @include body-6;
+      white-space: nowrap;
    }
 }
 .checkout-payment {
@@ -501,10 +506,7 @@
                @include body-4;
             }
             &:nth-child(2) {
-               @include body-1;
-               @media (max-width: $mobile) {
-                  @include body-2;
-               }
+               @include body-2;
             }
          }
       }
@@ -547,6 +549,15 @@
    // .checkout-aside__footer
 
    &__footer {
+      .app-input {
+         input {
+            border-color: $iceberg;
+         }
+         span {
+            color: #949698;
+            background: #fcfbf9;
+         }
+      }
    }
 }
 .checkout-success {
@@ -584,6 +595,9 @@
          align-items: flex-start;
          svg {
             flex: 0 0 16px;
+         }
+         @media (max-width: $tablet) {
+            font-size: 14px;
          }
       }
       @media (max-width: $mobile) {
@@ -679,6 +693,9 @@
       gap: 20px;
       .footer__icons {
          margin: 0 !important;
+         a {
+            border-color: $grey;
+         }
       }
       svg path {
          fill: $black;
