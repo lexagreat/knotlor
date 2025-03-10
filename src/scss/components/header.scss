@@ -250,7 +250,9 @@
    }
    @media (max-width: $mobile) {
       padding-bottom: 0;
-      overflow: auto;
+      height: 100dvh;
+      overflow-x: hidden;
+      overflow-y: auto;
    }
    // .header-menu__wrapper
    &__mains {
@@ -640,7 +642,8 @@
       padding-left: var(--container);
       padding-top: 34px;
       height: calc(100dvh - var(--header));
-      overflow: auto;
+      overflow-x: hidden;
+      overflow-y: auto;
 
       display: flex;
       flex-direction: column;
@@ -1073,6 +1076,206 @@
       .filters-modal__apply {
          background-color: $black;
          color: white;
+      }
+   }
+}
+.cart-empty {
+   padding-top: 56px;
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+   align-items: center;
+   padding-left: 80px;
+   padding-right: 96px;
+   @media (max-width: $mobile) {
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-top: 100px;
+   }
+   // .cart-empty__info
+
+   &__info {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      span {
+         @include h5;
+         @media (max-width: $mobile) {
+            @include h5-mobile;
+         }
+      }
+      p {
+         @include body-4-mobile;
+      }
+   }
+
+   // .cart-empty__btn
+
+   &__btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      border-radius: 100px;
+      border: 1px solid $grey-dark;
+      @include body-6;
+      height: 48px;
+      color: $black;
+   }
+}
+.auth-modal {
+   // .auth-modal__main
+   &.step-2 {
+      .code-input {
+         display: block;
+      }
+   }
+   .second {
+      display: none;
+   }
+   .first {
+      display: flex;
+   }
+   &.step-3 {
+      .second {
+         display: flex;
+      }
+      .first {
+         display: none;
+      }
+   }
+   .code-input {
+      display: none;
+
+      ul {
+         display: flex;
+         gap: 12px;
+      }
+      span {
+         color: #eb001b;
+         @include body-small;
+         display: none;
+         margin-top: 20px;
+      }
+      input {
+         background-color: transparent;
+         flex: 0 0 57px;
+         height: 57px;
+         width: 57px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         @include body-1;
+         color: $black;
+         border-radius: 5px;
+         border: 1px solid var(--grey, #d4d4d4);
+         transition: $transition;
+         &:focus {
+            border-color: $black;
+         }
+      }
+      &.success {
+         pointer-events: none;
+         input {
+            background: #ddece7;
+            border-color: #ddece7;
+         }
+      }
+      &.error {
+         input {
+            border-color: #eb001b;
+         }
+         span {
+            display: block;
+         }
+      }
+   }
+   &__items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+   &__main {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      flex: 1;
+      padding-left: 40px;
+      padding-right: 50px;
+      @media (max-width: $mobile) {
+         padding-left: 12px;
+         padding-right: 12px;
+      }
+   }
+   &__title {
+      @include h4;
+      @media (max-width: $mobile) {
+         @include h3-mobile;
+      }
+   }
+   // .auth-modal__radios
+
+   &__radios {
+      display: flex;
+      gap: 40px;
+   }
+
+   // .auth-modal__content
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .app-input {
+         span {
+            background-color: #f8f4e8;
+         }
+      }
+   }
+
+   // .auth-modal__tab
+
+   &__tab {
+   }
+
+   // .auth-modal__block
+
+   &__block {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+
+   // .auth-modal__footer
+
+   &__footer {
+      padding-left: 40px;
+      padding-right: 50px;
+      padding-bottom: 84px;
+      display: flex;
+      align-items: flex-start;
+      gap: 2px;
+      @media (max-width: $mobile) {
+         padding-left: 12px;
+         padding-right: 12px;
+         padding-bottom: 62px;
+      }
+      p {
+         @include body-small;
+         color: $grey-dark;
+         a {
+            color: $grey-dark;
+            border-bottom: 1px solid $grey-dark;
+         }
+      }
+      &::before {
+         content: "*";
+         display: block;
+         @include body-small;
+         color: $grey-dark;
       }
    }
 }

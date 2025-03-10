@@ -8,6 +8,13 @@ if (document.querySelectorAll("[data-phone]").length) {
       const mask = IMask(item, maskOptions);
    });
 }
+if (document.querySelectorAll(".code-input input").length) {
+   document.querySelectorAll(".code-input input").forEach((item) => {
+      const mask = IMask(item, {
+         mask: "0",
+      });
+   });
+}
 const body = document.body;
 document.addEventListener("DOMContentLoaded", () => {
    initProductSlider();
@@ -27,6 +34,46 @@ document.addEventListener("DOMContentLoaded", () => {
    checkoutPage();
    validateInputs();
 });
+function codeInput() {
+   const inputs = document.querySelectorAll(".code-input input");
+   let fields = ["", "", "", ""];
+   const onInput = (index) => {
+      if (fields[index] == "" || index + 1 == fields.length) {
+         return;
+      }
+
+      inputs[index + 1].focus();
+   };
+   const onBackspace = (index) => {
+      if (index == 0) {
+         return;
+      }
+      if (fields[index] == "") {
+         inputs[index - 1].focus();
+      }
+   };
+   inputs.forEach((item, index) => {
+      item.oninput = (e) => {
+         fields[index] = e.target.value;
+         if (fields.join("").length == 4) {
+            const code = document.querySelector(".code-input");
+            code.classList.add("success");
+            setTimeout(() => {
+               let modal = document.querySelector(".auth-modal");
+               modal.classList.remove("step-2");
+               modal.classList.add("step-3");
+            }, 200);
+            return;
+         }
+         onInput(index);
+      };
+      item.addEventListener("keydown", (e) => {
+         if (e.key == "Backspace") {
+            onBackspace(index);
+         }
+      });
+   });
+}
 function headerWork() {
    const main = document.querySelector("main.main");
    const header = document.querySelector(".header");
@@ -121,6 +168,32 @@ function headerWork() {
          oldScrollTopPosition = scrollTopPosition;
       }
    };
+   function auth() {
+      tabs('[name="auth-modal-radios"]', ".auth-modal__tab");
+      codeInput();
+      const modal = document.querySelector(".auth-modal");
+      const btn = modal.querySelector(".auth-modal__send");
+      let clicked = false;
+      btn.onclick = () => {
+         if (clicked) return;
+         let remind = 60;
+         clicked = true;
+
+         modal.classList.add("step-2");
+         let timer = setInterval(() => {
+            remind--;
+            btn.innerHTML = `Отправить код еще раз через: ${remind} сек`;
+            if (remind <= 0) {
+               clearInterval(timer);
+               timer = null;
+               btn.innerHTML = `Отправить код`;
+               clicked = false;
+               modal.classList.remove("step-2");
+            }
+         }, 1000);
+      };
+   }
+   auth();
    headerScroll();
    headerAssort();
    headerCollection();
