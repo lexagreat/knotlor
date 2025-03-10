@@ -1349,6 +1349,7 @@ label {
     gap: 60px;
     height: calc(100dvh - var(--header));
     overflow-y: auto;
+    overflow-x: hidden;
     margin-left: calc(-1 * var(--container));
     margin-right: calc(-1 * var(--container));
     padding-left: calc(1 * var(--container));
@@ -2573,6 +2574,9 @@ label {
 .auth-modal .code-input.error span {
   display: block;
 }
+.auth-modal .app-input span {
+  background-color: #f8f4e8;
+}
 .auth-modal__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2635,9 +2639,6 @@ label {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
-}
-.auth-modal__content .app-input span {
-  background-color: #f8f4e8;
 }
 .auth-modal__block {
   display: -webkit-box;
@@ -10261,6 +10262,7 @@ input[type=range]::-webkit-slider-thumb {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
+  color: #202929;
   /* 1440/Body 7 regular */
   font-family: "TT Drugs";
   font-size: 14px;
@@ -11045,8 +11047,8 @@ input[type=range]::-webkit-slider-thumb {
 }
 .checkout-success__list li > span {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 97px;
-          flex: 0 0 97px;
+      -ms-flex: 0 0 100px;
+          flex: 0 0 100px;
 }
 .checkout-success__list li > p {
   /* 1440/Body 6 medium */

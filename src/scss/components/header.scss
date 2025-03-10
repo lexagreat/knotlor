@@ -288,6 +288,7 @@
          gap: 60px;
          height: calc(100dvh - var(--header));
          overflow-y: auto;
+         overflow-x: hidden;
          margin-left: calc(-1 * var(--container));
          margin-right: calc(-1 * var(--container));
          padding-left: calc(1 * var(--container));
@@ -1193,6 +1194,11 @@
          }
       }
    }
+   .app-input {
+      span {
+         background-color: #f8f4e8;
+      }
+   }
    &__items {
       display: flex;
       flex-direction: column;
@@ -1229,11 +1235,6 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      .app-input {
-         span {
-            background-color: #f8f4e8;
-         }
-      }
    }
 
    // .auth-modal__tab
