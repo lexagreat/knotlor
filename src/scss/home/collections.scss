@@ -68,6 +68,16 @@
       .slider-btn {
          top: 35%;
          margin: 0;
+         &.swiper-button-prev {
+            left: 0;
+            right: unset;
+            translate: -50%;
+         }
+         &.swiper-button-next {
+            right: 0;
+            left: unset;
+            translate: 50%;
+         }
          @media (max-width: $tablet) {
             display: none;
          }
@@ -175,6 +185,7 @@
    // .home-collection__gallery
 
    &__gallery {
+      padding-left: 15px;
       position: absolute;
       display: flex;
       align-items: center;
@@ -206,6 +217,7 @@
       }
       @media (max-width: $tablet) {
          height: 81px;
+         padding-left: 12px;
          li {
             flex: 0 0 66px;
          }

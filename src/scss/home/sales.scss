@@ -42,6 +42,16 @@
          }
       }
       .slider-btn {
+         &.swiper-button-prev {
+            left: 0;
+            right: unset;
+            translate: -50%;
+         }
+         &.swiper-button-next {
+            right: 0;
+            left: unset;
+            translate: 50%;
+         }
          @media (max-width: $tablet) {
             display: none;
          }

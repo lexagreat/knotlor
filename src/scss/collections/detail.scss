@@ -22,13 +22,13 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-end;
-      padding-bottom: 295px;
+      padding-bottom: 355px;
       position: relative;
       width: 100vw;
       padding-left: var(--container);
       padding-right: var(--container);
-      max-height: 90vh;
-      aspect-ratio: calc(1440 / 810);
+      height: 105vh;
+      // aspect-ratio: calc(1440 / 810);
       .breadcrumbs {
          position: absolute;
          top: calc(var(--header) + 40px);
@@ -52,12 +52,12 @@
          }
       }
       @media (max-width: $tablet) {
-         aspect-ratio: calc(768 / 862);
+         // aspect-ratio: calc(768 / 862);
 
          padding-bottom: 350px;
       }
       @media (max-width: $mobile) {
-         aspect-ratio: calc(390 / 824);
+         // aspect-ratio: calc(390 / 824);
 
          padding-bottom: 320px;
       }
@@ -144,6 +144,7 @@
    // .collection-about__text
 
    &__text {
+      max-width: 500px;
       display: flex;
       flex-direction: column;
       gap: 44px;

@@ -16,6 +16,7 @@ if (document.querySelectorAll(".code-input input").length) {
    });
 }
 const body = document.body;
+gsap.registerPlugin(ScrollTrigger);
 document.addEventListener("DOMContentLoaded", () => {
    initProductSlider();
    productCard();
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
    headerCart();
    checkoutPage();
    validateInputs();
+   collabPage();
 });
 function codeInput() {
    const inputs = document.querySelectorAll(".code-input input");
@@ -290,7 +292,8 @@ function homePage() {
                   item.style.strokeDashoffset = totalLength * progress;
                });
             },
-            slideChange() {
+            slideChange(s) {
+               console.log(s.activeIndex);
                paginations.forEach((item, index) => {
                   if (index == swiper.activeIndex) {
                      item.classList.add("active");
@@ -556,6 +559,7 @@ function catalogPage() {
    initSelects();
    filtersModal();
    makeRange("#priceRange", 4000000, 100000);
+   makeRange("#priceRange1", 4000000, 100000);
 }
 function productPage() {
    pageNavigation();
@@ -725,6 +729,53 @@ function validateInputs() {
       };
    });
 }
+function collabPage() {
+   function team() {
+      const items = document.querySelectorAll(".collab-team__list.pc li");
+      let scrollLength = items.length * 200;
+      if (items.length && window.innerWidth > 1024) {
+         gsap.to(".collab-team", {
+            scrollTrigger: {
+               trigger: ".collab-team", // Триггер для анимации
+               start: "top 30%", // Начало анимации, когда блок достигает верха экрана
+               end: () => "+=" + scrollLength + "px", // Динамическая длина анимации
+               scrub: 1.5, // Плавность прокрутки
+               pin: true, // Закрепляем блок
+               // invalidateOnRefresh: true, // Пересчет при изменении размера экрана
+               // markers: true,
+            },
+         });
+         // Анимация для каждого элемента items
+         const timeline = gsap.timeline({
+            scrollTrigger: {
+               trigger: ".collab-team", // Триггер для анимации
+               start: "top 30%", // Начало анимации
+               end: () => "+=" + scrollLength + "px", // Динамическая длина анимации
+               scrub: 1.5, // Плавность прокрутки
+               pin: false, // Не закрепляем элементы
+               // markers: true, // Для отладки
+            },
+         });
+         const colors = ["#ECE4D1", "#EFE8D6", "#F3EEDE", "#FAF6E9", "#FBF8EF"];
+         // Добавляем анимацию для каждого элемента в таймлайн
+         items.forEach((item, index) => {
+            // if (index == 0) return;
+            timeline.to(item, {
+               x: `-${index * 50}%`,
+               backgroundColor: colors[index % colors.length], // Меняем цвет фона
+               duration: 1 + index * 0.2, // Увеличиваем продолжительность
+               ease: "power2.out", // Плавное замедление
+            });
+         });
+      }
+   }
+   team();
+}
+// 0
+//    - 50
+//    - 150
+//    - 250
+
 // helpers
 function slideShow(el, duration = 500) {
    // завершаем работу метода, если элемент содержит класс collapsing или collapse_show
