@@ -11235,6 +11235,26 @@ input[type=range]::-webkit-slider-thumb {
   padding: 0 40px;
 }
 
+.collab-main {
+  position: relative;
+  z-index: 9;
+}
+.collab-main .collab-hero {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.collab-page {
+  position: relative;
+  z-index: 99;
+  background-color: #f8f4e8;
+  border-radius: 10px 10px 0 0;
+  margin-top: -10px;
+}
+
 .collab-hero {
   position: relative;
   padding-top: var(--header);
@@ -11259,12 +11279,23 @@ input[type=range]::-webkit-slider-thumb {
           flex-direction: column;
   gap: 13px;
   color: #f8f4e8;
+  position: relative;
+}
+.collab-hero__wrapper .breadcrumbs {
+  position: absolute;
+  top: 40px;
+  left: 0;
 }
 .collab-hero__wrapper .breadcrumbs__list a {
   color: #f3f3f3;
 }
 .collab-hero__wrapper .breadcrumbs__list li:last-child a {
   color: #949698;
+}
+@media (max-width: 1024px) {
+  .collab-hero__wrapper .breadcrumbs {
+    top: 20px;
+  }
 }
 @media (max-width: 568px) {
   .collab-hero__wrapper .breadcrumbs {
@@ -11494,7 +11525,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .collab-advantages {
-  margin: var(--sectionMargin) 0;
+  padding: var(--sectionMargin) 0;
 }
 .collab-advantages__wrapper {
   display: -webkit-box;
@@ -11625,6 +11656,7 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-left: 110px;
   gap: 32px;
 }
 @media (max-width: 1024px) {
@@ -11637,6 +11669,7 @@ input[type=range]::-webkit-slider-thumb {
     -webkit-box-pack: unset;
         -ms-flex-pack: unset;
             justify-content: unset;
+    padding-left: 0;
   }
 }
 @media (max-width: 568px) {
@@ -11921,14 +11954,13 @@ input[type=range]::-webkit-slider-thumb {
   padding-top: 60px;
   border-radius: 10px;
   background: #fbf8ef;
+  padding-left: var(--containerFull);
+  padding-right: var(--containerFull);
 }
 @media (max-width: 1024px) {
   .collab-vars__wrapper {
-    margin-left: calc(-1 * var(--container));
-    margin-right: calc(-1 * var(--container));
     padding-left: calc(1 * var(--container));
     padding-right: calc(1 * var(--container));
-    width: 100vw;
     padding-top: 50px;
     padding-bottom: 40px;
   }
@@ -11984,6 +12016,10 @@ input[type=range]::-webkit-slider-thumb {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 8px;
+  }
+  .collab-vars__items br {
+    display: none;
   }
 }
 .collab-vars__item {
@@ -12010,6 +12046,9 @@ input[type=range]::-webkit-slider-thumb {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   position: relative;
+}
+.collab-vars__item:nth-child(1) {
+  border-left: 1px solid #d4d4d4;
 }
 .collab-vars__item span,
 .collab-vars__item p {
@@ -12060,6 +12099,9 @@ input[type=range]::-webkit-slider-thumb {
   .collab-vars__item p {
     opacity: 1;
   }
+  .collab-vars__item span {
+    font-size: 28px;
+  }
 }
 @media (max-width: 568px) {
   .collab-vars__item {
@@ -12067,6 +12109,9 @@ input[type=range]::-webkit-slider-thumb {
         -ms-flex: 0 0 348px !important;
             flex: 0 0 348px !important;
     height: 348px;
+  }
+  .collab-vars__item span {
+    font-size: 22px;
   }
 }
 
@@ -12333,5 +12378,490 @@ input[type=range]::-webkit-slider-thumb {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+.about-main {
+  position: relative;
+  z-index: 9;
+}
+.about-main .about-mission {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.about-page {
+  position: relative;
+  z-index: 99;
+  background-color: #f8f4e8;
+  border-radius: 10px 10px 0 0;
+  margin-top: -10px;
+  min-height: 1000px;
+}
+
+.about-hero {
+  height: 707px;
+  max-height: 100vh;
+}
+.about-hero .collab-hero__wrapper,
+.about-hero .collab-hero__main {
+  padding: 0;
+}
+.about-hero .h2 {
+  margin-top: 140px;
+}
+@media (max-width: 1024px) {
+  .about-hero .h2 {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 568px) {
+  .about-hero .h2 {
+    margin-top: 50px;
+  }
+}
+.about-hero p {
+  margin: 0;
+  margin-top: 40px;
+}
+@media (max-width: 1024px) {
+  .about-hero p {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 568px) {
+  .about-hero p {
+    margin-top: 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .about-hero {
+    height: 960px;
+  }
+}
+@media (max-width: 568px) {
+  .about-hero {
+    height: 743px;
+  }
+}
+
+.about-stats {
+  padding-top: var(--sectionMargin);
+}
+.about-stats__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+  row-gap: 30px;
+}
+@media (max-width: 1024px) {
+  .about-stats__items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+@media (max-width: 1024px) {
+  .about-stats__items {
+    grid-template-columns: 1fr;
+  }
+}
+.about-stats__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+  position: relative;
+  padding: 74px 16px;
+  min-height: 400px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(199, 220, 213, 0.3)), to(rgba(199, 220, 213, 0)));
+  background: linear-gradient(180deg, rgba(199, 220, 213, 0.3) 0%, rgba(199, 220, 213, 0) 100%);
+}
+.about-stats__item .circle {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  --size: 10px;
+  background-color: #0f6062;
+}
+.about-stats__item > p:nth-child(1) {
+  /* 1440/Decor H4 regular */
+  font-family: "TT Ramillas";
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 120%; /* 33.6px */
+}
+@media (max-width: 1024px) {
+  .about-stats__item > p:nth-child(1) {
+    /* 768/H4 medium CAPS */
+    font-family: "TT Ramillas";
+    font-size: 22px;
+    font-weight: 400;
+  }
+}
+.about-stats__item > p:nth-child(1) span {
+  /* 1440/H2 */
+  font-family: "TT Drugs";
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 110%; /* 55px */
+}
+@media (max-width: 1024px) {
+  .about-stats__item > p:nth-child(1) span {
+    /* 768/Decor H2 regular */
+    font-family: "TT Drugs";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 130%; /* 36.4px */
+  }
+}
+@media (max-width: 568px) {
+  .about-stats__item > p:nth-child(1) span {
+    /* 390/Decor H2 regular */
+    font-family: "TT Drugs";
+    font-size: 33px;
+    font-weight: 400;
+    line-height: 130%; /* 31.2px */
+  }
+}
+.about-stats__item > p:nth-child(2) {
+  /* 1440/Body 1 regular */
+  font-family: "TT Drugs";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+}
+@media (max-width: 1024px) {
+  .about-stats__item > p:nth-child(2) {
+    /* 768/Body 1 regular */
+    font-family: "TT Drugs";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 140%; /* 23.8px */
+  }
+}
+@media (max-width: 568px) {
+  .about-stats__item > p:nth-child(2) {
+    /* 390/Body 1 regular */
+    font-family: "TT Drugs";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 140%; /* 23.8px */
+  }
+}
+.about-stats__item:nth-child(1) {
+  translate: 0 140px;
+}
+.about-stats__item:nth-child(2) {
+  translate: 0 0;
+}
+.about-stats__item:nth-child(3) {
+  translate: 0 100px;
+}
+.about-stats__item:nth-child(4) {
+  translate: 0 20px;
+}
+.about-stats__item:nth-child(5) {
+  translate: 0 140px;
+}
+.about-stats__item:nth-child(6) {
+  translate: 0 0;
+}
+.about-stats__item:nth-child(7) {
+  translate: 0 100px;
+}
+@media (max-width: 1024px) {
+  .about-stats__item {
+    translate: 0 !important;
+    min-height: 200px;
+    padding-bottom: 38px;
+    padding-top: 66px;
+  }
+  .about-stats__item br {
+    display: none;
+  }
+}
+@media (max-width: 568px) {
+  .about-stats__item {
+    min-height: 170px;
+    padding-top: 46px;
+    padding-bottom: 40px;
+    padding-left: 17px;
+  }
+}
+
+.about-mission {
+  margin-top: var(--sectionMargin);
+  position: relative;
+  height: 130vh;
+  overflow: hidden;
+}
+.about-mission img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  translate: -50% 0;
+  max-width: 46.5277777778%;
+  max-height: 500px;
+  z-index: 1;
+}
+.about-mission__wrapper {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 0 var(--containerFull);
+}
+.about-mission__wrapper .h2 {
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+}
+@media (max-width: 1024px) {
+  .about-mission__wrapper .h2 {
+    font-size: 33px;
+  }
+}
+@media (max-width: 568px) {
+  .about-mission__wrapper .h2 {
+    font-size: 24px;
+  }
+}
+
+.about-phil {
+  padding: 160px 0;
+}
+@media (max-width: 1024px) {
+  .about-phil {
+    padding: 70px 0;
+  }
+}
+@media (max-width: 568px) {
+  .about-phil {
+    padding: 60px 0;
+  }
+}
+.about-phil__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 28px;
+}
+.about-phil__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.about-phil__list li:nth-child(1) {
+  grid-column: span 2;
+  grid-row: 1;
+}
+.about-phil__list li:nth-child(2) {
+  grid-row: 1;
+  grid-column: 3px;
+}
+.about-phil__list li:nth-child(3) {
+  grid-row: 2/4;
+  grid-column: 1;
+}
+.about-phil__list li:nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+}
+.about-phil__list li:nth-child(5) {
+  grid-column: 3;
+  grid-row: 2;
+}
+.about-phil__list li:nth-child(6) {
+  grid-column: 2/4;
+  grid-row: 3;
+}
+@media (max-width: 1024px) {
+  .about-phil__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .about-phil__list li {
+    height: 210px;
+    grid-column: unset !important;
+    grid-row: unset !important;
+  }
+}
+@media (max-width: 568px) {
+  .about-phil__list {
+    grid-template-columns: 1fr;
+  }
+}
+.about-phil__item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.about-phil__item .h4 {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  color: #202929;
+}
+.about-phil__item .h4.light {
+  color: #f8f4e8;
+}
+@media (max-width: 1024px) {
+  .about-phil__item .h4 {
+    top: 30px;
+    left: 30px;
+  }
+}
+.about-phil__item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about-history {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.about-history img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  -o-object-position: top;
+     object-position: top;
+  top: 0;
+  left: 0;
+  min-height: 130vh;
+}
+.about-history__wrapper {
+  padding-top: var(--sectionMargin);
+  padding-bottom: 190px;
+  color: #f8f4e8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 1024px) {
+  .about-history__wrapper {
+    padding: 90px 0;
+  }
+}
+@media (max-width: 568px) {
+  .about-history__wrapper {
+    padding: 70px 0;
+  }
+}
+.about-history__main {
+  max-width: 662px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+.about-history__main .h6 {
+  text-transform: uppercase;
+  /* 1440/H6 medium CAPS */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 500;
+}
+@media (max-width: 1024px) {
+  .about-history__main .h6 {
+    /* 1440/H6 medium CAPS */
+    font-family: "TT Drugs";
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+.about-history__list {
+  max-width: 565px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  /* 1440/Body 4 regular */
+  font-family: "TT Drugs";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  font-family: "TT Drugs";
+}
+.about-history__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+}
+.about-history__list li::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 8px;
+          flex: 0 0 8px;
+  background-color: #f8f4e8;
+  border-radius: 50%;
+  translate: 0 5px;
+}
+@media (max-width: 1024px) {
+  .about-history__list {
+    gap: 20px;
+    -ms-flex-item-align: start;
+        align-self: start;
+    /* 1440/Body 4 regular */
+    font-family: "TT Ramillas";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+    font-family: "TT Drugs";
   }
 }

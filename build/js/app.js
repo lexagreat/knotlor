@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
    checkoutPage();
    validateInputs();
    collabPage();
+   aboutPage();
 });
 function codeInput() {
    const inputs = document.querySelectorAll(".code-input input");
@@ -771,11 +772,107 @@ function collabPage() {
    }
    team();
 }
-// 0
-//    - 50
-//    - 150
-//    - 250
+function aboutPage() {
+   function stats() {
+      const items = document.querySelectorAll(".about-stats__item");
+      if (!items.length) return;
+      let steps = 30; // Количество шагов для анимации
+      items.forEach((item) => {
+         // Добавляем флаг для каждого элемента
+         let isStarted = false;
+         let maxValue = item
+            .querySelector("[data-number]")
+            .getAttribute("data-number");
+         let interval = 3000 / steps; // Интервал времени между шагами
+         gsap.to(item, {
+            scrollTrigger: {
+               trigger: ".about-stats", // Триггер для анимации
+               start: "top 50%", // Начало анимации, когда блок достигает верха экрана
+               end: "top 10%", // Динамическая длина анимации
+               scrub: 1.5, // Плавность прокрутки
+               // markers: true,
+               onEnter: () => {
+                  if (!isStarted) {
+                     animateNumber(
+                        item.querySelector("[data-number]"),
+                        maxValue,
+                        steps,
+                        interval
+                     );
+                     isStarted = true; // Устанавливаем флаг для текущего элемента
+                  }
+               },
+            },
+            y: 0,
+         });
+      });
 
+      function animateNumber(domElem, maxValue, steps, interval) {
+         let output = domElem.querySelector("span");
+         let temp = 0;
+         let stepValue = maxValue / steps; // Значение, на которое увеличивается число на каждом шаге
+
+         let timer = setInterval(() => {
+            temp += stepValue;
+            if (temp + 1 >= maxValue) {
+               clearInterval(timer);
+               output.innerHTML = maxValue;
+               return;
+            }
+            if (Number.isInteger(maxValue)) {
+               output.innerHTML = temp.toFixed(1);
+            } else {
+               output.innerHTML = Math.ceil(temp);
+            }
+         }, interval);
+      }
+   }
+   function mission() {
+      const image = document.querySelector(".about-mission img");
+      if (!image) return;
+      const text = document.querySelector(".about-mission__wrapper .h2");
+      gsap.to(image, {
+         scrollTrigger: {
+            trigger: ".about-mission", // Триггер для анимации
+            start: "top 30%", // Начало анимации
+            end: "+=300px", // Динамическая длина анимации
+            scrub: 1.5, // Плавность прокрутки
+            pin: false, // Не закрепляем элементы
+            markers: false, // Для отладки
+         },
+         maxWidth: "100%",
+         maxHeight: "100vh",
+      });
+      gsap.to(text, {
+         scrollTrigger: {
+            trigger: ".about-mission", // Триггер для анимации
+            start: "top 0%", // Начало анимации
+            end: "+=300px", // Динамическая длина анимации
+            scrub: 1.5, // Плавность прокрутки
+            pin: false, // Не закрепляем элементы
+            markers: false, // Для отладки
+         },
+         opacity: 1,
+      });
+   }
+   function firstParallax() {
+      const image = document.querySelector(".about-history img");
+      gsap.to(image, {
+         scrollTrigger: {
+            trigger: ".about-history", // Триггер для анимации
+            start: "top 75%", // Начало анимации
+            end: "top -50%", // Динамическая длина анимации
+            scrub: 1.5, // Плавность прокрутки
+            pin: false, // Не закрепляем элементы
+            markers: true, // Для отладки
+         },
+         y: "-20%",
+      });
+   }
+   stats();
+   mission();
+   firstParallax();
+}
 // helpers
 function slideShow(el, duration = 500) {
    // завершаем работу метода, если элемент содержит класс collapsing или collapse_show

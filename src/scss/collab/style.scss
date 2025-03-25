@@ -1,3 +1,22 @@
+.collab-main {
+   position: relative;
+   z-index: 9;
+   .collab-hero {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+   }
+}
+.collab-page {
+   position: relative;
+   z-index: 99;
+   background-color: $romance;
+   border-radius: 10px 10px 0 0;
+   margin-top: -10px;
+}
+
 .collab-hero {
    // .collab-hero__wrapper
    position: relative;
@@ -17,7 +36,11 @@
       flex-direction: column;
       gap: 13px;
       color: $romance;
+      position: relative;
       .breadcrumbs {
+         position: absolute;
+         top: 40px;
+         left: 0;
          &__list {
             a {
                color: $grey-light;
@@ -29,6 +52,9 @@
                   }
                }
             }
+         }
+         @media (max-width: $tablet) {
+            top: 20px;
          }
          @media (max-width: $mobile) {
             display: none;
@@ -185,7 +211,7 @@
    }
 }
 .collab-advantages {
-   margin: var(--sectionMargin) 0;
+   padding: var(--sectionMargin) 0;
    // .collab-advantages__wrapper
 
    &__wrapper {
@@ -282,11 +308,13 @@
       padding-bottom: 146px;
       display: flex;
       justify-content: space-between;
+      padding-left: 110px;
       gap: 32px;
       @media (max-width: $tablet) {
          padding: 50px 0;
          flex-direction: column;
          justify-content: unset;
+         padding-left: 0;
       }
       @media (max-width: $mobile) {
          padding: 40px 0;
@@ -297,6 +325,7 @@
 
    &__main {
       flex: 0 0 437px;
+
       div {
          margin-top: 24px;
          margin-bottom: 32px;
@@ -484,12 +513,14 @@
       padding-top: 60px;
       border-radius: 10px;
       background: #fbf8ef;
+      padding-left: var(--containerFull);
+      padding-right: var(--containerFull);
       @media (max-width: $tablet) {
-         margin-left: calc(-1 * var(--container));
-         margin-right: calc(-1 * var(--container));
+         // margin-left: calc(-1 * var(--container));
+         // margin-right: calc(-1 * var(--container));
          padding-left: calc(1 * var(--container));
          padding-right: calc(1 * var(--container));
-         width: 100vw;
+         // width: 100vw;
          padding-top: 50px;
          padding-bottom: 40px;
       }
@@ -523,6 +554,10 @@
       display: flex;
       @media (max-width: $tablet) {
          flex-direction: column;
+         gap: 8px;
+         br {
+            display: none;
+         }
       }
    }
 
@@ -540,7 +575,9 @@
       text-align: center;
       transition: $transition;
       position: relative;
-
+      &:nth-child(1) {
+         border-left: 1px solid #d4d4d4;
+      }
       span,
       p {
          position: relative;
@@ -583,10 +620,16 @@
          p {
             opacity: 1;
          }
+         span {
+            font-size: 28px;
+         }
       }
       @media (max-width: $mobile) {
          flex: 0 0 348px !important;
          height: 348px;
+         span {
+            font-size: 22px;
+         }
       }
    }
 }
