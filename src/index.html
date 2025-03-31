@@ -1064,6 +1064,91 @@
             </div>
          </section>
          <section class="home-interier">
+            <div class="modal hint-modal" id="hintModal">
+               <div class="modal__content hint-modal__content">
+                  <button class="modal__close">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M1 11L11 1" stroke="#202929" stroke-width="1.5" stroke-linecap="round"
+                           stroke-linejoin="round" />
+                        <path d="M11 11L1 1" stroke="#202929" stroke-width="1.5" stroke-linecap="round"
+                           stroke-linejoin="round" />
+                     </svg>
+                  </button>
+                  <div class="hint-modal__product">
+                     <div class="hint-modal__image">
+                        <img src="img/hint-modal.png" alt="" class="tablet">
+                        <img src="img/hint-modal-mobile.png" alt="" class="mobile">
+                        <ul class="product-card__colors hint-modal__colors">
+                           <li>
+                              <label>
+                                 <div style="background-color: #A7ABAA;" class="circle"></div>
+                                 <input checked type="radio" name="interier-hint-1" value="0">
+                              </label>
+                           </li>
+                           <li>
+                              <label>
+                                 <div style="background-color: #3C4545;" class="circle"></div>
+                                 <input type="radio" name="interier-hint-1" value="1">
+                              </label>
+                           </li>
+                           <li>
+                              <label>
+                                 <div style="background-color: #987856;" class="circle"></div>
+                                 <input checked type="radio" name="interier-hint-1" value="2">
+                              </label>
+                           </li>
+                           <li>
+                              <label>
+                                 <div style="background-color: #EBE7E3;" class="circle"></div>
+                                 <input type="radio" name="interier-hint-1" value="3">
+                              </label>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="hint-modal__main">
+                        <span class="hint-modal__collection">Коллекция Muse</span>
+                        <span class="hint-modal__name">Душевая система с верхним тропическим душем</span>
+                        <ul class="product-card__colors hint-modal__colors">
+                           <li>
+                              <label>
+                                 <div style="background-color: #A7ABAA;" class="circle"></div>
+                                 <input checked type="radio" name="interier-hint-1" value="0">
+                              </label>
+                           </li>
+                           <li>
+                              <label>
+                                 <div style="background-color: #3C4545;" class="circle"></div>
+                                 <input type="radio" name="interier-hint-1" value="1">
+                              </label>
+                           </li>
+                           <li>
+                              <label>
+                                 <div style="background-color: #987856;" class="circle"></div>
+                                 <input checked type="radio" name="interier-hint-1" value="2">
+                              </label>
+                           </li>
+                           <li>
+                              <label>
+                                 <div style="background-color: #EBE7E3;" class="circle"></div>
+                                 <input type="radio" name="interier-hint-1" value="3">
+                              </label>
+                           </li>
+                        </ul>
+                        <span class="hint-modal__price">7 958 ₽</span>
+                     </div>
+                     <a class="hint-modal__link">
+                        <span>Подробнее</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                           <path
+                              d="M6 1C6 1 7.17729 2.64096 7.97998 3.44687C8.79022 4.26037 10.0467 5.04667 10.0467 5.04667C10.0467 5.04667 8.39025 6.23328 7.57998 7.04687C6.77742 7.85273 6 9.09333 6 9.09333"
+                              stroke="#202929" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                           <path d="M1.39844 5H9.59844" stroke="#202929" stroke-miterlimit="10" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </div>
             <div class="home-interier__backdrop"></div>
             <div class="container">
                <div class="home-interier__wrapper">
@@ -1076,6 +1161,9 @@
                               style="left: calc(113 / 550 * 100%); top:calc(225 / 680 * 100%)">
                               <div class="home-interier__point circle" data-dot="hint1">
                               </div>
+                              <a href="#hintModal" class="home-interier__point circle tablet-mobile modal__link"
+                                 data-dot="hint1">
+                              </a>
                               <div class="interier-hint" data-hint="hint1">
                                  <button class="interier-hint__close">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
@@ -1101,6 +1189,18 @@
                                           <label>
                                              <div style="background-color: #3C4545;" class="circle"></div>
                                              <input type="radio" name="interier-hint-1" value="1">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #987856;" class="circle"></div>
+                                             <input checked type="radio" name="interier-hint-1" value="2">
+                                          </label>
+                                       </li>
+                                       <li>
+                                          <label>
+                                             <div style="background-color: #EBE7E3;" class="circle"></div>
+                                             <input type="radio" name="interier-hint-1" value="3">
                                           </label>
                                        </li>
                                     </ul>
@@ -1151,6 +1251,9 @@
                            <div class="home-interier__modal"
                               style="left: calc(201 / 436 * 100%); top:calc(240 / 680 * 100%) ">
                               <div class="home-interier__point circle" data-dot="hint2"></div>
+                              <a href="#hintModal" class="home-interier__point circle tablet-mobile modal__link"
+                                 data-dot="hint1">
+                              </a>
                               <div class="interier-hint" data-hint="hint2">
                                  <button class="interier-hint__close">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
@@ -1226,6 +1329,9 @@
                            <div class="home-interier__modal top"
                               style="left: calc(135 / 324 * 100%); top:calc(340 / 680 * 100%) ">
                               <div class="home-interier__point circle" data-dot="hint3"></div>
+                              <a href="#hintModal" class="home-interier__point circle tablet-mobile modal__link"
+                                 data-dot="hint1">
+                              </a>
                               <div class="interier-hint" data-hint="hint3">
                                  <button class="interier-hint__close">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
@@ -1301,6 +1407,9 @@
                            <div class="home-interier__modal left"
                               style="left: calc(571 / 775 * 100%); top:calc(273 / 693 * 100%) ">
                               <div class="home-interier__point circle" data-dot="hint4"></div>
+                              <a href="#hintModal" class="home-interier__point circle tablet-mobile modal__link"
+                                 data-dot="hint1">
+                              </a>
                               <div class="interier-hint" data-hint="hint4">
                                  <button class="interier-hint__close">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
@@ -1376,6 +1485,9 @@
                            <div class="home-interier__modal"
                               style="left: calc(39 / 550 * 100%); top:calc(315 / 693 * 100%) ">
                               <div class="home-interier__point circle" data-dot="hint5"></div>
+                              <a href="#hintModal" class="home-interier__point circle tablet-mobile modal__link"
+                                 data-dot="hint1">
+                              </a>
                               <div class="interier-hint" data-hint="hint5">
                                  <button class="interier-hint__close">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
@@ -1445,6 +1557,9 @@
                            <div class="home-interier__modal"
                               style="left: calc(207 / 550 * 100%); top:calc(498 / 693 * 100%) ">
                               <div class="home-interier__point circle" data-dot="hint6"></div>
+                              <a href="#hintModal" class="home-interier__point circle tablet-mobile modal__link"
+                                 data-dot="hint1">
+                              </a>
                               <div class="interier-hint" data-hint="hint6">
                                  <button class="interier-hint__close">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
@@ -1514,6 +1629,9 @@
                            <div class="home-interier__modal left"
                               style="left: calc(394 / 550 * 100%); top:calc(306 / 693 * 100%) ">
                               <div class="home-interier__point circle" data-dot="hint7"></div>
+                              <a href="#hintModal" class="home-interier__point circle tablet-mobile modal__link"
+                                 data-dot="hint1">
+                              </a>
                               <div class="interier-hint" data-hint="hint7">
                                  <button class="interier-hint__close">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"

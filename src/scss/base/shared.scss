@@ -129,6 +129,12 @@ label {
       display: block;
    }
 }
+.tablet-mobile {
+   display: none;
+   @media (max-width: $tablet) {
+      display: block;
+   }
+}
 .app-checkbox {
    cursor: pointer;
    display: flex;
@@ -394,7 +400,8 @@ label {
       padding: 0 8px;
       transition: $transition;
    }
-   input {
+   input,
+   textarea {
       background-color: transparent;
       width: 100%;
       height: 50px;
@@ -405,6 +412,10 @@ label {
       color: $black;
       font-size: 16px;
       transition: $transition;
+   }
+   textarea {
+      height: 160px;
+      padding-top: 10px;
    }
    button {
       position: absolute;
@@ -424,7 +435,8 @@ label {
       display: none;
    }
    &.filled,
-   &:has(input:focus) {
+   &:has(input:focus),
+   &:has(textarea:focus) {
       span {
          top: 0;
       }

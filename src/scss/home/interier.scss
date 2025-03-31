@@ -2,15 +2,17 @@
    padding-bottom: var(--sectionMargin);
    // .home-interier__wrapper
    &:has(.interier-hint.active) {
-      .home-interier__backdrop {
-         opacity: 1;
-         pointer-events: all;
+      @media (min-width: 1025px) {
+         .home-interier__backdrop {
+            opacity: 1;
+            pointer-events: all;
+         }
       }
    }
    &__backdrop {
       display: none;
       @media (max-width: $mobile) {
-         display: block;
+         // display: block;
          position: fixed;
          top: 0;
          left: 0;
@@ -173,8 +175,10 @@
          }
       }
       &:has(.active) {
-         .home-interier__point::after {
-            scale: 1;
+         @media (min-width: 1025px) {
+            .home-interier__point::after {
+               scale: 1;
+            }
          }
       }
    }
@@ -196,6 +200,17 @@
          border-radius: 50%;
          transition: $transition;
          scale: 0.5;
+      }
+      &.tablet-mobile {
+         display: none;
+         @media (max-width: $tablet) {
+            display: flex;
+         }
+      }
+      &:not(.tablet-mobile) {
+         @media (max-width: $tablet) {
+            display: none;
+         }
       }
    }
    &__link {
@@ -234,6 +249,9 @@
    z-index: 1;
    .product-card__colors {
       position: absolute;
+   }
+   @media (max-width: $tablet) {
+      display: none;
    }
    // .interier-hint__close
    @media (max-width: $mobile) {
@@ -379,6 +397,157 @@
          height: 48px;
          width: 100%;
          @include body-6;
+      }
+   }
+}
+.hint-modal {
+   background: rgba(32, 41, 41, 0.3);
+   // .hint-modal__content
+   .modal__close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      @media (max-width: $mobile) {
+         top: 12px;
+         right: 12px;
+      }
+   }
+   &__content {
+      height: fit-content;
+      padding: 30px 40px;
+      border-radius: 10px 10px 0px 0px;
+      background: #fff;
+      width: 100vw;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: unset;
+      @media (max-width: $mobile) {
+         padding-top: 48px;
+         padding-bottom: 40px;
+         padding-left: 12px;
+         padding-right: 12px;
+      }
+   }
+
+   // .hint-modal__product
+
+   &__product {
+      display: flex;
+      gap: 12px;
+      @media (max-width: $mobile) {
+         flex-direction: column;
+      }
+   }
+
+   // .hint-modal__image
+
+   &__image {
+      border-radius: 5px;
+      background: #f9f7f5;
+      height: 120px;
+      flex: 0 0 95px;
+      padding: 14px 10px;
+      position: relative;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+      }
+      .product-card__colors {
+         display: none;
+         @media (max-width: $mobile) {
+            display: flex;
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            margin: 0;
+         }
+      }
+      @media (max-width: $mobile) {
+         height: 223px;
+         width: 100%;
+         flex: 0 0 223px;
+         padding: 20px 0;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         img {
+            max-width: 50%;
+         }
+      }
+   }
+
+   // .hint-modal__main
+
+   &__main {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      margin-left: 16px;
+      @media (max-width: $mobile) {
+         margin: 0;
+         margin-bottom: 16px;
+         .product-card__colors {
+            display: none;
+         }
+      }
+   }
+
+   // .hint-modal__collection
+
+   &__collection {
+      @include body-3;
+      color: $grey-dark;
+      margin-bottom: 4px;
+      @media (max-width: $mobile) {
+         color: $black;
+         @include body-3-mobile;
+      }
+   }
+
+   // .hint-modal__name
+
+   &__name {
+      @include body-3-tablet;
+      color: $black;
+      @media (max-width: $mobile) {
+         @include body-6-mobile;
+      }
+   }
+
+   // .hint-modal__colors
+
+   &__colors {
+      margin: 20px 0;
+   }
+
+   // .hint-modal__price
+
+   &__price {
+      @include body-5;
+      color: $black;
+      @media (max-width: $mobile) {
+         @include body-5-mobile;
+         margin-top: 12px;
+      }
+   }
+
+   // .hint-modal__link
+
+   &__link {
+      align-self: end;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border-radius: 50px;
+      border: 1px solid var(--grey-dark, #949698);
+      padding: 0 40px;
+      @include body-6;
+      @media (max-width: $mobile) {
+         width: 100%;
       }
    }
 }

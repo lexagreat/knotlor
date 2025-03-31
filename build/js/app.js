@@ -713,7 +713,10 @@ function validateInputs() {
    const labels = document.querySelectorAll(".app-input");
    if (!labels.length) return;
    labels.forEach((label) => {
-      const input = label.querySelector("input");
+      let input = label.querySelector("input");
+      if (!input) {
+         input = label.querySelector("textarea");
+      }
       const button = label.querySelector("button");
       input.oninput = (e) => {
          let value = e.target.value.length;
@@ -743,7 +746,7 @@ function collabPage() {
                scrub: 1.5, // Плавность прокрутки
                pin: true, // Закрепляем блок
                // invalidateOnRefresh: true, // Пересчет при изменении размера экрана
-               // markers: true,
+               // markers: false,
             },
          });
          // Анимация для каждого элемента items
@@ -754,7 +757,7 @@ function collabPage() {
                end: () => "+=" + scrollLength + "px", // Динамическая длина анимации
                scrub: 1.5, // Плавность прокрутки
                pin: false, // Не закрепляем элементы
-               // markers: true, // Для отладки
+               // markers: false, // Для отладки
             },
          });
          const colors = ["#ECE4D1", "#EFE8D6", "#F3EEDE", "#FAF6E9", "#FBF8EF"];
@@ -776,21 +779,21 @@ function aboutPage() {
    function stats() {
       const items = document.querySelectorAll(".about-stats__item");
       if (!items.length) return;
-      let steps = 30; // Количество шагов для анимации
+      let steps = 15; // Количество шагов для анимации
       items.forEach((item) => {
          // Добавляем флаг для каждого элемента
          let isStarted = false;
          let maxValue = item
             .querySelector("[data-number]")
             .getAttribute("data-number");
-         let interval = 3000 / steps; // Интервал времени между шагами
+         let interval = 1500 / steps; // Интервал времени между шагами
          gsap.to(item, {
             scrollTrigger: {
                trigger: ".about-stats", // Триггер для анимации
                start: "top 50%", // Начало анимации, когда блок достигает верха экрана
                end: "top 10%", // Динамическая длина анимации
                scrub: 1.5, // Плавность прокрутки
-               // markers: true,
+               // markers: false,
                onEnter: () => {
                   if (!isStarted) {
                      animateNumber(
@@ -864,14 +867,44 @@ function aboutPage() {
             end: "top -50%", // Динамическая длина анимации
             scrub: 1.5, // Плавность прокрутки
             pin: false, // Не закрепляем элементы
-            markers: true, // Для отладки
+            markers: false, // Для отладки
          },
-         y: "-20%",
+         y: "-15%",
+      });
+   }
+   function secondParallax() {
+      const image = document.querySelector(".about-more__image img");
+      gsap.to(image, {
+         scrollTrigger: {
+            trigger: ".about-more", // Триггер для анимации
+            start: "top 75%", // Начало анимации
+            end: "top -50%", // Динамическая длина анимации
+            scrub: 1.5, // Плавность прокрутки
+            pin: false, // Не закрепляем элементы
+            markers: false, // Для отладки
+         },
+         y: "-10%",
+      });
+   }
+   function thirdParallax() {
+      const image = document.querySelector(".about-comfort__image img");
+      gsap.to(image, {
+         scrollTrigger: {
+            trigger: ".about-comfort", // Триггер для анимации
+            start: "top 75%", // Начало анимации
+            end: "top -50%", // Динамическая длина анимации
+            scrub: 1.5, // Плавность прокрутки
+            pin: false, // Не закрепляем элементы
+            markers: false, // Для отладки
+         },
+         y: "-10%",
       });
    }
    stats();
    mission();
    firstParallax();
+   secondParallax();
+   thirdParallax();
 }
 // helpers
 function slideShow(el, duration = 500) {

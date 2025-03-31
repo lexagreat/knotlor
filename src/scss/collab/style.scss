@@ -776,7 +776,7 @@
             }
          }
       }
-      button {
+      & > button {
          display: flex;
          align-items: center;
          justify-content: center;
@@ -786,6 +786,7 @@
          border: 1px solid var(--grey-dark, #949698);
          @include body-6;
          width: fit-content;
+         color: $black;
       }
       & > p {
          @include body-small;

@@ -37,6 +37,7 @@
    p {
       margin: 0;
       margin-top: 40px;
+      max-width: 709px;
       @media (max-width: $tablet) {
          margin-top: 20px;
       }
@@ -274,11 +275,18 @@
       position: relative;
       border-radius: 10px;
       overflow: hidden;
+      min-height: 290px;
+      &:hover {
+         .about-phil__bg {
+            opacity: 1;
+         }
+      }
       .h4 {
          position: absolute;
          top: 40px;
          left: 40px;
          color: $black;
+         z-index: 2;
          &.light {
             color: $romance;
          }
@@ -288,14 +296,36 @@
          }
       }
       img {
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
+         max-width: 100%;
+         max-height: 100%;
+      }
+      @media (max-width: $tablet) {
+         min-height: unset;
+         height: 210px;
+      }
+   }
+   &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: $transition;
+      z-index: 4;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      @include body-1;
+      padding: 40px;
+      color: $black;
+      opacity: 0;
+
+      @media (max-width: $mobile) {
+         padding: 30px;
+         @include body-1-mobile;
       }
    }
 }
 .about-history {
-   height: 100vh;
+   height: 150vh;
    overflow: hidden;
    position: relative;
    img {
@@ -374,6 +404,215 @@
          align-self: start;
          @include body-4-mobile;
          font-family: $fontDrugs;
+      }
+   }
+}
+.about-more {
+   background: var(--wheatfield, #dfd5bc);
+   position: relative;
+   padding: var(--sectionMargin) 0;
+   & > img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @media (max-width: $tablet) {
+         width: 279px;
+      }
+      @media (max-width: $mobile) {
+         display: none;
+      }
+   }
+   // .about-more__wrapper
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+      @media (max-width: $tablet) {
+         gap: 32px;
+      }
+   }
+
+   // .about-more__title
+
+   &__title {
+      display: flex;
+      flex-direction: column;
+      span {
+         &:nth-child(1) {
+            align-self: start;
+         }
+         &:nth-child(2) {
+            align-self: end;
+            @media (max-width: $tablet) {
+               align-self: start;
+            }
+         }
+      }
+   }
+
+   // .about-more__main
+
+   &__main {
+      display: flex;
+      gap: 55px;
+      @media (max-width: $tablet) {
+         gap: 10px;
+      }
+      @media (max-width: $mobile) {
+         flex-direction: column-reverse;
+         gap: 32px;
+      }
+   }
+
+   // .about-more__image
+
+   &__image {
+      border-radius: 10px;
+      overflow: hidden;
+      flex: 0 0 510px;
+      height: 624px;
+      img {
+         width: 100%;
+         height: 120%;
+         object-fit: cover;
+         object-position: top;
+      }
+      @media (max-width: $tablet) {
+         flex: 0 0 363px;
+         height: 470px;
+         border-radius: 5px;
+      }
+      @media (max-width: $mobile) {
+         flex: 0 0 400px;
+         height: 400px;
+         width: 100%;
+      }
+   }
+
+   // .about-more__desc
+
+   &__desc {
+      @include body-4;
+      flex: 0 1 539px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      @media (max-width: $tablet) {
+         flex: 1;
+         @include body-3-tablet;
+      }
+      @media (max-width: $mobile) {
+         flex: unset;
+         @include body-4-mobile;
+      }
+   }
+}
+.about-form {
+   .collab-form__main {
+      background: var(--iceberg, #c7dcd5);
+      @media (max-width: $tablet) {
+         background: unset;
+      }
+   }
+}
+.about-comfort {
+   padding-bottom: 160px;
+   position: relative;
+   @media (max-width: $tablet) {
+      padding-bottom: var(--sectionMargin);
+   }
+   & > img {
+      position: absolute;
+      right: var(--containerFull);
+      bottom: 160px;
+      @media (max-width: $tablet) {
+         width: 220px;
+         bottom: 70px;
+         right: var(--container);
+      }
+      @media (max-width: $mobile) {
+         display: none;
+      }
+   }
+   // .about-comfort__wrapper
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .h3 {
+         max-width: 1060px;
+         display: flex;
+         flex-direction: column;
+         span {
+            &:nth-child(1) {
+               align-self: start;
+            }
+            &:nth-child(2) {
+               align-self: end;
+               @media (max-width: $tablet) {
+                  align-self: start;
+               }
+            }
+         }
+      }
+   }
+
+   // .about-comfort__main
+
+   &__main {
+      display: flex;
+      gap: 55px;
+      @media (max-width: $tablet) {
+         gap: 10px;
+      }
+      @media (max-width: $mobile) {
+         flex-direction: column-reverse;
+         gap: 32px;
+      }
+   }
+
+   // .about-comfort__image
+
+   &__image {
+      border-radius: 10px;
+      overflow: hidden;
+      flex: 0 0 510px;
+      height: 520px;
+      img {
+         width: 100%;
+         height: 120%;
+         object-fit: cover;
+         object-position: top;
+      }
+      @media (max-width: $tablet) {
+         flex: 0 0 363px;
+         height: 400px;
+         border-radius: 5px;
+      }
+      @media (max-width: $mobile) {
+         flex: 0 0 400px;
+         height: 400px;
+         width: 100%;
+      }
+   }
+
+   // .about-comfort__desc
+
+   &__desc {
+      @include body-4;
+      flex: 0 1 539px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      @media (max-width: $tablet) {
+         flex: 1;
+         @include body-3-tablet;
+      }
+      @media (max-width: $mobile) {
+         flex: unset;
+         @include body-4-mobile;
       }
    }
 }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+@@include('components/_head.html',{
+"lang":"en",
+"title":"Knotlor",
+"description":"",
+"keywords":"",
+})
+
+<body>
+   <div class="wrapper lock-padding">
+      @@include('components/_header.html')
+      <main class="collab-main">
+         <section class="collab-hero about-hero design-hero">
+            <img src="img/design/hero.png" alt="">
+            <div class="container" style="position: relative;z-index: 1;">
+               <div class="collab-hero__wrapper">
+                  <div class="collab-hero__upper">
+                     <div class="collab-hero__main">
+                        <section class="breadcrumbs">
+                           <ul class="breadcrumbs__list scrollbar-none">
+                              <li><a href="index.html">Главная</a></li>
+                              <li><a href="">Дизайнерам и архитекторам</a></li>
+                           </ul>
+                        </section>
+                        <h1 class="h2">
+                           Приглашаем к сотрудничеству дизайнеров и архитекторов
+                        </h1>
+                        <p>
+                           Вы создаете пространства, которые вдохновляют.  Мы создаем сантехнику, которая подчеркивает
+                           их уникальность.
+                        </p>
+                        <button>
+                           Начать сотрудничество
+                        </button>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+         </section>
+         <div class="collab-page">
+         </div>
+      </main>
+      @@include('components/_footer.html')
+
+   </div>
+   @@include('components/_scripts.html')
+</body>
+
+</html>
