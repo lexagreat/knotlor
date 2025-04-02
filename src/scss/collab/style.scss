@@ -44,6 +44,10 @@
          &__list {
             a {
                color: $grey-light;
+               &::after {
+                  color: white;
+                  background-color: white;
+               }
             }
             li {
                &:last-child {
@@ -220,7 +224,7 @@
       @media (max-width: $tablet) {
          flex-direction: column;
          justify-content: unset;
-         gap: 32px;
+         gap: 32px !important;
       }
    }
 

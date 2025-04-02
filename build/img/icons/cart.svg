@@ -1,7 +1,1 @@
-<svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Group 103">
-<path id="Vector" d="M1 1.5V1.5C2.13271 1.5 3.07852 2.36373 3.18107 3.49179L3.27273 4.5L3.72946 9.52401C3.87904 11.1695 5.33097 12.3843 6.97702 12.2411L13.1269 11.7064C14.5166 11.5855 15.6396 10.5228 15.8369 9.1419L16.0108 7.92426C16.269 6.11696 14.8666 4.5 13.041 4.5H7.5" stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"/>
-<path id="Vector_2" d="M7 17.5C7.55228 17.5 8 17.0523 8 16.5C8 15.9477 7.55228 15.5 7 15.5C6.44772 15.5 6 15.9477 6 16.5C6 17.0523 6.44772 17.5 7 17.5Z" stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_3" d="M13 17.5C13.5523 17.5 14 17.0523 14 16.5C14 15.9477 13.5523 15.5 13 15.5C12.4477 15.5 12 15.9477 12 16.5C12 17.0523 12.4477 17.5 13 17.5Z" stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-</svg>
+<svg width="17" height="19" fill="none" xmlns="http://www.w3.org/2000/svg"><g stroke="#F8F4E8" stroke-width="1.5" stroke-linecap="round"><path d="M1 1.5v0a2.19 2.19 0 012.181 1.992L3.273 4.5l.456 5.024a3 3 0 003.248 2.717l6.15-.535a3 3 0 002.71-2.564l.174-1.218A3 3 0 0013.04 4.5H7.5"/><path d="M7 17.5a1 1 0 100-2 1 1 0 000 2zm6 0a1 1 0 100-2 1 1 0 000 2z" stroke-linejoin="round"/></g></svg>

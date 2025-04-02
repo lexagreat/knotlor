@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
    validateInputs();
    collabPage();
    aboutPage();
+   designPage();
 });
 function codeInput() {
    const inputs = document.querySelectorAll(".code-input input");
@@ -905,6 +906,110 @@ function aboutPage() {
    firstParallax();
    secondParallax();
    thirdParallax();
+}
+function designPage() {
+   function parallax() {
+      let image;
+      if (window.innerWidth > 1024) {
+         image = document.querySelector(".about-inspiration__image img.pc");
+      } else if (window.innerWidth > 568) {
+         image = document.querySelector(".about-inspiration__image img.tablet");
+      } else {
+         image = document.querySelector(".about-inspiration__image img.mobile");
+      }
+      gsap.to(image, {
+         scrollTrigger: {
+            trigger: ".about-inspiration", // Триггер для анимации
+            start: "top 75%", // Начало анимации
+            end: "top -50%", // Динамическая длина анимации
+            scrub: 1.5, // Плавность прокрутки
+            pin: false, // Не закрепляем элементы
+            markers: false, // Для отладки
+         },
+         y: "-10%",
+      });
+   }
+   function cases() {
+      const items = document.querySelectorAll(".design-projects__item");
+      if (!items.length) return;
+      items.forEach((item) => {
+         item.onclick = (e) => {
+            console.log(e.target.closest(".design-projects__item button"));
+            if (e.target.closest(".design-projects__item button")) {
+               item.classList.add("active");
+            } else {
+               item.classList.remove("active");
+            }
+         };
+      });
+   }
+   function why() {
+      const bg = document.querySelectorAll(".design-why__wrapper > img");
+      const list = document.querySelectorAll(".design-why__list");
+      const title = document.querySelectorAll(".design-why__inner .h3");
+      if (!bg) return;
+      gsap.to(list, {
+         scrollTrigger: {
+            trigger: ".design-why", // Триггер для анимации
+            start: "top 0%", // Начало анимации
+            end: "bottom", // Динамическая длина анимации
+            scrub: 1.5, // Плавность прокрутки
+            pin: false, // Не закрепляем элементы
+            markers: false, // Для отладки
+         },
+         y: "-70%",
+      });
+      gsap.to(bg, {
+         scrollTrigger: {
+            trigger: ".design-why", // Триггер для анимации
+            start: "top 0%", // Начало анимации
+            end: "bottom", // Динамическая длина анимации
+            scrub: 1.5, // Плавность прокрутки
+            pin: false, // Не закрепляем элементы
+            markers: false, // Для отладки
+         },
+         y: "-40%",
+      });
+      if (window.innerWidth > 568 && window.innerWidth < 1024) {
+         gsap.to(title, {
+            scrollTrigger: {
+               trigger: ".design-why", // Триггер для анимации
+               start: "top 0%", // Начало анимации
+               end: "bottom", // Динамическая длина анимации
+               scrub: 1.5, // Плавность прокрутки
+               pin: false, // Не закрепляем элементы
+               markers: false, // Для отладки
+            },
+            y: "-70%",
+         });
+      } else if (window.innerWidth <= 568) {
+         gsap.to(title, {
+            scrollTrigger: {
+               trigger: ".design-why", // Триггер для анимации
+               start: "top 0%", // Начало анимации
+               end: "bottom", // Динамическая длина анимации
+               scrub: 1.5, // Плавность прокрутки
+               pin: false, // Не закрепляем элементы
+               markers: false, // Для отладки
+            },
+            y: "-1600px",
+         });
+         gsap.to(list, {
+            scrollTrigger: {
+               trigger: ".design-why", // Триггер для анимации
+               start: "top 0%", // Начало анимации
+               end: "bottom", // Динамическая длина анимации
+               scrub: 1.5, // Плавность прокрутки
+               pin: false, // Не закрепляем элементы
+               markers: false, // Для отладки
+            },
+            y: "-100%",
+         });
+      }
+   }
+   parallax();
+   cases();
+   why();
 }
 // helpers
 function slideShow(el, duration = 500) {

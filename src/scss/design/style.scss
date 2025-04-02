@@ -4,3 +4,453 @@
       margin-bottom: 40px;
    }
 }
+.design-advant {
+   .collab-advantages {
+      &__title {
+         &::after {
+            display: none;
+         }
+      }
+   }
+   &__link {
+      height: 68px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      padding: 0 16px;
+      border-radius: 50px;
+      background: var(--blue-stone, #0f6062);
+      color: $romance;
+      @include body-2;
+      width: fit-content;
+      margin-top: 60px;
+   }
+}
+.about-inspiration {
+   padding: var(--sectionMargin) 0;
+   // .about-inspiration__wrapper
+
+   &__wrapper {
+      display: flex;
+      gap: 128px;
+      @media (max-width: $tablet) {
+         gap: 45px;
+      }
+      @media (max-width: $mobile) {
+         gap: 40px;
+         flex-direction: column;
+      }
+      & > .about-inspiration__header {
+         display: none;
+         @media (max-width: $mobile) {
+            display: flex;
+         }
+      }
+   }
+
+   // .about-inspiration__image
+
+   &__image {
+      overflow: hidden;
+      flex: 0 0 550px;
+      border-radius: 10px;
+      max-height: 773px;
+      img {
+         width: 100%;
+         height: 120%;
+         object-fit: cover;
+      }
+      @media (max-width: $tablet) {
+         flex: 0 0 325px;
+         max-height: 480px;
+      }
+      @media (max-width: $mobile) {
+         flex: 0 0 480px;
+         width: 100%;
+         max-height: unset;
+      }
+   }
+
+   // .about-inspiration__main
+
+   &__main {
+      flex: 0 1 584px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      & > .about-inspiration__header {
+         @media (max-width: $mobile) {
+            display: none;
+         }
+      }
+      @media (max-width: $mobile) {
+         flex: unset;
+      }
+   }
+
+   // .about-inspiration__header
+
+   &__header {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      @media (max-width: $mobile) {
+         gap: 20px;
+      }
+   }
+
+   // .about-inspiration__title
+
+   &__title {
+   }
+
+   // .about-inspiration__desc
+
+   &__desc {
+      @include body-4;
+      color: $black;
+      @media (max-width: $tablet) {
+         @include body-3-tablet;
+      }
+   }
+
+   // .about-inspiration__block
+
+   &__block {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+
+   // .about-inspiration__subtitle
+
+   &__subtitle {
+   }
+
+   // .about-inspiration__list
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      li {
+         padding: 20px 0;
+         display: flex;
+         align-items: center;
+         gap: 12px;
+         @include body-2;
+         border-bottom: 1px solid var(--grey, #d4d4d4);
+         &:nth-child(1) {
+            border-top: 1px solid var(--grey, #d4d4d4);
+         }
+         @media (max-width: $tablet) {
+            @include body-2-tablet;
+         }
+      }
+   }
+
+   // .about-inspiration__link
+
+   &__link {
+      height: 48px;
+      padding: 0 40px;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100px;
+      border: 1px solid var(--grey-dark, #949698);
+      @include body-6;
+      color: $black;
+      @media (max-width: $tablet) {
+         display: none;
+      }
+   }
+}
+.design-projects {
+   // .design-projects__wrapper
+
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      @media (max-width: $tablet) {
+         gap: 28px;
+      }
+      @media (max-width: $mobile) {
+         gap: 24px;
+      }
+   }
+
+   // .design-projects__title
+
+   &__title {
+   }
+
+   // .design-projects__items
+
+   &__items {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      .more {
+         display: none;
+         padding: 0 40px;
+         height: 48px;
+         align-items: center;
+         justify-content: center;
+         border-radius: 50px;
+         border: 1px solid var(--grey-dark, #949698);
+         @include body-6;
+         margin: 0 auto;
+         margin-top: 22px;
+         @media (max-width: $tablet) {
+            display: flex;
+         }
+         @media (max-width: $mobile) {
+            margin-top: 14px;
+            width: 100%;
+         }
+      }
+      @media (max-width: $tablet) {
+         gap: 10px;
+      }
+      @media (max-width: $mobile) {
+         flex-direction: column;
+      }
+   }
+
+   // .design-projects__item
+
+   &__item {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      button {
+         transition: $transition;
+         display: none;
+         @media (max-width: $tablet) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: #fff;
+            position: absolute;
+            z-index: 2;
+            bottom: 10px;
+            right: 10px;
+            width: 44px;
+            height: 44px;
+         }
+      }
+      @media (hover: hover) {
+         &:hover {
+            .design-projects__hint {
+               opacity: 1;
+            }
+         }
+      }
+      &.active {
+         button {
+            opacity: 0;
+         }
+         .design-projects__hint {
+            opacity: 1;
+         }
+      }
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+      &:nth-child(1) {
+         flex: 0 0 calc(437 / 1340 * 100%);
+      }
+      &:nth-child(2) {
+         flex: 0 0 calc(436 / 1340 * 100%);
+      }
+      &:nth-child(3) {
+         flex: 0 0 calc(436 / 1340 * 100%);
+      }
+      &:nth-child(4) {
+         flex: 0 0 calc(662 / 1340 * 100%);
+      }
+      &:nth-child(5) {
+         flex: 0 0 calc(324 / 1340 * 100%);
+      }
+      &:nth-child(6) {
+         flex: 0 0 calc(324 / 1340 * 100%);
+      }
+      @media (max-width: 1440px) {
+         &:nth-child(1) {
+            flex: 0 0 calc(296px + 140 * ((100vw - 1024px) / (1440 - 1024)));
+         }
+         &:nth-child(2) {
+            flex: 0 0 calc(296px + 140 * ((100vw - 1024px) / (1440 - 1024)));
+         }
+         &:nth-child(3) {
+            flex: 0 0 calc(296px + 140 * ((100vw - 1024px) / (1440 - 1024)));
+         }
+         &:nth-child(4) {
+            flex: 0 0 calc(522px + 140 * ((100vw - 1024px) / (1440 - 1024)));
+         }
+         &:nth-child(5) {
+            flex: 0 0 calc(184px + 140 * ((100vw - 1024px) / (1440 - 1024)));
+         }
+         &:nth-child(6) {
+            flex: 0 0 calc(184px + 140 * ((100vw - 1024px) / (1440 - 1024)));
+         }
+      }
+      @media (max-width: $tablet) {
+         &:nth-child(1) {
+            flex: 0 0 calc(402px / 736px * 100%);
+         }
+         &:nth-child(2) {
+            flex: 0 0 calc(320px / 736px * 100%);
+         }
+         &:nth-child(3) {
+            flex: 0 0 calc(437px / 736px * 100%);
+         }
+         &:nth-child(4) {
+            flex: 0 0 calc(285px / 736px * 100%);
+         }
+         &:nth-child(5) {
+            display: none;
+         }
+         &:nth-child(6) {
+            display: none;
+         }
+      }
+      @media (max-width: $mobile) {
+         flex: unset !important;
+      }
+   }
+
+   // .design-projects__hint
+
+   &__hint {
+      transition: $transition;
+      opacity: 0;
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      right: 10px;
+      background-color: #fff;
+      padding: 12px;
+      border-radius: 10px;
+      p {
+         &:nth-child(1) {
+            @include body-3;
+            color: $grey-dark;
+         }
+         &:nth-child(2) {
+            margin-bottom: 8px;
+            margin-top: 4px;
+            @include body-6;
+            color: $black;
+         }
+         &:nth-child(3) {
+            display: flex;
+            gap: 8px;
+            color: $black;
+            @include body-5;
+         }
+      }
+   }
+}
+.design-why {
+   // .design-why__wrapper
+   height: 300vh;
+   &__wrapper {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: hidden;
+      & > img {
+         width: 100%;
+         height: 300vh;
+         object-fit: cover;
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 1;
+      }
+      & > .container {
+         position: relative;
+         z-index: 2;
+      }
+   }
+
+   // .design-why__inner
+
+   &__inner {
+      padding-top: 180px;
+      display: flex;
+      gap: 40px;
+      .h3 {
+         color: $romance;
+      }
+      @media (max-width: $mobile) {
+         flex-direction: column;
+      }
+   }
+
+   // .design-why__list
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      @media (max-width: $tablet) {
+         margin-left: -185px;
+         flex: 0 0 100% !important;
+         width: calc(100vw - 2 * var(--container));
+      }
+      @media (max-width: $mobile) {
+         margin: 0;
+         flex: unset;
+         width: 100%;
+         gap: 10px;
+      }
+      & > li {
+         width: calc(50% - 7px);
+         border-radius: 10px;
+         background: rgba(199, 220, 213, 0.1);
+         backdrop-filter: blur(50px);
+         display: flex;
+         flex-direction: column;
+         gap: 73px;
+         color: $romance;
+         padding: 40px;
+         @media (max-width: $tablet) {
+            padding: 20px;
+            gap: 96px;
+         }
+         @media (max-width: $mobile) {
+            width: 100%;
+         }
+         div {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            p:not(.h4) {
+               @include body-4;
+               @media (max-width: $tablet) {
+                  @include body-4-mobile;
+               }
+            }
+         }
+         &:nth-child(even) {
+            @media (max-width: $tablet) {
+               align-self: flex-start;
+            }
+            align-self: flex-end;
+         }
+         &:nth-child(odd) {
+            @media (max-width: $tablet) {
+               align-self: flex-end;
+            }
+         }
+      }
+   }
+}
