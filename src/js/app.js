@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
    collabPage();
    aboutPage();
    designPage();
+   articlePage();
 });
 function codeInput() {
    const inputs = document.querySelectorAll(".code-input input");
@@ -1010,6 +1011,27 @@ function designPage() {
    parallax();
    cases();
    why();
+}
+function articlePage() {
+   const slider = document.querySelector(".article-page__gallery .swiper");
+   if (!slider) return;
+   let swiper = new Swiper(slider, {
+      slidesPerView: "auto",
+      spaceBetween: 10,
+      navigation: {
+         prevEl: ".article-page__gallery .swiper-button-prev",
+         nextEl: ".article-page__gallery .swiper-button-next",
+      },
+      pagination: {
+         el: ".article-page__gallery .swiper-pagination",
+         type: "progressbar",
+      },
+      breakpoints: {
+         1025: {
+            spaceBetween: 15,
+         },
+      },
+   });
 }
 // helpers
 function slideShow(el, duration = 500) {

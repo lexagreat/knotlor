@@ -6743,6 +6743,81 @@ body.lock {
   }
 }
 
+.blog-page {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+@media (max-width: 1024px) {
+  .blog-page {
+    padding-top: 32px;
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 568px) {
+  .blog-page {
+    padding-bottom: 60px;
+  }
+}
+.blog-page__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+@media (max-width: 1024px) {
+  .blog-page__wrapper {
+    gap: 32px;
+  }
+}
+.blog-page__title {
+  text-align: center;
+}
+.blog-page__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 1024px) {
+  .blog-page__main {
+    gap: 16px;
+  }
+}
+.blog-page__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+  row-gap: 40px;
+}
+@media (max-width: 1024px) {
+  .blog-page__list {
+    grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+    row-gap: 28px;
+  }
+}
+@media (max-width: 568px) {
+  .blog-page__list {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
 .search-page {
   margin-bottom: 80px;
   margin-top: 40px;
@@ -14136,4 +14211,361 @@ input[type=range]::-webkit-slider-thumb {
     -ms-flex-item-align: end;
         align-self: flex-end;
   }
+}
+
+.article-page__wrapper {
+  padding-top: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+  max-width: 1039px;
+}
+.article-page__side {
+  padding-top: 60px;
+  max-width: 279px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 279px;
+          flex: 0 0 279px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+@media (max-width: 1024px) {
+  .article-page__side {
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+    max-width: unset;
+    padding-top: 40px;
+  }
+}
+.article-page__side a {
+  padding: 1px 8px;
+  border-radius: 5px;
+  border: 1px solid var(--grey, #d4d4d4);
+  color: #949698;
+  /* 1440/Body 7 regular */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%; /* 18.2px */
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.article-page__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 700px;
+}
+.article-page__content .article-page__side {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .article-page__content .article-page__side {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+.article-page__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.article-page__header > span {
+  height: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 0 8px;
+  border-radius: 5px;
+  /* 1440/Body 7 regular */
+  font-family: "TT Drugs";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%; /* 18.2px */
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.article-page__subheader {
+  margin: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px 0;
+  border-top: 1px solid #d4d4d4;
+  border-bottom: 1px solid #d4d4d4;
+}
+.article-page__subheader > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 36px;
+}
+.article-page__subheader > div p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  leading-trim: both;
+  text-edge: cap;
+  /* 1440/Body 2 medium */
+  font-family: "TT Drugs";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 22.4px */
+  color: #202929;
+}
+.article-page__subheader > div p:nth-child(1) {
+  position: relative;
+}
+.article-page__subheader > div p:nth-child(1)::after {
+  content: "·";
+  position: absolute;
+  top: 50%;
+  translate: 16px -50%;
+  left: 100%;
+}
+@media (max-width: 1024px) {
+  .article-page__subheader > div p {
+    leading-trim: both;
+    text-edge: cap;
+    /* 768/Body 2 medium */
+    font-family: "TT Drugs";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+  }
+}
+@media (max-width: 568px) {
+  .article-page__subheader > div p {
+    leading-trim: both;
+    text-edge: cap;
+    /* 390/Body 2 demibold */
+    font-family: "TT Drugs";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%; /* 16.8px */
+  }
+}
+.article-page__subheader > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.article-page__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+.article-page__main .body-1 {
+  /* 1440/Body 1 regular */
+  font-family: "TT Drugs";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+}
+@media (max-width: 1024px) {
+  .article-page__main .body-1 {
+    /* 768/Body 1 regular */
+    font-family: "TT Drugs";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 140%; /* 23.8px */
+  }
+}
+.article-page__main .body-4 {
+  /* 1440/Body 4 regular */
+  font-family: "TT Drugs";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+@media (max-width: 1024px) {
+  .article-page__main .body-4 {
+    leading-trim: both;
+    text-edge: cap;
+    /* 1440/Decor Body 3 regular */
+    font-family: "TT Drugs";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 130%; /* 20.8px */
+  }
+}
+.article-page__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.article-page__block ul li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.article-page__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+.article-page__image div {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.article-page__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.article-page__image span {
+  /* 1440/Body small */
+  font-family: "TT Drugs";
+  font-size: 12px;
+  font-weight: 400;
+}
+.article-page__advice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+  padding: 20px 32px;
+  border-radius: 10px;
+  background: rgba(255, 254, 251, 0.4);
+}
+.article-page__gallery {
+  position: relative;
+  margin-left: -339px;
+  margin-right: -301px;
+}
+.article-page__gallery .swiper-pagination {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .article-page__gallery .swiper-pagination {
+    display: block;
+    width: 196px;
+    top: unset;
+    bottom: -32px;
+    left: 50%;
+    translate: -50% 0;
+    height: 1px;
+    background: #d9d9d9;
+  }
+  .article-page__gallery .swiper-pagination .swiper-pagination-progressbar-fill {
+    background: #adadad;
+  }
+}
+@media (max-width: 1400px) {
+  .article-page__gallery {
+    margin-right: unset;
+    margin-left: calc(-339px - var(--container));
+    width: 100vw;
+  }
+  .article-page__gallery .swiper {
+    padding-left: var(--container);
+    padding-right: var(--container);
+  }
+}
+@media (max-width: 1024px) {
+  .article-page__gallery {
+    margin-left: calc(-1 * var(--container));
+    margin-right: calc(-1 * var(--container));
+    width: 100vw;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 1024px) {
+  .article-page__gallery .slider-btn {
+    display: none;
+  }
+}
+.article-page__gallery .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  /* 1440/Body small */
+  font-family: "TT Drugs";
+  font-size: 12px;
+  font-weight: 400;
+  color: #202929;
+  max-width: 437px;
+}
+.article-page__gallery .swiper-slide img {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
