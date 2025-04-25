@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+@@include('components/_head.html',{
+"lang":"en",
+"title":"Knotlor",
+"description":"",
+"keywords":"",
+})
+
+<body>
+   <div class="wrapper lock-padding">
+      @@include('components/_header.html')
+      <main class="main">
+         <section class="breadcrumbs">
+            <div class="container">
+               <ul class="breadcrumbs__list scrollbar-none">
+                  <li><a href="index.html">Главная</a></li>
+                  <li><a href="account.html">Личный кабинет</a></li>
+               </ul>
+            </div>
+         </section>
+         <section class="delivery-page account-wrapper" style="padding: 0;">
+            <div class="container">
+               <div class="delivery-page__wrapper">
+                  <div class="delivery-page__header">
+                     <h1 class="h2 delivery-page__title">Личный кабинет</h1>
+                     <ul class="delivery-page__tabs">
+                        <li>
+                           <a href="account.html">Профиль</a>
+                        </li>
+                        <li>
+                           <a href="orders.html" class="active">Заказы</a>
+                        </li>
+                        <li>
+                           <a href="appeals.html">Обращения</a>
+                        </li>
+                     </ul>
+                  </div>
+
+               </div>
+            </div>
+         </section>
+         <section class="account-profile">
+            <div class="container">
+               <div class="account-profile__wrapper">
+                  <div class="account-profile__main">
+                     <ul class="account-orders">
+                        <li class="account-order new">
+                           <span class="account-order__banner">Новый</span>
+                           <div class="account-order__row">
+                              <div class="account-order__main">
+                                 <span>Заказ № 1234567</span><span>от 25.02.2025 </span>
+                              </div>
+                              <span class="account-order__price">
+                                 7 958 ₽
+                              </span>
+                           </div>
+                           <span class="account-order__date">Срок хранения до 03 марта</span>
+                           <div class="account-order__footer">
+                              <div class="account-order__left">
+                                 <div class="account-order__payment">Оплачен</div>
+                                 <span class="account-order__delivery">Самовывоз из ПВЗ</span>
+                              </div>
+                              <div class="account-order__right">
+                                 <button class="account-order__btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8"
+                                       fill="none">
+                                       <path d="M1.58398 6.91634L7.41732 1.08301" stroke="#949698" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round" />
+                                       <path d="M7.41732 6.91634L1.58398 1.08301" stroke="#949698" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span>Отменить заказ</span>
+                                 </button>
+                                 <a class="account-order__details modal__link" href="#orderModal">Детали заказа</a>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="account-order finished">
+                           <span class="account-order__banner">Завершен</span>
+                           <div class="account-order__row">
+                              <div class="account-order__main">
+                                 <span>Заказ № 1234567</span><span>от 22.02.2025 </span>
+                              </div>
+                              <span class="account-order__price">
+                                 4 500 ₽
+                              </span>
+                           </div>
+                           <span class="account-order__date">Получен 25.02.2025</span>
+                           <div class="account-order__footer">
+                              <div class="account-order__left">
+                                 <div class="account-order__payment">Оплачен</div>
+                                 <span class="account-order__delivery">Самовывоз из ПВЗ</span>
+                              </div>
+                              <div class="account-order__right">
+                                 <button class="account-order__btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14"
+                                       fill="none">
+                                       <path
+                                          d="M5.81335 2.96372C6.32085 2.81206 6.88085 2.71289 7.49918 2.71289C10.2934 2.71289 12.5567 4.97622 12.5567 7.77039C12.5567 10.5646 10.2934 12.8279 7.49918 12.8279C4.70502 12.8279 2.44168 10.5646 2.44168 7.77039C2.44168 6.73206 2.41265 6.40539 2.94932 5.60039"
+                                          stroke="#949698" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                       <path d="M5.0918 3.10366L6.77763 1.16699" stroke="#949698" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round" />
+                                       <path d="M5.0918 3.10352L7.05763 4.53852" stroke="#949698" stroke-width="1.5"
+                                          stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span>Повторить</span>
+                                 </button>
+                                 <a class="account-order__details modal__link" href="#orderModal">Детали заказа</a>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="account-order canceled">
+                           <span class="account-order__banner">Отменен</span>
+                           <div class="account-order__row">
+                              <div class="account-order__main">
+                                 <span>Заказ № 1234567</span><span>от 20.02.2025 </span>
+                              </div>
+                              <span class="account-order__price">
+                                 17 390 ₽
+                              </span>
+                           </div>
+                           <div class="account-order__footer">
+                              <div class="account-order__left">
+                                 <div class="account-order__payment">Не оплачен</div>
+                                 <span class="account-order__delivery">Курьер</span>
+                              </div>
+                              <div class="account-order__right">
+                                 <a class="account-order__details modal__link" href="#orderModal">Детали заказа</a>
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <div class="modal cancel-order">
+            <div class="modal__content">
+               <div class="cancel-order__close modal__close">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                     <path d="M1 11L11 1" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round" />
+                     <path d="M11 11L1 1" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+               </div>
+               <div class="cancel-order__title h4">
+                  Отмена заказа
+               </div>
+               <div class="cancel-order__text">Вы уверены, что хотите отменить заказ?</div>
+               <button class="cancel-order__btn modal__close">
+                  Да, отменить</button>
+            </div>
+         </div>
+         <div class="modal cancel-order">
+            <div class="modal__content">
+               <div class="cancel-order__close modal__close">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                     <path d="M1 11L11 1" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round" />
+                     <path d="M11 11L1 1" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+               </div>
+               <div class="circle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                     <path d="M11.0977 16.9999L15.0282 20.9304L22.9032 13.0693" stroke="#202929" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+               </div>
+               <div class="cancel-order__title h4">
+                  Заказ отменен
+               </div>
+
+               <a href="#" class="cancel-order__btn modal__close">
+                  В личный кабинет</a>
+            </div>
+         </div>
+         <div class="modal order-modal" id="orderModal">
+            <div class="modal__content order-modal__content">
+               <div class="cart-modal__header filters-modal__header order-modal__header">
+                  <h4 class="h4 cart-modal__title">Заказ № 1234567</h4>
+                  <button class="filters-modal__close circle modal__close">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                           d="M7.05661 7.99943L1.86133 2.80413L2.80413 1.86133L7.99941 7.05656L13.1947 1.86133L14.1375 2.80413L8.94221 7.99943L14.1375 13.1946L13.1947 14.1375L7.99941 8.94223L2.80413 14.1375L1.86133 13.1946L7.05661 7.99943Z"
+                           fill="#949698" />
+                     </svg>
+                  </button>
+               </div>
+               <div class="order-modal__scrollable scrollbar-none">
+                  <div class="order-modal__main">
+                     <ul class="order-modal__list">
+                        <li>
+                           <span>Статус</span>
+                           <p>Новый</p>
+                        </li>
+                        <li>
+                           <span> Дата заказа</span>
+                           <p> от 25.02.2025</p>
+                        </li>
+                        <li>
+                           <span>Получатель</span>
+                           <p>Александр Иванов</p>
+                        </li>
+                        <li>
+                           <span>Доставка</span>
+                           <p>
+                              <span>Пункт выдачи СДЭК</span>
+                              <span>г. Москва, ул. Тверская-Ямская 1-я, 8, корп. стр 1</span>
+                           </p>
+                        </li>
+                        <li>
+                           <span>Сумма заказа</span>
+                           <p>16 158 ₽</p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="order-modal__structure">
+                     <h5 class="h5">Состав заказа</h5>
+                     <ul class="order-modal__products">
+                        <li class="cart-modal__item">
+                           <div class="cart-modal__image">
+                              <img src="img/product1.webp" alt="">
+                           </div>
+                           <div class="cart-modal__submain">
+                              <div class="cart-modal__subheader">
+                                 <h5 class="cart-modal__subtitle">Ecoflow</h5>
+                                 <p class="cart-modal__description">
+                                    Душевая система с верхним тропическим душем  с регулировкой по высоте
+                                 </p>
+                                 <span class="cart-modal__color">
+                                    Цвет: Матовый черный
+                                 </span>
+                              </div>
+                              <div class="cart-modal__subfooter">
+                                 <div class="cart-modal__count">
+                                    1шт.
+                                 </div>
+                                 <p class="cart-modal__price">
+                                    <span style="color: #949698; text-decoration: line-through;">10 900 ₽</span>
+                                    <span style="color: #202929;">7 958 ₽</span>
+                                 </p>
+                              </div>
+
+                           </div>
+                        </li>
+                        <li class="cart-modal__item">
+                           <div class="cart-modal__image">
+                              <img src="img/product1.webp" alt="">
+                           </div>
+                           <div class="cart-modal__submain">
+                              <div class="cart-modal__subheader">
+                                 <h5 class="cart-modal__subtitle">Ecoflow</h5>
+                                 <p class="cart-modal__description">
+                                    Душевая система с верхним тропическим душем  с регулировкой по высоте
+                                 </p>
+                                 <span class="cart-modal__color">
+                                    Цвет: Матовый черный
+                                 </span>
+                              </div>
+                              <div class="cart-modal__subfooter">
+                                 <div class="cart-modal__count">
+                                    1шт.
+                                 </div>
+                                 <p class="cart-modal__price">
+                                    <span style="color: #949698; text-decoration: line-through;">10 900 ₽</span>
+                                    <span style="color: #202929;">7 958 ₽</span>
+                                 </p>
+                              </div>
+
+                           </div>
+                        </li>
+                        <li class="cart-modal__item">
+                           <div class="cart-modal__image">
+                              <img src="img/product1.webp" alt="">
+                           </div>
+                           <div class="cart-modal__submain">
+                              <div class="cart-modal__subheader">
+                                 <h5 class="cart-modal__subtitle">Ecoflow</h5>
+                                 <p class="cart-modal__description">
+                                    Душевая система с верхним тропическим душем  с регулировкой по высоте
+                                 </p>
+                                 <span class="cart-modal__color">
+                                    Цвет: Матовый черный
+                                 </span>
+                              </div>
+                              <div class="cart-modal__subfooter">
+                                 <div class="cart-modal__count">
+                                    1шт.
+                                 </div>
+                                 <p class="cart-modal__price">
+                                    <span style="color: #949698; text-decoration: line-through;">10 900 ₽</span>
+                                    <span style="color: #202929;">7 958 ₽</span>
+                                 </p>
+                              </div>
+
+                           </div>
+                        </li>
+
+                     </ul>
+                  </div>
+                  <div class="order-modal__result h5">
+                     <span>Итого</span>
+                     <span>16 158 ₽</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      @@include('components/_footer.html')
+
+   </div>
+   @@include('components/_scripts.html')
+</body>
+
+</html>

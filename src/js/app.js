@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
    aboutPage();
    designPage();
    articlePage();
+   favorPage();
+   refundPage();
 });
 function codeInput() {
    const inputs = document.querySelectorAll(".code-input input");
@@ -1033,6 +1035,38 @@ function articlePage() {
       },
    });
 }
+function favorPage() {
+   if (!document.querySelector("#favor-select")) return;
+   const sort = new Select("#favor-select", {
+      // placeholder: "Сортировка",
+      selectedId: "asd",
+      data: [
+         {
+            id: "asd",
+            value: "По популярности",
+         },
+         {
+            id: "asd1",
+            value: "Новинки",
+         },
+         {
+            id: "asd2",
+            value: "Сначала дешевле",
+         },
+         {
+            id: "asd3",
+            value: "Сначала дороже",
+         },
+      ],
+      onSelect(item, select) {
+         select.classList.add("filled");
+         console.log(item);
+      },
+   });
+}
+function refundPage() {
+   accordion(".refund-accordeon__header", ".refund-accordeon__spoiler");
+}
 // helpers
 function slideShow(el, duration = 500) {
    // завершаем работу метода, если элемент содержит класс collapsing или collapse_show
@@ -1109,6 +1143,7 @@ function slideHide(el, duration = 500) {
 function slideToggle(el, duration = 500) {
    el.classList.contains("collapse_show") ? slideHide(el) : slideShow(el);
 }
+
 class Select {
    constructor(selector, options) {
       this.$el = document.querySelector(selector);

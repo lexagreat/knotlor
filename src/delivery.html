@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+@@include('components/_head.html',{
+"lang":"en",
+"title":"Knotlor",
+"description":"",
+"keywords":"",
+})
+
+<body>
+   <div class="wrapper lock-padding">
+      @@include('components/_header.html')
+      <main class="main">
+         <section class="breadcrumbs">
+            <div class="container">
+               <ul class="breadcrumbs__list scrollbar-none">
+                  <li><a href="index.html">Главная</a></li>
+                  <li><a href="delivery.html">Доставка</a></li>
+               </ul>
+            </div>
+         </section>
+         <section class="delivery-page">
+            <div class="container">
+               <div class="delivery-page__wrapper">
+                  <div class="delivery-page__header">
+                     <h1 class="h2 delivery-page__title">Доставка</h1>
+                     <ul class="delivery-page__tabs">
+                        <li>
+                           <a href="delivery.html" class="active">Доставка</a>
+                        </li>
+                        <li>
+                           <a href="payment.html">Оплата</a>
+                        </li>
+                        <li>
+                           <a href="refund.html">Возврат и обмен</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="delivery-page__main">
+                     <div class="delivery-page__left">
+                        <div class="delivery-page__block">
+                           <h2 class="h4">Доставка</h2>
+                           <p>Мы предлагаем удобные и надежные способы доставки транспортными компаниями по России, срок
+                              доставки в среднем 7 дней. Выберите тот, который подходит вам.</p>
+                        </div>
+                        <div class="delivery-page__block_small">
+                           <div class="delivery-page__subtitle">
+                              <h5 class="h5">СДЭК</h5>
+                              <span>Постаматы, Пункты выдачи, Курьер</span>
+                           </div>
+                           <p>
+                              Курьерская доставка до двери или удобный самовывоз в пунктах выдачи по всей стране.
+                           </p>
+                        </div>
+                        <div class="delivery-page__block_small">
+                           <div class="delivery-page__subtitle">
+                              <h5 class="h5">ПЭК</h5>
+                              <span>Постаматы, Пункты выдачи, Курьер</span>
+                           </div>
+                           <p>
+                              Надежная доставка крупногабаритных товаров.
+                           </p>
+                        </div>
+                        <div class="delivery-page__block_small">
+                           <div class="delivery-page__subtitle">
+                              <h5 class="h5">Байкал-Сервис</h5>
+                              <span>Пункты выдачи</span>
+                           </div>
+                           <p>
+                              Оптимальное соотношение скорости и стоимости доставки
+                           </p>
+                        </div>
+                     </div>
+                     <div class="delivery-page__right">
+                        <div class="delivery-page__block">
+                           <h2 class="h4">Сроки обработки заказа</h2>
+                           <p>После оформления заказа на сайте мы свяжемся для подтверждения заказа. Заказы
+                              обрабатываются с Понедельника по Воскресенье с 10.00 до 20.00 (по Московскому времени)</p>
+                        </div>
+                        <div class="delivery-page__block">
+                           <h2 class="h4">Остались вопросы по доставке?</h2>
+                           <div class="delivery-page__block_small">
+                              <p>
+                                 Телефон для связи <a href="tel:8 800-201-51-28">8 800-201-51-28</a> Пн-пт c 09:00
+                                 до
+                                 20:00
+                              </p>
+                              <p>Email: <a href="mailto:info@knotlor.ru">info@knotlor.ru</a></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('components/_footer.html')
+
+   </div>
+   @@include('components/_scripts.html')
+</body>
+
+</html>

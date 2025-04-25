@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+@@include('components/_head.html',{
+"lang":"en",
+"title":"Knotlor",
+"description":"",
+"keywords":"",
+})
+
+<body>
+   <div class="wrapper lock-padding">
+      @@include('components/_header.html')
+      <main class="main">
+         <section class="breadcrumbs">
+            <div class="container">
+               <ul class="breadcrumbs__list scrollbar-none">
+                  <li><a href="index.html">Главная</a></li>
+                  <li><a href="account.html">Личный кабинет</a></li>
+               </ul>
+            </div>
+         </section>
+         <section class="delivery-page account-wrapper" style="padding: 0;">
+            <div class="container">
+               <div class="delivery-page__wrapper">
+                  <div class="delivery-page__header">
+                     <h1 class="h2 delivery-page__title">Личный кабинет</h1>
+                     <ul class="delivery-page__tabs">
+                        <li>
+                           <a href="account.html">Профиль</a>
+                        </li>
+                        <li>
+                           <a href="orders.html" class="active">Заказы</a>
+                        </li>
+                        <li>
+                           <a href="appeals.html">Обращения</a>
+                        </li>
+                     </ul>
+                  </div>
+
+               </div>
+            </div>
+         </section>
+         <div class="orders-empty">
+            <h4 class="h4">У вас пока нет заказов</h4>
+            <p>Перейдите в каталог, чтобы найти что-то подходящее</p>
+            <a href="#" class="hover-btn">
+               В каталог</a>
+         </div>
+      </main>
+      @@include('components/_footer.html')
+
+   </div>
+   @@include('components/_scripts.html')
+</body>
+
+</html>

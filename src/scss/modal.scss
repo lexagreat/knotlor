@@ -16,10 +16,12 @@ body.lock {
    transition: 0.5s;
    overflow-y: auto;
    overflow-x: hidden;
-   cursor: pointer;
+   // cursor: pointer;
    z-index: 101;
 }
-
+.modal__close {
+   cursor: pointer;
+}
 .modal__content {
    width: 100%;
    top: 0;

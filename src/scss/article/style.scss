@@ -141,6 +141,9 @@
       flex-direction: column;
       gap: 20px;
       ul {
+         display: flex;
+         flex-direction: column;
+         gap: 12px;
          li {
             list-style-type: disc;
             list-style-position: inside;

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+@@include('components/_head.html',{
+"lang":"en",
+"title":"Knotlor",
+"description":"",
+"keywords":"",
+})
+
+<body>
+   <div class="wrapper lock-padding">
+      @@include('components/_header.html')
+      <main class="main">
+         <section class="breadcrumbs">
+            <div class="container">
+               <ul class="breadcrumbs__list scrollbar-none">
+                  <li><a href="index.html">Главная</a></li>
+                  <li><a href="payment.html">Оплата</a></li>
+               </ul>
+            </div>
+         </section>
+         <section class="delivery-page">
+            <div class="container">
+               <div class="delivery-page__wrapper">
+                  <div class="delivery-page__header">
+                     <h1 class="h2 delivery-page__title">Оплата</h1>
+                     <ul class="delivery-page__tabs">
+                        <li>
+                           <a href="delivery.html">Доставка</a>
+                        </li>
+                        <li>
+                           <a href="payment.html" class="active">Оплата</a>
+                        </li>
+                        <li>
+                           <a href="refund.html">Возврат и обмен</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="delivery-page__main">
+                     <div class="delivery-page__left">
+                        <div class="delivery-page__block">
+                           <h2 class="h4">Оплата</h2>
+
+                        </div>
+                        <div class="delivery-page__block_small">
+                           <div class="delivery-page__subtitle">
+                              <h5 class="h5">Для физических лиц</h5>
+
+                           </div>
+                           <p>
+                              Оплата картой онлайн на сайте.
+                              <br> <br>
+                              Мы принимаем банковские карты Visa, MasterCard, Мир.
+                              <br> <br>
+                              После успешной оплаты вы получите подтверждение на email.
+                           </p>
+                        </div>
+                        <div class="delivery-page__block_small">
+                           <div class="delivery-page__subtitle">
+                              <h5 class="h5">Для юридических лиц</h5>
+                           </div>
+                           <p>
+                              Оплата по счету. <br> <br>
+                              После оформления заказа мы вышлем счет на вашу электронную почту. <br> <br>
+                              Оплата возможна по безналичному расчету. <br> <br>
+                              Отгрузка товара производится после поступления средств на наш расчетный счет. <br> <br>
+                              Для выставления счета свяжитесь с нами или укажите реквизиты при оформлении заказа. <br>
+                           </p>
+                        </div>
+
+                     </div>
+                     <div class="delivery-page__right">
+
+                        <div class="delivery-page__block">
+                           <h2 class="h4">Остались вопросы по оплате?</h2>
+                           <div class="delivery-page__block_small">
+                              <p>
+                                 Телефон для связи <a href="tel:8 800-201-51-28">8 800-201-51-28</a> Ежедневно c 09:00
+                                 до
+                                 20:00
+                              </p>
+                              <p>Email: <a href="mailto:info@knotlor.ru">info@knotlor.ru</a></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('components/_footer.html')
+
+   </div>
+   @@include('components/_scripts.html')
+</body>
+
+</html>

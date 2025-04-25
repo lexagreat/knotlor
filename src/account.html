@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+@@include('components/_head.html',{
+"lang":"en",
+"title":"Knotlor",
+"description":"",
+"keywords":"",
+})
+
+<body>
+   <div class="wrapper lock-padding">
+      @@include('components/_header.html')
+      <main class="main">
+         <section class="breadcrumbs">
+            <div class="container">
+               <ul class="breadcrumbs__list scrollbar-none">
+                  <li><a href="index.html">Главная</a></li>
+                  <li><a href="account.html">Личный кабинет</a></li>
+               </ul>
+            </div>
+         </section>
+         <section class="delivery-page account-wrapper" style="padding: 0;">
+            <div class="container">
+               <div class="delivery-page__wrapper">
+                  <div class="delivery-page__header">
+                     <h1 class="h2 delivery-page__title">Личный кабинет</h1>
+                     <ul class="delivery-page__tabs">
+                        <li>
+                           <a href="account.html" class="active">Профиль</a>
+                        </li>
+                        <li>
+                           <a href="orders.html">Заказы</a>
+                        </li>
+                        <li>
+                           <a href="appeals.html">Обращения</a>
+                        </li>
+                     </ul>
+                  </div>
+
+               </div>
+            </div>
+         </section>
+         <section class="account-profile">
+            <div class="container">
+               <div class="account-profile__wrapper">
+                  <div class="account-profile__main profile-data">
+                     <div class="profile-data__main">
+                        <div class="profile-data__block">
+                           <h5 class="h5">Личные данные</h5>
+                           <ul class="profile-data__grid">
+                              <li class="profile-data__item">
+                                 <label class="app-input">
+                                    <input type="text">
+                                    <span>Имя</span>
+                                    <button>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                          viewBox="0 0 12 12" fill="none">
+                                          <path d="M1 11L11 1" stroke="#949698" stroke-width="1.5"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                          <path d="M11 11L1 1" stroke="#949698" stroke-width="1.5"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                       </svg>
+                                    </button>
+                                 </label>
+                              </li>
+                              <li class="profile-data__item">
+                                 <label class="app-input">
+                                    <input type="text">
+                                    <span>Фамилия</span>
+                                    <button>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                          viewBox="0 0 12 12" fill="none">
+                                          <path d="M1 11L11 1" stroke="#949698" stroke-width="1.5"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                          <path d="M11 11L1 1" stroke="#949698" stroke-width="1.5"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                       </svg>
+                                    </button>
+                                 </label>
+                              </li>
+                              <li class="profile-data__item">
+                                 <label class="app-input">
+                                    <input data-phone type="text">
+                                    <span>Телефон</span>
+                                    <button>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                          viewBox="0 0 12 12" fill="none">
+                                          <path d="M1 11L11 1" stroke="#949698" stroke-width="1.5"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                          <path d="M11 11L1 1" stroke="#949698" stroke-width="1.5"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                       </svg>
+                                    </button>
+                                 </label>
+                              </li>
+                              <li class="profile-data__item">
+                                 <label class="app-input">
+                                    <input type="text">
+                                    <span>Email</span>
+                                    <button>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                          viewBox="0 0 12 12" fill="none">
+                                          <path d="M1 11L11 1" stroke="#949698" stroke-width="1.5"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                          <path d="M11 11L1 1" stroke="#949698" stroke-width="1.5"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                       </svg>
+                                    </button>
+                                 </label>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="profile-data__block">
+                           <h5 class="h5">Адрес</h5>
+                           <ul class="profile-data__three">
+                              <li>
+                                 <label class="app-input">
+                                    <input type="text">
+                                    <span>Адрес</span>
+                                    <button>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                          viewBox="0 0 12 12" fill="none">
+                                          <path d="M1 11L11 1" stroke="#949698" stroke-width="1.5"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                          <path d="M11 11L1 1" stroke="#949698" stroke-width="1.5"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                       </svg>
+                                    </button>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="app-input">
+                                    <input type="text">
+                                    <span>Квартира</span>
+                                    <button>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                          viewBox="0 0 12 12" fill="none">
+                                          <path d="M1 11L11 1" stroke="#949698" stroke-width="1.5"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                          <path d="M11 11L1 1" stroke="#949698" stroke-width="1.5"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                       </svg>
+                                    </button>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="app-input">
+                                    <input type="text">
+                                    <span>Подъезд</span>
+                                    <button>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                          viewBox="0 0 12 12" fill="none">
+                                          <path d="M1 11L11 1" stroke="#949698" stroke-width="1.5"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                          <path d="M11 11L1 1" stroke="#949698" stroke-width="1.5"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                       </svg>
+                                    </button>
+                                 </label>
+                              </li>
+                              <li>
+                                 <label class="app-input">
+                                    <input type="text">
+                                    <span>Этаж</span>
+                                    <button>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                          viewBox="0 0 12 12" fill="none">
+                                          <path d="M1 11L11 1" stroke="#949698" stroke-width="1.5"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                          <path d="M11 11L1 1" stroke="#949698" stroke-width="1.5"
+                                             stroke-linecap="round" stroke-linejoin="round" />
+                                       </svg>
+                                    </button>
+                                 </label>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="profile-data__check">
+                        <label class="app-checkbox">
+                           <input type="checkbox" name="catalog-select-collection" value="3">
+                           <div>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                 fill="none">
+                                 <path d="M6.4585 9.99993L8.81683 12.3583L13.5418 7.6416" stroke="#202929"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                           </div>
+                           <span>Заказываю как Организация</span>
+                        </label>
+                     </div>
+                     <div class="profile-data__block org">
+                        <h5 class="h5">Данные организации</h5>
+                        <ul class="profile-data__grid">
+                           <li style="grid-column: span 2;">
+                              <label class="app-input">
+                                 <input type="text">
+                                 <span>Наименование*</span>
+                                 <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                       fill="none">
+                                       <path d="M1 11L11 1" stroke="#949698" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                       <path d="M11 11L1 1" stroke="#949698" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                    </svg>
+                                 </button>
+                              </label>
+                           </li>
+                           <li style="grid-column: span 2;">
+                              <label class="app-input">
+                                 <input type="text">
+                                 <span>Адрес*</span>
+                                 <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                       fill="none">
+                                       <path d="M1 11L11 1" stroke="#949698" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                       <path d="M11 11L1 1" stroke="#949698" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                    </svg>
+                                 </button>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="app-input">
+                                 <input type="text">
+                                 <span>ОГРН*</span>
+                                 <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                       fill="none">
+                                       <path d="M1 11L11 1" stroke="#949698" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                       <path d="M11 11L1 1" stroke="#949698" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                    </svg>
+                                 </button>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="app-input">
+                                 <input type="text">
+                                 <span>ИНН*</span>
+                                 <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                       fill="none">
+                                       <path d="M1 11L11 1" stroke="#949698" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                       <path d="M11 11L1 1" stroke="#949698" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                    </svg>
+                                 </button>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="app-input">
+                                 <input type="text">
+                                 <span>Корр. счет*</span>
+                                 <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                       fill="none">
+                                       <path d="M1 11L11 1" stroke="#949698" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                       <path d="M11 11L1 1" stroke="#949698" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                    </svg>
+                                 </button>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="app-input">
+                                 <input type="text">
+                                 <span>р/с*</span>
+                                 <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                       fill="none">
+                                       <path d="M1 11L11 1" stroke="#949698" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                       <path d="M11 11L1 1" stroke="#949698" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                    </svg>
+                                 </button>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="app-input">
+                                 <input type="text">
+                                 <span>БИК*</span>
+                                 <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                       fill="none">
+                                       <path d="M1 11L11 1" stroke="#949698" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                       <path d="M11 11L1 1" stroke="#949698" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                    </svg>
+                                 </button>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="app-input">
+                                 <input type="text">
+                                 <span>КПП*</span>
+                                 <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                       fill="none">
+                                       <path d="M1 11L11 1" stroke="#949698" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                       <path d="M11 11L1 1" stroke="#949698" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                    </svg>
+                                 </button>
+                              </label>
+                           </li>
+                        </ul>
+                     </div>
+                     <button class="profile-data__btn hover-btn">Cохранить</button>
+
+                  </div>
+                  <div class="account-profile__notifications">
+                     <div class="profile-data__block">
+                        <h5 class="h5">Уведомления</h5>
+                        <div class="account-profile__switch">
+                           <label>
+                              <input type="checkbox">
+                              <div class="circle"></div>
+                           </label>
+                           <p>
+                              Я согласен(а) получать персонализированные предложения, акции и новости от компании
+                              Knotlor
+                              по электронной почте. Я могу в любой момент отказаться от рассылки, следуя инструкциям в
+                              письме.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('components/_footer.html')
+
+   </div>
+   @@include('components/_scripts.html')
+</body>
+
+</html>

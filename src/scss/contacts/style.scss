@@ -1,0 +1,202 @@
+.contacts-page {
+   padding-bottom: 80px;
+   @media (max-width: $tablet) {
+      padding-bottom: 70px;
+   }
+   @media (max-width: $mobile) {
+      padding-bottom: 60px;
+   }
+   // .contacts-page__wrapper
+
+   &__wrapper {
+   }
+
+   // .contacts-page__title
+
+   &__title {
+      text-align: center;
+      margin-top: 32px;
+      margin-bottom: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      @media (max-width: $tablet) {
+         margin-bottom: 32px;
+      }
+   }
+
+   // .contacts-page__section
+
+   &__section {
+      padding-top: 20px;
+      padding-bottom: 80px;
+      display: flex;
+      justify-content: space-between;
+      gap: 200px;
+      border-top: 1px solid #d4d4d4;
+      @media (max-width: $tablet) {
+         flex-direction: column;
+         gap: 24px;
+         padding-bottom: 40px;
+      }
+   }
+
+   // .contacts-page__main
+
+   &__main {
+      flex: 0 0 442px;
+      @media (max-width: $tablet) {
+         flex: unset;
+      }
+   }
+
+   // .contacts-page__subtitle
+
+   &__subtitle {
+   }
+
+   // .contacts-page__text
+
+   &__text {
+      margin-top: 20px;
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      @include body-7;
+      @media (max-width: $tablet) {
+         @include body-3-tablet;
+      }
+   }
+
+   // .contacts-page__info
+
+   &__info {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 40px;
+      row-gap: 32px;
+      .gc2 {
+         grid-column: span 2;
+      }
+      .footer__icons {
+         margin: 0;
+         padding: 0;
+         a {
+            border-color: #d4d4d4;
+         }
+         svg path {
+            fill: $black;
+         }
+      }
+      @media (max-width: $tablet) {
+         display: flex;
+         flex-direction: column;
+         gap: 24px;
+      }
+   }
+
+   // .contacts-page__block
+
+   &__block {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      & > span {
+         @include body-4;
+         color: $grey-dark;
+         @media (max-width: $tablet) {
+            @include body-3-tablet;
+         }
+      }
+      & > a {
+         @include body-2;
+         color: $black;
+         @media (max-width: $tablet) {
+            @include body-2-tablet;
+         }
+      }
+   }
+
+   // .contacts-page__label
+
+   &__label {
+   }
+
+   // .contacts-page__btn
+
+   &__btn {
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 40px;
+      @include body-6;
+      border-radius: 100px;
+      border: 1px solid var(--grey-dark, #949698);
+   }
+
+   // .contacts-page__image
+
+   &__image {
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   // .contacts-page__list
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      grid-column: span 2;
+      li {
+         display: flex;
+         gap: 8px;
+         @media (max-width: $mobile) {
+            flex-direction: column;
+         }
+         & > span:nth-child(1) {
+            @include body-2;
+            @media (max-width: $tablet) {
+               @include body-2-tablet;
+            }
+         }
+         & > span:nth-child(2) {
+            @include body-4;
+            @media (max-width: $tablet) {
+               @include body-3-tablet;
+            }
+         }
+      }
+   }
+   &__download {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      @include body-6;
+      color: $black;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--grey, #d4d4d4);
+      margin-top: 8px;
+      width: fit-content;
+   }
+   // .contacts-page__map
+
+   &__map {
+      height: 480px;
+      background-color: #fff;
+      background-color: red;
+      @media (max-width: $tablet) {
+         height: 400px;
+      }
+      @media (max-width: $mobile) {
+         height: 320px;
+      }
+   }
+}
